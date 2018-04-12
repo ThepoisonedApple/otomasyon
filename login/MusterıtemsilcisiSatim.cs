@@ -48,5 +48,21 @@ namespace login
             nextForm.ShowDialog();
             this.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SSiparisAdd nextForm = new SSiparisAdd();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MusteriAdd nextForm = new MusteriAdd();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -72,6 +72,12 @@
     <Compile Include="IKMain.Designer.cs">
       <DependentUpon>IKMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="MakineAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakineAdd.Designer.cs">
+      <DependentUpon>MakineAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="MakineMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,12 @@
     <Compile Include="Stokurun.Designer.cs">
       <DependentUpon>Stokurun.cs</DependentUpon>
     </Compile>
+    <Compile Include="TedarikciAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TedarikciAdd.Designer.cs">
+      <DependentUpon>TedarikciAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerimAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IKMain.resx">
       <DependentUpon>IKMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakineAdd.resx">
+      <DependentUpon>MakineAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MakineMain.resx">
       <DependentUpon>MakineMain.cs</DependentUpon>
@@ -239,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stokurun.resx">
       <DependentUpon>Stokurun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TedarikciAdd.resx">
+      <DependentUpon>TedarikciAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerimAdd.resx">
       <DependentUpon>VerimAdd.cs</DependentUpon>

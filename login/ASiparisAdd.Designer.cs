@@ -33,6 +33,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -61,6 +61,7 @@
             this.button12.Size = new System.Drawing.Size(25, 25);
             this.button12.TabIndex = 4;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // panel1
             // 
@@ -115,18 +116,30 @@
             this.panel5.Size = new System.Drawing.Size(595, 435);
             this.panel5.TabIndex = 24;
             // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox4.ForeColor = System.Drawing.Color.Silver;
+            this.textBox4.Location = new System.Drawing.Point(42, 112);
+            this.textBox4.MaxLength = 10;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(233, 33);
+            this.textBox4.TabIndex = 33;
+            this.textBox4.Text = "hammadde ID";
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(193)))), ((int)(((byte)(82)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(426, 287);
+            this.button1.Location = new System.Drawing.Point(445, 359);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 54);
             this.button1.TabIndex = 32;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox7
             // 
@@ -218,6 +231,7 @@
             this.button11.Size = new System.Drawing.Size(50, 50);
             this.button11.TabIndex = 2;
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -240,17 +254,7 @@
             this.button9.Size = new System.Drawing.Size(50, 50);
             this.button9.TabIndex = 0;
             this.button9.UseVisualStyleBackColor = false;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.ForeColor = System.Drawing.Color.Silver;
-            this.textBox4.Location = new System.Drawing.Point(42, 112);
-            this.textBox4.MaxLength = 10;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(233, 33);
-            this.textBox4.TabIndex = 33;
-            this.textBox4.Text = "hammadde ID";
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // ASiparisAdd
             // 

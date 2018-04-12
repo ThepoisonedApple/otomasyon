@@ -48,5 +48,21 @@ namespace login
             nextForm.ShowDialog();
             this.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ASiparisAdd  nextForm = new ASiparisAdd();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            TedarikciAdd nextForm = new TedarikciAdd();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
+        }
     }
 }

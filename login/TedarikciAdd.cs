@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace login
 {
-    public partial class ASiparisAdd : Form
+    public partial class TedarikciAdd : Form
     {
-        public ASiparisAdd()
+        public TedarikciAdd()
         {
             InitializeComponent();
             button1.FlatAppearance.BorderSize = 0;
@@ -20,13 +20,6 @@ namespace login
             button10.FlatAppearance.BorderSize = 0;
             button11.FlatAppearance.BorderSize = 0;
             button12.FlatAppearance.BorderSize = 0;
-            DateTime thisDay1 = DateTime.Today;
-            textBox2.Text = thisDay1.ToString("d");
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button12_Click(object sender, EventArgs e)
