@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A165119-FB3C-4DAA-9057-75051D4C52AE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>login</RootNamespace>
+    <AssemblyName>login</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ASiparisAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASiparisAdd.Designer.cs">
+      <DependentUpon>ASiparisAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BolumsefiMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BolumsefiMain.Designer.cs">
+      <DependentUpon>BolumsefiMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IKMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IKMain.Designer.cs">
+      <DependentUpon>IKMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MakineMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakineMain.Designer.cs">
+      <DependentUpon>MakineMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModellemeMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModellemeMain.Designer.cs">
+      <DependentUpon>ModellemeMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriAdd.Designer.cs">
+      <DependentUpon>MusteriAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteritemsilcisiAlim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteritemsilcisiAlim.Designer.cs">
+      <DependentUpon>MusteritemsilcisiAlim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteritemsilcisiMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteritemsilcisiMain.Designer.cs">
+      <DependentUpon>MusteritemsilcisiMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusterıtemsilcisiSatim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusterıtemsilcisiSatim.Designer.cs">
+      <DependentUpon>MusterıtemsilcisiSatim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelAdd.Designer.cs">
+      <DependentUpon>PersonelAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelDelete.Designer.cs">
+      <DependentUpon>PersonelDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelSearch.Designer.cs">
+      <DependentUpon>PersonelSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelUpdate.Designer.cs">
+      <DependentUpon>PersonelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SSiparisAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSiparisAdd.Designer.cs">
+      <DependentUpon>SSiparisAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stokhammadde.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stokhammadde.Designer.cs">
+      <DependentUpon>Stokhammadde.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokMain.Designer.cs">
+      <DependentUpon>StokMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stokurun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stokurun.Designer.cs">
+      <DependentUpon>Stokurun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerimAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerimAdd.Designer.cs">
+      <DependentUpon>VerimAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerimUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerimUpdate.Designer.cs">
+      <DependentUpon>VerimUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiMain.Designer.cs">
+      <DependentUpon>YoneticiMain.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ASiparisAdd.resx">
+      <DependentUpon>ASiparisAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BolumsefiMain.resx">
+      <DependentUpon>BolumsefiMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IKMain.resx">
+      <DependentUpon>IKMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakineMain.resx">
+      <DependentUpon>MakineMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModellemeMain.resx">
+      <DependentUpon>ModellemeMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriAdd.resx">
+      <DependentUpon>MusteriAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteritemsilcisiAlim.resx">
+      <DependentUpon>MusteritemsilcisiAlim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteritemsilcisiMain.resx">
+      <DependentUpon>MusteritemsilcisiMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusterıtemsilcisiSatim.resx">
+      <DependentUpon>MusterıtemsilcisiSatim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelAdd.resx">
+      <DependentUpon>PersonelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelDelete.resx">
+      <DependentUpon>PersonelDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelSearch.resx">
+      <DependentUpon>PersonelSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelUpdate.resx">
+      <DependentUpon>PersonelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SSiparisAdd.resx">
+      <DependentUpon>SSiparisAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stokhammadde.resx">
+      <DependentUpon>Stokhammadde.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokMain.resx">
+      <DependentUpon>StokMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stokurun.resx">
+      <DependentUpon>Stokurun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerimAdd.resx">
+      <DependentUpon>VerimAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerimUpdate.resx">
+      <DependentUpon>VerimUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiMain.resx">
+      <DependentUpon>YoneticiMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Login_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Login_man.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Login_lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Login_eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Business_man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Order_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\search_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\list_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Work_Done.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
