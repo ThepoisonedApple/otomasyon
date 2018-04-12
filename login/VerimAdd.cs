@@ -15,8 +15,8 @@ namespace login
         public VerimAdd()
         {
             InitializeComponent();
-            DateTime thisDay = DateTime.Today;
-            textBox5.Text = thisDay.ToString("d");
+            DateTime thisDay1 = DateTime.Today;
+            textBox5.Text = thisDay1.ToString("d");
             button2.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;
