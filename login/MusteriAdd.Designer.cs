@@ -60,6 +60,7 @@
             this.button12.Size = new System.Drawing.Size(25, 25);
             this.button12.TabIndex = 4;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // panel1
             // 
@@ -217,6 +218,7 @@
             this.button11.Size = new System.Drawing.Size(50, 50);
             this.button11.TabIndex = 2;
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -239,6 +241,7 @@
             this.button9.Size = new System.Drawing.Size(50, 50);
             this.button9.TabIndex = 0;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // MusteriAdd
             // 

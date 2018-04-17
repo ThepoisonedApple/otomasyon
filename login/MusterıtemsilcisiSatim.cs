@@ -64,5 +64,33 @@ namespace login
             nextForm.ShowDialog();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SSiparisUpdate nextForm = new SSiparisUpdate();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SSiparisDelete nextForm = new SSiparisDelete();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MusteriUpdate nextForm = new MusteriUpdate();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MusteriDelete nextForm = new MusteriDelete();
+            nextForm.Show();
+            this.Dispose();
+        }
     }
 }

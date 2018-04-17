@@ -154,7 +154,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(215, 125);
             this.button1.TabIndex = 23;
-            this.button1.Text = " Tasarım   Güncelle";
+            this.button1.Text = "   Ürün     Güncelle";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button5
@@ -167,7 +167,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(215, 125);
             this.button5.TabIndex = 22;
-            this.button5.Text = "     Tasarım      Ekle";
+            this.button5.Text = "      Ürün        Ekle";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // button4
@@ -180,7 +180,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(215, 125);
             this.button4.TabIndex = 21;
-            this.button4.Text = "Tasarım Ara,Listele";
+            this.button4.Text = "  Ürün   Ara,Listele";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
@@ -193,7 +193,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(215, 125);
             this.button3.TabIndex = 20;
-            this.button3.Text = "       Tasarım        Sil";
+            this.button3.Text = "        Ürün         Sil";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // label1
@@ -238,6 +238,7 @@
             this.button9.Size = new System.Drawing.Size(50, 50);
             this.button9.TabIndex = 0;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel1
             // 

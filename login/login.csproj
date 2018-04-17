@@ -54,6 +54,18 @@
     <Compile Include="ASiparisAdd.Designer.cs">
       <DependentUpon>ASiparisAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="ASiparisDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASiparisDelete.designer.cs">
+      <DependentUpon>ASiparisDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASiparisUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASiparisUpdate.designer.cs">
+      <DependentUpon>ASiparisUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="BolumsefiMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,12 @@
     <Compile Include="MusteriAdd.Designer.cs">
       <DependentUpon>MusteriAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="MusteriDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriDelete.designer.cs">
+      <DependentUpon>MusteriDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="MusteritemsilcisiAlim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +125,12 @@
     </Compile>
     <Compile Include="MusteritemsilcisiMain.Designer.cs">
       <DependentUpon>MusteritemsilcisiMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriUpdate.designer.cs">
+      <DependentUpon>MusteriUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="MusterıtemsilcisiSatim.cs">
       <SubType>Form</SubType>
@@ -146,6 +170,18 @@
     <Compile Include="SSiparisAdd.Designer.cs">
       <DependentUpon>SSiparisAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="SSiparisDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSiparisDelete.designer.cs">
+      <DependentUpon>SSiparisDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SSiparisUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSiparisUpdate.designer.cs">
+      <DependentUpon>SSiparisUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stokhammadde.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,11 +206,29 @@
     <Compile Include="TedarikciAdd.Designer.cs">
       <DependentUpon>TedarikciAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="TedarikciDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TedarikciDelete.designer.cs">
+      <DependentUpon>TedarikciDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TedarikciUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TedarikciUpdate.designer.cs">
+      <DependentUpon>TedarikciUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerimAdd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VerimAdd.Designer.cs">
       <DependentUpon>VerimAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerimDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerimDelete.designer.cs">
+      <DependentUpon>VerimDelete.cs</DependentUpon>
     </Compile>
     <Compile Include="VerimUpdate.cs">
       <SubType>Form</SubType>
@@ -190,6 +244,12 @@
     </Compile>
     <EmbeddedResource Include="ASiparisAdd.resx">
       <DependentUpon>ASiparisAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASiparisDelete.resx">
+      <DependentUpon>ASiparisDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASiparisUpdate.resx">
+      <DependentUpon>ASiparisUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BolumsefiMain.resx">
       <DependentUpon>BolumsefiMain.cs</DependentUpon>
@@ -212,11 +272,17 @@
     <EmbeddedResource Include="MusteriAdd.resx">
       <DependentUpon>MusteriAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MusteriDelete.resx">
+      <DependentUpon>MusteriDelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MusteritemsilcisiAlim.resx">
       <DependentUpon>MusteritemsilcisiAlim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MusteritemsilcisiMain.resx">
       <DependentUpon>MusteritemsilcisiMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriUpdate.resx">
+      <DependentUpon>MusteriUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MusterıtemsilcisiSatim.resx">
       <DependentUpon>MusterıtemsilcisiSatim.cs</DependentUpon>
@@ -246,6 +312,12 @@
     <EmbeddedResource Include="SSiparisAdd.resx">
       <DependentUpon>SSiparisAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SSiparisDelete.resx">
+      <DependentUpon>SSiparisDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SSiparisUpdate.resx">
+      <DependentUpon>SSiparisUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Stokhammadde.resx">
       <DependentUpon>Stokhammadde.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,8 +330,17 @@
     <EmbeddedResource Include="TedarikciAdd.resx">
       <DependentUpon>TedarikciAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TedarikciDelete.resx">
+      <DependentUpon>TedarikciDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TedarikciUpdate.resx">
+      <DependentUpon>TedarikciUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VerimAdd.resx">
       <DependentUpon>VerimAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerimDelete.resx">
+      <DependentUpon>VerimDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerimUpdate.resx">
       <DependentUpon>VerimUpdate.cs</DependentUpon>

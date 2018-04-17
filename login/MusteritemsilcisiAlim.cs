@@ -64,5 +64,12 @@ namespace login
             nextForm.ShowDialog();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SSiparisUpdate nextForm = new SSiparisUpdate();
+            nextForm.Show();
+            this.Dispose();
+        }
     }
 }

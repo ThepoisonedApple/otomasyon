@@ -210,11 +210,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(278, 74);
+            this.label4.Location = new System.Drawing.Point(249, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(368, 32);
+            this.label4.Size = new System.Drawing.Size(435, 32);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Personel Ekleme Paneli";
+            this.label4.Text = "Personel Güncelleme Paneli";
             // 
             // label1
             // 

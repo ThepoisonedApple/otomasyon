@@ -24,6 +24,8 @@ namespace login
             button10.FlatAppearance.BorderSize = 0;
             button11.FlatAppearance.BorderSize = 0;
             button12.FlatAppearance.BorderSize = 0;
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -34,9 +36,8 @@ namespace login
         private void button11_Click(object sender, EventArgs e)
         {
             Form1 nextForm = new Form1();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -47,9 +48,8 @@ namespace login
         private void button4_Click(object sender, EventArgs e)
         {
             PersonelSearch nextForm = new PersonelSearch();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -60,25 +60,22 @@ namespace login
         private void button5_Click(object sender, EventArgs e)
         {
             PersonelAdd nextForm = new PersonelAdd();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             PersonelDelete nextForm = new PersonelDelete();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             PersonelUpdate nextForm = new PersonelUpdate();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
     }
 }
