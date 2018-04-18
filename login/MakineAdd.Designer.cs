@@ -72,6 +72,7 @@
             this.button9.Size = new System.Drawing.Size(50, 50);
             this.button9.TabIndex = 0;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel2
             // 
@@ -146,6 +147,7 @@
             this.button12.Size = new System.Drawing.Size(25, 25);
             this.button12.TabIndex = 4;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // textBox3
             // 

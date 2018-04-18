@@ -26,14 +26,15 @@ namespace login
             button10.FlatAppearance.BorderSize = 0;
             button11.FlatAppearance.BorderSize = 0;
             button12.FlatAppearance.BorderSize = 0;
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             MakineMain nextForm = new MakineMain();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -49,9 +50,8 @@ namespace login
         private void button11_Click(object sender, EventArgs e)
         {
             Form1 nextForm = new Form1();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -62,33 +62,29 @@ namespace login
         private void button7_Click(object sender, EventArgs e)
         {
             IKMain nextForm = new IKMain();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             BolumsefiMain nextForm = new BolumsefiMain();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void rapor_Click(object sender, EventArgs e)
         {
             MusteritemsilcisiMain nextForm = new MusteritemsilcisiMain();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             StokMain nextForm = new StokMain();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
@@ -104,9 +100,13 @@ namespace login
         private void button8_Click(object sender, EventArgs e)
         {
             ModellemeMain nextForm = new ModellemeMain();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

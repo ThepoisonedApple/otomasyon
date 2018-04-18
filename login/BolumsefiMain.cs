@@ -27,9 +27,8 @@ namespace login
         private void button11_Click(object sender, EventArgs e)
         {
             Form1 nextForm = new Form1();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -40,17 +39,20 @@ namespace login
         private void button5_Click(object sender, EventArgs e)
         {
             VerimAdd nextForm = new VerimAdd();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             VerimUpdate nextForm = new VerimUpdate();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

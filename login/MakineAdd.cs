@@ -31,5 +31,15 @@ namespace login
         {
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

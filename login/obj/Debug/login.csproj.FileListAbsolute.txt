@@ -79,3 +79,5 @@ C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.MusteriDelete.re
 C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.MusteriUpdate.resources
 C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.SSiparisDelete.resources
 C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.SSiparisUpdate.resources
+C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.csproj.CoreCompileInputs.cache
+C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.csproj.CopyComplete

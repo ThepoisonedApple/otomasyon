@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -56,8 +58,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.rapor = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -87,6 +87,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1051, 605);
             this.panel1.TabIndex = 0;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.Location = new System.Drawing.Point(790, 416);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(215, 125);
+            this.button13.TabIndex = 18;
+            this.button13.Text = "   Stok   Ara,Listele";
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(197)))), ((int)(((byte)(189)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(560, 419);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(215, 125);
+            this.button6.TabIndex = 17;
+            this.button6.Text = "Makine Bakım Ara,Listele";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -133,6 +159,7 @@
             this.button9.Size = new System.Drawing.Size(50, 50);
             this.button9.TabIndex = 0;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel6
             // 
@@ -404,32 +431,6 @@
             this.rapor.Text = "Sipariş Ara,Listele";
             this.rapor.UseVisualStyleBackColor = false;
             this.rapor.Click += new System.EventHandler(this.rapor_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(197)))), ((int)(((byte)(189)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(560, 419);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(215, 125);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Makine Bakım Ara,Listele";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(790, 416);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(215, 125);
-            this.button13.TabIndex = 18;
-            this.button13.Text = "   Stok   Ara,Listele";
-            this.button13.UseVisualStyleBackColor = false;
             // 
             // YoneticiMain
             // 

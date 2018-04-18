@@ -170,6 +170,7 @@
             this.button9.Size = new System.Drawing.Size(50, 50);
             this.button9.TabIndex = 0;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
             // 
             // MusteritemsilcisiMain
             // 

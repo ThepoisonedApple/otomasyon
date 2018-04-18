@@ -32,17 +32,15 @@ namespace login
         private void button9_Click(object sender, EventArgs e)
         {
             MusteritemsilcisiAlim nextForm = new MusteritemsilcisiAlim();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             Form1 nextForm = new Form1();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
     }
 }

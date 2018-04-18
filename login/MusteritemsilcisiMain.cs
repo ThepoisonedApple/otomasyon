@@ -21,30 +21,29 @@ namespace login
             button10.FlatAppearance.BorderSize = 0;
             button11.FlatAppearance.BorderSize = 0;
             button12.FlatAppearance.BorderSize = 0;
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             MusteritemsilcisiAlim nextForm = new MusteritemsilcisiAlim();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             MusterıtemsilcisiSatim nextForm = new MusterıtemsilcisiSatim();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-                        Form1 nextForm = new Form1();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            Form1 nextForm = new Form1();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -53,6 +52,11 @@ namespace login
         }
 
         private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
         {
 
         }
