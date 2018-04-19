@@ -114,6 +114,7 @@
             this.button1.TabIndex = 19;
             this.button1.Text = "Ürün Stok  Güncelle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -127,6 +128,7 @@
             this.button4.TabIndex = 17;
             this.button4.Text = "Ürün Stok Ara,Listele";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -140,6 +142,7 @@
             this.button3.TabIndex = 16;
             this.button3.Text = "     Ürün Stok      Sil";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -223,6 +226,7 @@
             this.button5.TabIndex = 18;
             this.button5.Text = "   Ürün Stok    Ekle";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Stokurun
             // 

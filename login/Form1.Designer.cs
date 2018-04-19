@@ -30,6 +30,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.linkLabel2);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.button1);
@@ -62,6 +64,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(384, 461);
             this.panel1.TabIndex = 0;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.linkLabel2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel2.LinkColor = System.Drawing.Color.CornflowerBlue;
+            this.linkLabel2.Location = new System.Drawing.Point(35, 402);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(65, 18);
+            this.linkLabel2.TabIndex = 7;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Kayıt Ol";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // panel9
             // 
@@ -86,6 +102,7 @@
             this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Şifremi Unuttum";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // button1
             // 
@@ -234,6 +251,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
 

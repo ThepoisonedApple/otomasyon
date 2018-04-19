@@ -113,6 +113,7 @@
             this.button2.TabIndex = 27;
             this.button2.Text = "Tedarikçi   Güncelle";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button6
             // 
@@ -140,6 +141,7 @@
             this.button7.TabIndex = 25;
             this.button7.Text = "Tedarikçi Ara,Listele";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -153,6 +155,7 @@
             this.button8.TabIndex = 24;
             this.button8.Text = "      Tedarikçi       Sil";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button1
             // 
@@ -194,6 +197,7 @@
             this.button4.TabIndex = 21;
             this.button4.Text = " Sipariş  Ara,Listele";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -207,6 +211,7 @@
             this.button3.TabIndex = 20;
             this.button3.Text = "       Sipariş        Sil";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 

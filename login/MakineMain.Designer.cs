@@ -77,6 +77,7 @@
             this.button1.TabIndex = 32;
             this.button1.Text = "Makine Güncelle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -118,6 +119,7 @@
             this.button5.TabIndex = 27;
             this.button5.Text = "     Makine       Ekle";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -131,6 +133,7 @@
             this.button4.TabIndex = 26;
             this.button4.Text = "Makine Ara,Listele";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -144,6 +147,7 @@
             this.button3.TabIndex = 25;
             this.button3.Text = "     Makine       Sil";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -211,6 +215,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 

@@ -54,5 +54,19 @@ namespace login
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            VerimDelete nextForm = new VerimDelete();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            VerimSearch nextForm = new VerimSearch();
+            nextForm.Show();
+            this.Dispose();
+        }
     }
 }

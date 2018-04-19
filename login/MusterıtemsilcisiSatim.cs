@@ -90,5 +90,19 @@ namespace login
             nextForm.Show();
             this.Dispose();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SSiparisSearch nextForm = new SSiparisSearch();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            MusteriSearch nextForm = new MusteriSearch();
+            nextForm.Show();
+            this.Dispose();
+        }
     }
 }

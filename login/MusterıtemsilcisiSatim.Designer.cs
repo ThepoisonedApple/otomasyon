@@ -129,6 +129,7 @@
             this.button7.TabIndex = 25;
             this.button7.Text = "Müşteri Ara,Listele";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -184,6 +185,7 @@
             this.button4.TabIndex = 21;
             this.button4.Text = " Sipariş  Ara,Listele";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 

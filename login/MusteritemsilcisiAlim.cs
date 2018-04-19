@@ -65,7 +65,42 @@ namespace login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SSiparisUpdate nextForm = new SSiparisUpdate();
+            ASiparisUpdate nextForm = new ASiparisUpdate();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ASiparisSearch nextForm = new ASiparisSearch();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            TedarikciSearch nextForm = new TedarikciSearch();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ASiparisDelete nextForm = new ASiparisDelete();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TedarikciUpdate nextForm = new TedarikciUpdate();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            TedarikciDelete nextForm = new TedarikciDelete();
             nextForm.Show();
             this.Dispose();
         }

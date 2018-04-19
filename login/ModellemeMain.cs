@@ -47,5 +47,31 @@ namespace login
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            UrunAdd nextForm = new UrunAdd();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UrunUpdate nextForm = new UrunUpdate();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            UrunDelete nextForm = new UrunDelete();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

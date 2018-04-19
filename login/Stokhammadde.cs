@@ -49,5 +49,34 @@ namespace login
         {
             Application.Exit();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            HammaddestokSearch nextForm = new HammaddestokSearch();
+            nextForm.Show();
+            this.Dispose();
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            HammaddestokAdd nextForm = new HammaddestokAdd();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            HammaddestokDelete nextForm = new HammaddestokDelete();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HammaddeStokUpdate nextForm = new HammaddeStokUpdate();
+            nextForm.Show();
+            this.Dispose();
+        }
     }
 }

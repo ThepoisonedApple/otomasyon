@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -41,48 +38,16 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button11
-            // 
-            this.button11.BackgroundImage = global::login.Properties.Resources.Shutdown;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(0, 234);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(50, 50);
-            this.button11.TabIndex = 2;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackgroundImage = global::login.Properties.Resources.Info;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(0, 178);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(50, 50);
-            this.button10.TabIndex = 1;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.BackgroundImage = global::login.Properties.Resources.Exit;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(1035, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(25, 25);
-            this.button12.TabIndex = 28;
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // panel2
             // 
@@ -117,6 +82,7 @@
             this.button6.TabIndex = 26;
             this.button6.Text = "   Operasyon     Ekle";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -156,6 +122,7 @@
             this.button1.TabIndex = 23;
             this.button1.Text = "   Ürün     Güncelle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -167,8 +134,9 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(215, 125);
             this.button5.TabIndex = 22;
-            this.button5.Text = "      Ürün        Ekle";
+            this.button5.Text = "       Ürün         Ekle";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -195,6 +163,7 @@
             this.button3.TabIndex = 20;
             this.button3.Text = "        Ürün         Sil";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -207,16 +176,6 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "ModaVizyon Modelleme Paneli";
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = global::login.Properties.Resources.logo;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(84, 32);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(161, 84);
-            this.panel4.TabIndex = 14;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(156)))), ((int)(((byte)(236)))));
@@ -227,6 +186,29 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(50, 500);
             this.panel3.TabIndex = 13;
+            // 
+            // button11
+            // 
+            this.button11.BackgroundImage = global::login.Properties.Resources.Shutdown;
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Location = new System.Drawing.Point(0, 234);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(50, 50);
+            this.button11.TabIndex = 2;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackgroundImage = global::login.Properties.Resources.Info;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(0, 178);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(50, 50);
+            this.button10.TabIndex = 1;
+            this.button10.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
@@ -259,6 +241,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1060, 500);
             this.panel1.TabIndex = 2;
+            // 
+            // button12
+            // 
+            this.button12.BackgroundImage = global::login.Properties.Resources.Exit;
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Location = new System.Drawing.Point(1035, 0);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(25, 25);
+            this.button12.TabIndex = 28;
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImage = global::login.Properties.Resources.logo;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Location = new System.Drawing.Point(84, 32);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(161, 84);
+            this.panel4.TabIndex = 14;
             // 
             // ModellemeMain
             // 

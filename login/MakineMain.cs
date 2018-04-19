@@ -43,5 +43,38 @@ namespace login
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MakineSearch nextForm = new MakineSearch();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MakineAdd nextForm = new MakineAdd();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MakineUpdate nextForm = new MakineUpdate();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MakineDelete nextForm = new MakineDelete();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

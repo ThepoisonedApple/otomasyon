@@ -123,13 +123,28 @@ namespace login
             }
             else
             {
-                MessageBox.Show("Hatalı giriş");
+                MessageBox.Show("         Hatalı giriş");
+               
             }
         }
 
         private void panel9_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            kayitol nextForm = new kayitol();
+            this.Hide();
+            nextForm.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SifremiUnuttum nextForm = new SifremiUnuttum();
+            this.Hide();
+            nextForm.Show();
         }
     }
 }

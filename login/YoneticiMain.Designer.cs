@@ -98,7 +98,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(215, 125);
             this.button13.TabIndex = 18;
-            this.button13.Text = "   Stok   Ara,Listele";
+            this.button13.Text = "Müşteri Ara,Listele";
             this.button13.UseVisualStyleBackColor = false;
             // 
             // button6
@@ -111,7 +111,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(215, 125);
             this.button6.TabIndex = 17;
-            this.button6.Text = "Makine Bakım Ara,Listele";
+            this.button6.Text = "Tedarikçi Ara,Listele";
             this.button6.UseVisualStyleBackColor = false;
             // 
             // panel3

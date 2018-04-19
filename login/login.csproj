@@ -60,6 +60,12 @@
     <Compile Include="ASiparisDelete.designer.cs">
       <DependentUpon>ASiparisDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="ASiparisSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASiparisSearch.designer.cs">
+      <DependentUpon>ASiparisSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="ASiparisUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +84,47 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hakkında.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hakkında.Designer.cs">
+      <DependentUpon>Hakkında.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HammaddestokAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HammaddestokAdd.Designer.cs">
+      <DependentUpon>HammaddestokAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HammaddestokDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HammaddestokDelete.designer.cs">
+      <DependentUpon>HammaddestokDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HammaddestokSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HammaddestokSearch.designer.cs">
+      <DependentUpon>HammaddestokSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HammaddeStokUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HammaddeStokUpdate.designer.cs">
+      <DependentUpon>HammaddeStokUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="IKMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IKMain.Designer.cs">
       <DependentUpon>IKMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kayitol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kayitol.Designer.cs">
+      <DependentUpon>kayitol.cs</DependentUpon>
     </Compile>
     <Compile Include="MakineAdd.cs">
       <SubType>Form</SubType>
@@ -90,11 +132,29 @@
     <Compile Include="MakineAdd.Designer.cs">
       <DependentUpon>MakineAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="MakineDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakineDelete.designer.cs">
+      <DependentUpon>MakineDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="MakineMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MakineMain.Designer.cs">
       <DependentUpon>MakineMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MakineSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakineSearch.designer.cs">
+      <DependentUpon>MakineSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MakineUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakineUpdate.designer.cs">
+      <DependentUpon>MakineUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="ModellemeMain.cs">
       <SubType>Form</SubType>
@@ -113,6 +173,12 @@
     </Compile>
     <Compile Include="MusteriDelete.designer.cs">
       <DependentUpon>MusteriDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriSearch.designer.cs">
+      <DependentUpon>MusteriSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="MusteritemsilcisiAlim.cs">
       <SubType>Form</SubType>
@@ -164,6 +230,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SifreDegistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifreDegistir.Designer.cs">
+      <DependentUpon>SifreDegistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SifremiUnuttum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifremiUnuttum.Designer.cs">
+      <DependentUpon>SifremiUnuttum.cs</DependentUpon>
+    </Compile>
     <Compile Include="SSiparisAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +253,12 @@
     </Compile>
     <Compile Include="SSiparisDelete.designer.cs">
       <DependentUpon>SSiparisDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SSiparisSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSiparisSearch.designer.cs">
+      <DependentUpon>SSiparisSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="SSiparisUpdate.cs">
       <SubType>Form</SubType>
@@ -212,11 +296,59 @@
     <Compile Include="TedarikciDelete.designer.cs">
       <DependentUpon>TedarikciDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="TedarikciSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TedarikciSearch.designer.cs">
+      <DependentUpon>TedarikciSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="TedarikciUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TedarikciUpdate.designer.cs">
       <DependentUpon>TedarikciUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrunAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunAdd.Designer.cs">
+      <DependentUpon>UrunAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrunDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunDelete.Designer.cs">
+      <DependentUpon>UrunDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrunUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunUpdate.Designer.cs">
+      <DependentUpon>UrunUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrunStokAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunStokAdd.designer.cs">
+      <DependentUpon>UrunStokAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrunStokDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunStokDelete.designer.cs">
+      <DependentUpon>UrunStokDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrunStokSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunStokSearch.designer.cs">
+      <DependentUpon>UrunStokSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrunStokUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunStokUpdate.designer.cs">
+      <DependentUpon>UrunStokUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="VerimAdd.cs">
       <SubType>Form</SubType>
@@ -229,6 +361,12 @@
     </Compile>
     <Compile Include="VerimDelete.designer.cs">
       <DependentUpon>VerimDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerimSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerimSearch.designer.cs">
+      <DependentUpon>VerimSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="VerimUpdate.cs">
       <SubType>Form</SubType>
@@ -248,6 +386,9 @@
     <EmbeddedResource Include="ASiparisDelete.resx">
       <DependentUpon>ASiparisDelete.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ASiparisSearch.resx">
+      <DependentUpon>ASiparisSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ASiparisUpdate.resx">
       <DependentUpon>ASiparisUpdate.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,14 +398,41 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hakkında.resx">
+      <DependentUpon>Hakkında.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HammaddestokAdd.resx">
+      <DependentUpon>HammaddestokAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HammaddestokDelete.resx">
+      <DependentUpon>HammaddestokDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HammaddestokSearch.resx">
+      <DependentUpon>HammaddestokSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HammaddeStokUpdate.resx">
+      <DependentUpon>HammaddeStokUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IKMain.resx">
       <DependentUpon>IKMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kayitol.resx">
+      <DependentUpon>kayitol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MakineAdd.resx">
       <DependentUpon>MakineAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MakineDelete.resx">
+      <DependentUpon>MakineDelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MakineMain.resx">
       <DependentUpon>MakineMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakineSearch.resx">
+      <DependentUpon>MakineSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakineUpdate.resx">
+      <DependentUpon>MakineUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModellemeMain.resx">
       <DependentUpon>ModellemeMain.cs</DependentUpon>
@@ -274,6 +442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MusteriDelete.resx">
       <DependentUpon>MusteriDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriSearch.resx">
+      <DependentUpon>MusteriSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MusteritemsilcisiAlim.resx">
       <DependentUpon>MusteritemsilcisiAlim.cs</DependentUpon>
@@ -309,11 +480,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SifreDegistir.resx">
+      <DependentUpon>SifreDegistir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SifremiUnuttum.resx">
+      <DependentUpon>SifremiUnuttum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SSiparisAdd.resx">
       <DependentUpon>SSiparisAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SSiparisDelete.resx">
       <DependentUpon>SSiparisDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SSiparisSearch.resx">
+      <DependentUpon>SSiparisSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SSiparisUpdate.resx">
       <DependentUpon>SSiparisUpdate.cs</DependentUpon>
@@ -333,14 +513,41 @@
     <EmbeddedResource Include="TedarikciDelete.resx">
       <DependentUpon>TedarikciDelete.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TedarikciSearch.resx">
+      <DependentUpon>TedarikciSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TedarikciUpdate.resx">
       <DependentUpon>TedarikciUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunAdd.resx">
+      <DependentUpon>UrunAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunDelete.resx">
+      <DependentUpon>UrunDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunUpdate.resx">
+      <DependentUpon>UrunUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunStokAdd.resx">
+      <DependentUpon>UrunStokAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunStokDelete.resx">
+      <DependentUpon>UrunStokDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunStokSearch.resx">
+      <DependentUpon>UrunStokSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunStokUpdate.resx">
+      <DependentUpon>UrunStokUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerimAdd.resx">
       <DependentUpon>VerimAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerimDelete.resx">
       <DependentUpon>VerimDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerimSearch.resx">
+      <DependentUpon>VerimSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerimUpdate.resx">
       <DependentUpon>VerimUpdate.cs</DependentUpon>
@@ -402,6 +609,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\Work_Done.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\forget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\forgot.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

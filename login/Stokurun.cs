@@ -49,5 +49,33 @@ namespace login
         {
             Application.Exit();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            UrunStokSearch nextForm = new UrunStokSearch();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            UrunStokAdd nextForm = new UrunStokAdd();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            UrunStokDelete nextForm = new UrunStokDelete();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UrunStokUpdate nextForm = new UrunStokUpdate();
+            nextForm.Show();
+            this.Dispose();
+        }
     }
 }

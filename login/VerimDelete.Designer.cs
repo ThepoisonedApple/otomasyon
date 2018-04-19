@@ -32,6 +32,17 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,21 +51,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -108,6 +108,125 @@
             this.panel5.Size = new System.Drawing.Size(595, 390);
             this.panel5.TabIndex = 27;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(187)))), ((int)(((byte)(66)))));
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.textBox13);
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Controls.Add(this.button1);
+            this.panel7.Location = new System.Drawing.Point(36, 269);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(523, 90);
+            this.panel7.TabIndex = 46;
+            // 
+            // panel8
+            // 
+            this.panel8.BackgroundImage = global::login.Properties.Resources.Work_Done;
+            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel8.Location = new System.Drawing.Point(30, 10);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(71, 71);
+            this.panel8.TabIndex = 47;
+            // 
+            // textBox13
+            // 
+            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(187)))), ((int)(((byte)(66)))));
+            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox13.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox13.ForeColor = System.Drawing.Color.Black;
+            this.textBox13.Location = new System.Drawing.Point(245, 27);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(110, 40);
+            this.textBox13.TabIndex = 45;
+            this.textBox13.Text = "13113";
+            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label5.Location = new System.Drawing.Point(123, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 25);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Toplam=";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(193)))), ((int)(((byte)(82)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(460, 167);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(86, 39);
+            this.button3.TabIndex = 44;
+            this.button3.Text = "Ara";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox5.ForeColor = System.Drawing.Color.Black;
+            this.textBox5.Location = new System.Drawing.Point(313, 83);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(233, 33);
+            this.textBox5.TabIndex = 41;
+            this.textBox5.Text = "Tarih";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox3.ForeColor = System.Drawing.Color.Silver;
+            this.textBox3.Location = new System.Drawing.Point(36, 83);
+            this.textBox3.MaxLength = 10;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(233, 33);
+            this.textBox3.TabIndex = 40;
+            this.textBox3.Text = "Personel ID";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox2.ForeColor = System.Drawing.Color.Silver;
+            this.textBox2.Location = new System.Drawing.Point(313, 33);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(233, 33);
+            this.textBox2.TabIndex = 39;
+            this.textBox2.Text = "Personel Soyadı";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.ForeColor = System.Drawing.Color.Silver;
+            this.textBox1.Location = new System.Drawing.Point(36, 33);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(233, 33);
+            this.textBox1.TabIndex = 38;
+            this.textBox1.Text = "Personel Adı";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox7.ForeColor = System.Drawing.Color.Silver;
+            this.textBox7.Location = new System.Drawing.Point(36, 131);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(233, 33);
+            this.textBox7.TabIndex = 43;
+            this.textBox7.Text = "Model No";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox6.ForeColor = System.Drawing.Color.Silver;
+            this.textBox6.Location = new System.Drawing.Point(313, 128);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(233, 33);
+            this.textBox6.TabIndex = 42;
+            this.textBox6.Text = "Operasyon no";
+            // 
             // button9
             // 
             this.button9.BackgroundImage = global::login.Properties.Resources.Home;
@@ -122,6 +241,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
@@ -199,125 +319,6 @@
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(193)))), ((int)(((byte)(82)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(460, 167);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 39);
-            this.button3.TabIndex = 44;
-            this.button3.Text = "Ara";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(313, 83);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(233, 33);
-            this.textBox5.TabIndex = 41;
-            this.textBox5.Text = "Tarih";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.ForeColor = System.Drawing.Color.Silver;
-            this.textBox3.Location = new System.Drawing.Point(36, 83);
-            this.textBox3.MaxLength = 10;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 33);
-            this.textBox3.TabIndex = 40;
-            this.textBox3.Text = "Personel ID";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(313, 33);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 33);
-            this.textBox2.TabIndex = 39;
-            this.textBox2.Text = "Personel Soyadı";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(36, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 33);
-            this.textBox1.TabIndex = 38;
-            this.textBox1.Text = "Personel Adı";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox7.ForeColor = System.Drawing.Color.Silver;
-            this.textBox7.Location = new System.Drawing.Point(36, 131);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(233, 33);
-            this.textBox7.TabIndex = 43;
-            this.textBox7.Text = "Model No";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox6.ForeColor = System.Drawing.Color.Silver;
-            this.textBox6.Location = new System.Drawing.Point(313, 128);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(233, 33);
-            this.textBox6.TabIndex = 42;
-            this.textBox6.Text = "Operasyon no";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(187)))), ((int)(((byte)(66)))));
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.textBox13);
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.button1);
-            this.panel7.Location = new System.Drawing.Point(36, 269);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(523, 90);
-            this.panel7.TabIndex = 46;
-            // 
-            // panel8
-            // 
-            this.panel8.BackgroundImage = global::login.Properties.Resources.Work_Done;
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel8.Location = new System.Drawing.Point(30, 10);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(71, 71);
-            this.panel8.TabIndex = 47;
-            // 
-            // textBox13
-            // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(187)))), ((int)(((byte)(66)))));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox13.ForeColor = System.Drawing.Color.Black;
-            this.textBox13.Location = new System.Drawing.Point(245, 27);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(110, 40);
-            this.textBox13.TabIndex = 45;
-            this.textBox13.Text = "13113";
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label5.Location = new System.Drawing.Point(123, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 25);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "Toplam=";
-            // 
             // VerimDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,11 +331,11 @@
             this.Text = "VerimDelete";
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
