@@ -104,3 +104,8 @@ C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.UrunStokDelete.r
 C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.UrunStokSearch.resources
 C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.UrunStokUpdate.resources
 C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.HammaddestokSearch.resources
+C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.OperasyonAdd.resources
+C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.OperasyonDelete.resources
+C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.OperasyonUpdate.resources
+C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.OperasyonSearch.resources
+C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.UrunSearch.resources

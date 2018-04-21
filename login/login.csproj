@@ -48,6 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OperasyonSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperasyonSearch.designer.cs">
+      <DependentUpon>OperasyonSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrunSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunSearch.designer.cs">
+      <DependentUpon>UrunSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="ASiparisAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +215,24 @@
     </Compile>
     <Compile Include="MusterıtemsilcisiSatim.Designer.cs">
       <DependentUpon>MusterıtemsilcisiSatim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperasyonAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperasyonAdd.designer.cs">
+      <DependentUpon>OperasyonAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperasyonDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperasyonDelete.designer.cs">
+      <DependentUpon>OperasyonDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperasyonUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperasyonUpdate.designer.cs">
+      <DependentUpon>OperasyonUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonelAdd.cs">
       <SubType>Form</SubType>
@@ -380,6 +410,12 @@
     <Compile Include="YoneticiMain.Designer.cs">
       <DependentUpon>YoneticiMain.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OperasyonSearch.resx">
+      <DependentUpon>OperasyonSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunSearch.resx">
+      <DependentUpon>UrunSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ASiparisAdd.resx">
       <DependentUpon>ASiparisAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -457,6 +493,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MusterıtemsilcisiSatim.resx">
       <DependentUpon>MusterıtemsilcisiSatim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperasyonAdd.resx">
+      <DependentUpon>OperasyonAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperasyonDelete.resx">
+      <DependentUpon>OperasyonDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperasyonUpdate.resx">
+      <DependentUpon>OperasyonUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelAdd.resx">
       <DependentUpon>PersonelAdd.cs</DependentUpon>

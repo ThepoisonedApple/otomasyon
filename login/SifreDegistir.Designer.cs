@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -39,7 +40,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -57,6 +57,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(453, 341);
             this.panel1.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::login.Properties.Resources.Exit;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(437, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(16, 16);
+            this.panel3.TabIndex = 15;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
             // panel2
             // 
@@ -93,6 +103,8 @@
             this.textBox3.Size = new System.Drawing.Size(269, 31);
             this.textBox3.TabIndex = 1;
             this.textBox3.Text = "Şifre Tekrar";
+            this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // panel4
             // 
@@ -129,6 +141,8 @@
             this.textBox2.Size = new System.Drawing.Size(269, 31);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "Şifre";
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // button1
             // 
@@ -152,16 +166,6 @@
             this.label1.Size = new System.Drawing.Size(264, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Şifremi Unuttum";
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::login.Properties.Resources.Exit;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(437, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(16, 16);
-            this.panel3.TabIndex = 15;
-            this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
             // SifreDegistir
             // 

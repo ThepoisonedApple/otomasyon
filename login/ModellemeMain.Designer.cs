@@ -39,12 +39,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,7 @@
             this.button2.TabIndex = 27;
             this.button2.Text = "Operasyon   Güncelle";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button6
             // 
@@ -96,6 +97,7 @@
             this.button7.TabIndex = 25;
             this.button7.Text = "Operasyon Ara,Listele";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -109,6 +111,7 @@
             this.button8.TabIndex = 24;
             this.button8.Text = "      Operasyon       Sil";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button1
             // 
@@ -150,6 +153,7 @@
             this.button4.TabIndex = 21;
             this.button4.Text = "  Ürün   Ara,Listele";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -186,41 +190,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(50, 500);
             this.panel3.TabIndex = 13;
-            // 
-            // button11
-            // 
-            this.button11.BackgroundImage = global::login.Properties.Resources.Shutdown;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(0, 234);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(50, 50);
-            this.button11.TabIndex = 2;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackgroundImage = global::login.Properties.Resources.Info;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(0, 178);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(50, 50);
-            this.button10.TabIndex = 1;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.BackgroundImage = global::login.Properties.Resources.Home;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(0, 122);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(50, 50);
-            this.button9.TabIndex = 0;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel1
             // 
@@ -263,6 +232,41 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(161, 84);
             this.panel4.TabIndex = 14;
+            // 
+            // button11
+            // 
+            this.button11.BackgroundImage = global::login.Properties.Resources.Shutdown;
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Location = new System.Drawing.Point(0, 234);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(50, 50);
+            this.button11.TabIndex = 2;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackgroundImage = global::login.Properties.Resources.Info;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(0, 178);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(50, 50);
+            this.button10.TabIndex = 1;
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImage = global::login.Properties.Resources.Home;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Location = new System.Drawing.Point(0, 122);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(50, 50);
+            this.button9.TabIndex = 0;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // ModellemeMain
             // 

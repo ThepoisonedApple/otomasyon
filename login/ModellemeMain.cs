@@ -71,7 +71,37 @@ namespace login
 
         private void button6_Click(object sender, EventArgs e)
         {
+            OperasyonAdd nextForm = new OperasyonAdd();
+            nextForm.Show();
+            this.Dispose();
+        }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            OperasyonSearch nextForm = new OperasyonSearch();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OperasyonUpdate nextForm = new OperasyonUpdate();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            OperasyonDelete nextForm = new OperasyonDelete();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            UrunSearch nextForm = new UrunSearch();
+            nextForm.Show();
+            this.Dispose();
         }
     }
 }

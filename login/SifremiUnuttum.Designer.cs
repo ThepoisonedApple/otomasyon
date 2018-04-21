@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
@@ -42,7 +43,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -63,6 +63,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(486, 526);
             this.panel1.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.BackgroundImage = global::login.Properties.Resources.Exit;
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel9.Location = new System.Drawing.Point(470, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(16, 16);
+            this.panel9.TabIndex = 13;
+            this.panel9.Click += new System.EventHandler(this.panel9_Click);
             // 
             // button1
             // 
@@ -103,6 +113,8 @@
             this.textBox4.Size = new System.Drawing.Size(309, 31);
             this.textBox4.TabIndex = 1;
             this.textBox4.Text = "Güvenlik sorusu cevabınız";
+            this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
+            this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
             // 
             // panel14
             // 
@@ -121,6 +133,8 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(308, 33);
             this.comboBox2.TabIndex = 5;
+            this.comboBox2.Enter += new System.EventHandler(this.comboBox2_Enter);
+            this.comboBox2.Leave += new System.EventHandler(this.comboBox2_Leave);
             // 
             // panel15
             // 
@@ -165,6 +179,8 @@
             this.textBox1.Size = new System.Drawing.Size(269, 31);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Kullanıcı Adı";
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // label1
             // 
@@ -184,16 +200,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(125, 125);
             this.panel2.TabIndex = 0;
-            // 
-            // panel9
-            // 
-            this.panel9.BackgroundImage = global::login.Properties.Resources.Exit;
-            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel9.Location = new System.Drawing.Point(470, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(16, 16);
-            this.panel9.TabIndex = 13;
-            this.panel9.Click += new System.EventHandler(this.panel9_Click);
             // 
             // SifremiUnuttum
             // 
