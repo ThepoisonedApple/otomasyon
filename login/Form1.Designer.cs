@@ -88,7 +88,6 @@
             this.panel9.Size = new System.Drawing.Size(16, 16);
             this.panel9.TabIndex = 6;
             this.panel9.Click += new System.EventHandler(this.panel9_Click);
-            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // linkLabel1
             // 
@@ -167,12 +166,14 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox2.ForeColor = System.Drawing.Color.Silver;
             this.textBox2.Location = new System.Drawing.Point(58, 12);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(269, 31);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "Şifre";
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CharKontrol);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // panel3
@@ -196,12 +197,14 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.ForeColor = System.Drawing.Color.Silver;
             this.textBox1.Location = new System.Drawing.Point(58, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(269, 31);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Kullanıcı Adı";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CharKontrol);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // panel2

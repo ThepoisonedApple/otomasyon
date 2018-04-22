@@ -126,7 +126,6 @@
             this.panel18.Size = new System.Drawing.Size(16, 16);
             this.panel18.TabIndex = 9;
             this.panel18.Click += new System.EventHandler(this.panel18_Click);
-            this.panel18.Paint += new System.Windows.Forms.PaintEventHandler(this.panel18_Paint);
             // 
             // label1
             // 
@@ -137,7 +136,6 @@
             this.label1.Size = new System.Drawing.Size(135, 33);
             this.label1.TabIndex = 8;
             this.label1.Text = "Kayıt OL";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel17
             // 
@@ -165,6 +163,7 @@
             this.textBox4.TabIndex = 1;
             this.textBox4.Text = "Güvenlik sorusu cevabınız";
             this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressControl);
             this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
             // 
             // panel14
@@ -180,11 +179,18 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "En sevdiğiniz ilkokul öğretmeninizin adı",
+            "Ilk evcil hayvanınızın adı",
+            "Annenizin kızlık soyadı",
+            "En sevdiğiniz araba markası",
+            "En sevdiğiniz kitap"});
             this.comboBox2.Location = new System.Drawing.Point(18, 12);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(308, 33);
             this.comboBox2.TabIndex = 5;
             this.comboBox2.Enter += new System.EventHandler(this.comboBox2_Enter);
+            this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox2_KeyPress);
             this.comboBox2.Leave += new System.EventHandler(this.comboBox2_Leave);
             // 
             // panel15
@@ -213,6 +219,7 @@
             this.textBox5.TabIndex = 5;
             this.textBox5.Text = "Personel ID";
             this.textBox5.Enter += new System.EventHandler(this.textBox5_Enter);
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressControl);
             this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
             // 
             // panel16
@@ -258,6 +265,7 @@
             this.textBox3.TabIndex = 1;
             this.textBox3.Text = "Şifre Tekrar";
             this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressControl);
             this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // panel4
@@ -296,6 +304,7 @@
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "Şifre";
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressControl);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // panel3
@@ -335,6 +344,7 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Kullanıcı Adı";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressControl);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // kayitol
@@ -384,7 +394,6 @@
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.TextBox textBox5;
@@ -393,5 +402,6 @@
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

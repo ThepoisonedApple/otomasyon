@@ -35,8 +35,14 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Npgsql, Version=3.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.7\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,12 +54,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBconnect.cs" />
+    <Compile Include="KayitInsert.cs" />
+    <Compile Include="LoginClass.cs" />
     <Compile Include="OperasyonSearch.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OperasyonSearch.designer.cs">
       <DependentUpon>OperasyonSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="OtomasyonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OtomasyonDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SifreUnuttumClass.cs" />
     <Compile Include="UrunSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -600,6 +615,18 @@
     <EmbeddedResource Include="YoneticiMain.resx">
       <DependentUpon>YoneticiMain.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="OtomasyonDataSet.xsc">
+      <DependentUpon>OtomasyonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OtomasyonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OtomasyonDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OtomasyonDataSet.xss">
+      <DependentUpon>OtomasyonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -666,6 +693,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\forgot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

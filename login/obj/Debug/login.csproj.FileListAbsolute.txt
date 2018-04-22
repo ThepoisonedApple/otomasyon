@@ -109,3 +109,7 @@ C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.OperasyonDelete.
 C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.OperasyonUpdate.resources
 C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.OperasyonSearch.resources
 C:\Users\Mali\Desktop\otomasyon\otomasyon\login\obj\Debug\login.UrunSearch.resources
+C:\Users\Mali\Desktop\otomasyon\otomasyon\login\bin\Debug\Npgsql.dll
+C:\Users\Mali\Desktop\otomasyon\otomasyon\login\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Mali\Desktop\otomasyon\otomasyon\login\bin\Debug\Npgsql.xml
+C:\Users\Mali\Desktop\otomasyon\otomasyon\login\bin\Debug\System.Threading.Tasks.Extensions.xml

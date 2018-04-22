@@ -104,6 +104,7 @@
             this.textBox3.TabIndex = 1;
             this.textBox3.Text = "Şifre Tekrar";
             this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // panel4
@@ -142,6 +143,7 @@
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "Şifre";
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // button1
@@ -156,6 +158,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Şifreyi Değiştir";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 

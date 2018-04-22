@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -35,7 +36,6 @@
             this.panel20 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -43,10 +43,18 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.otomasyonDataSet = new login.OtomasyonDataSet();
+            this.otomasyonDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kullaniciBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kullaniciTableAdapter = new login.OtomasyonDataSetTableAdapters.kullaniciTableAdapter();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.otomasyonDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.otomasyonDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kullaniciBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -114,6 +122,7 @@
             this.textBox4.TabIndex = 1;
             this.textBox4.Text = "Güvenlik sorusu cevabınız";
             this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Charkontrol);
             this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
             // 
             // panel14
@@ -124,17 +133,6 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(344, 55);
             this.panel14.TabIndex = 8;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(18, 12);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(308, 33);
-            this.comboBox2.TabIndex = 5;
-            this.comboBox2.Enter += new System.EventHandler(this.comboBox2_Enter);
-            this.comboBox2.Leave += new System.EventHandler(this.comboBox2_Leave);
             // 
             // panel15
             // 
@@ -180,6 +178,7 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Kullanıcı Adı";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Charkontrol);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // label1
@@ -201,6 +200,43 @@
             this.panel2.Size = new System.Drawing.Size(125, 125);
             this.panel2.TabIndex = 0;
             // 
+            // otomasyonDataSet
+            // 
+            this.otomasyonDataSet.DataSetName = "OtomasyonDataSet";
+            this.otomasyonDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // otomasyonDataSetBindingSource
+            // 
+            this.otomasyonDataSetBindingSource.DataSource = this.otomasyonDataSet;
+            this.otomasyonDataSetBindingSource.Position = 0;
+            // 
+            // kullaniciBindingSource
+            // 
+            this.kullaniciBindingSource.DataMember = "kullanici";
+            this.kullaniciBindingSource.DataSource = this.otomasyonDataSet;
+            // 
+            // kullaniciTableAdapter
+            // 
+            this.kullaniciTableAdapter.ClearBeforeFill = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "En sevdiğiniz ilkokul öğretmeninizin adı",
+            "Ilk evcil hayvanınızın adı",
+            "Annenizin kızlık soyadı",
+            "En sevdiğiniz araba markası",
+            "En sevdiğiniz kitap"});
+            this.comboBox2.Location = new System.Drawing.Point(18, 11);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(308, 33);
+            this.comboBox2.TabIndex = 6;
+            this.comboBox2.Enter += new System.EventHandler(this.comboBox2_Enter);
+            this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox2_KeyPress);
+            this.comboBox2.Leave += new System.EventHandler(this.comboBox2_Leave);
+            // 
             // SifremiUnuttum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,6 +254,9 @@
             this.panel14.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.otomasyonDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.otomasyonDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kullaniciBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,9 +274,13 @@
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.BindingSource otomasyonDataSetBindingSource;
+        private OtomasyonDataSet otomasyonDataSet;
+        private System.Windows.Forms.BindingSource kullaniciBindingSource;
+        private OtomasyonDataSetTableAdapters.kullaniciTableAdapter kullaniciTableAdapter;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

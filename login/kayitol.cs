@@ -7,25 +7,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace login
 {
     public partial class kayitol : Form
     {
+        public bool Kontrol = false;
+        public bool NK=false, PD=false, PDT=false, PID=false, GSC=false;
+
         public kayitol()
         {
             InitializeComponent();
+            comboBox2.SelectedIndex = 0;
             this.ActiveControl = this.panel1;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
 
         }
 
-        private void panel18_Paint(object sender, PaintEventArgs e)
+        public void charkontrol(KeyPressEventArgs e)
         {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Lütfen İşaret veya Türkçe Karakter Kullanmayınız.");
+            }
+            string x = "şŞüÜğĞıİÇçöÖ";
+            bool c = false;
+            for (int i = 0; i < x.Length; i++)
+            {
+                if (x[i] == e.KeyChar)
+                {
+                    c = true;
+                    break;
+                }
+            }
+            if (c)
+            {
+                e.Handled = true;
+                MessageBox.Show("Lütfen İşaret veya Türkçe Karakter Kullanmayınız.");
+            }
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
@@ -47,6 +67,7 @@ namespace login
             {
                 textBox2.Text = "";
                 textBox2.ForeColor = Color.Black;
+                textBox2.UseSystemPasswordChar = true;
             }
         }
 
@@ -58,6 +79,7 @@ namespace login
             {
                 textBox3.Text = "";
                 textBox3.ForeColor = Color.Black;
+                textBox3.UseSystemPasswordChar = true;
             }
         }
 
@@ -93,24 +115,74 @@ namespace login
         {
             panel3.BackColor = Color.White;
             panel12.BackColor = Color.White;
+            if (textBox1.Text.Length < 6 || textBox1.Text.Length > 20)
+            {
+                panel3.BackColor = Color.FromArgb(218, 68, 83);
+                NK = false;
+                MessageBox.Show("Kullanıcı adınız en az 6 en çok 20 karakterden oluşmalıdır.");
+            }
+            else NK = true;
+            
         }
 
         private void textBox2_Leave(object sender, EventArgs e)
         {
             panel4.BackColor = Color.White;
             panel6.BackColor = Color.White;
+            if (textBox2.Text.Length < 8 || textBox2.Text.Length > 20)
+            {
+                panel4.BackColor = Color.FromArgb(218, 68, 83);
+                PD = false;
+                MessageBox.Show("Şifreniz en az 8 en çok 20 karakterden oluşmalıdır.");
+            }
+            else PD = true;
         }
 
         private void textBox3_Leave(object sender, EventArgs e)
         {
             panel2.BackColor = Color.White;
             panel11.BackColor = Color.White;
+            if (textBox3.Text.Length < 8 || textBox3.Text.Length > 20)
+            {
+                panel2.BackColor = Color.FromArgb(218, 68, 83);
+                PDT = false;
+                MessageBox.Show("Şifreniz en az 8 en çok 20 karakterden oluşmalıdır.");
+            }
+            else if (textBox3.Text != textBox2.Text)
+            {
+                panel2.BackColor = Color.FromArgb(218, 68, 83);
+                PDT = false;
+                MessageBox.Show("Şifreleriniz uyuşmamaktadır lütfen şifrenizi tekrar giriniz");
+            }
+            else PDT = true;
+
         }
 
         private void textBox5_Leave(object sender, EventArgs e)
         {
+
             panel13.BackColor = Color.White;
             panel16.BackColor = Color.White;
+            if (textBox5.Text == "")
+            {
+                panel13.BackColor = Color.FromArgb(218, 68, 83);
+                PID = false;
+            }
+            else if (textBox5.Text!="")
+            {
+
+                KayitInsert kontrol1 = new KayitInsert();
+                Kontrol = kontrol1.PidKontrol(textBox5.Text);
+                if (!Kontrol)
+                {
+                    panel13.BackColor = Color.FromArgb(218, 68, 83);
+                    PID = false;
+                }
+                else PID = true;
+            }
+            
+
+            
         }
 
         private void comboBox2_Leave(object sender, EventArgs e)
@@ -123,6 +195,12 @@ namespace login
         {
             panel17.BackColor = Color.White;
             panel20.BackColor = Color.White;
+            if (textBox4.Text.Length < 4)
+            {
+                panel17.BackColor = Color.FromArgb(218, 68, 83);
+                GSC = false;
+            }
+            else GSC = true;
         }
 
         private void panel18_Click(object sender, EventArgs e)
@@ -133,8 +211,43 @@ namespace login
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        { bool CompleteKontrol = NK & PD & PDT & PID & GSC;
+            if (CompleteKontrol)
+            {
+                string kad, sifre, pid, gs, gc;
+                KayitInsert kaydol = new KayitInsert();
+                kad = textBox1.Text;
+                sifre = textBox2.Text;
+                sifre = kaydol.Hashing(sifre);
+                pid = textBox5.Text;
+                gs = comboBox2.SelectedItem.ToString();
+                gc = textBox4.Text;
 
+
+                int x = kaydol.TakeID(pid);
+
+                kaydol.InsertKullanici(kad, sifre, x.ToString(), gs, gc, pid);
+
+                MessageBox.Show("Kaydınız tamamlanmıstır Giris sayfasına yönlendiriliyorsunuz");
+                panel18_Click(sender,e);
+            }
+            else if (!NK) MessageBox.Show("Kullanıcı adınız hatalı veye eksik");
+                else if (!PD) MessageBox.Show("Şifreniz hatalı veye eksik");
+                    else if(!PDT) MessageBox.Show("Şifre tekrarınız hatalı veye eksik");
+                        else if(!PID) MessageBox.Show("Kullanıcı id'niz hatalı veya eksik");
+                            else if(!GSC) MessageBox.Show("Güvenlik sorusu cevabınız hatalı veye eksik");
+
+
+        }
+
+        private void KeyPressControl(object sender, KeyPressEventArgs e)
+        {
+            charkontrol(e);
+        }
+
+        private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }
