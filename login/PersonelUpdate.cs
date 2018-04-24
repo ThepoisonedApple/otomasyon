@@ -12,68 +12,83 @@ namespace login
 {
     public partial class PersonelUpdate : Form
     {
+        string[] arr = new string[8];
+        string pid;
         public PersonelUpdate()
         {
             InitializeComponent();
             this.ActiveControl = this.panel1;
-            button1.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.BorderSize = 0;
-            button9.FlatAppearance.BorderSize = 0;
-            button10.FlatAppearance.BorderSize = 0;
-            button11.FlatAppearance.BorderSize = 0;
-            button12.FlatAppearance.BorderSize = 0;
+            bupdate.FlatAppearance.BorderSize = 0;
+            bbilgi.FlatAppearance.BorderSize = 0;
+            bhome.FlatAppearance.BorderSize = 0;
+            binfo.FlatAppearance.BorderSize = 0;
+            blogout.FlatAppearance.BorderSize = 0;
+            bexit.FlatAppearance.BorderSize = 0;
         }
 
-        private void textBox9_Enter(object sender, EventArgs e)
+        private void tpid_Enter(object sender, EventArgs e)
         {
-            if (textBox9.Text=="Personel ID")
+            if (tpid.Text=="Personel ID")
             {
-                textBox9.Text = "";
-                textBox9.ForeColor = Color.Black;
+                tpid.Text = "";
+                tpid.ForeColor = Color.Black;
             }
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void bbilgi_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            textBox1.ForeColor = Color.Black;
-            textBox2.Text = "";
-            textBox2.ForeColor = Color.Black;
-            textBox3.Text = "";
-            textBox3.ForeColor = Color.Black;
-            textBox4.ForeColor = Color.Black;
-            textBox4.Text = "";
-            textBox5.ForeColor = Color.Black;
-            textBox5.Text = "";
-            textBox6.ForeColor = Color.Black;
-            textBox6.Text = "";
-            textBox7.ForeColor = Color.Black;
-            textBox7.Text = "";
-            textBox8.ForeColor = Color.Black;
-            textBox8.Text = "";
+            try
+            {
+                pid = tpid.Text;
+                PersonelClass myclass = new PersonelClass();
+                arr = myclass.PersonelBilgiGetir(pid);
+                tpad.Text = arr[0];
+                tpad.ForeColor = Color.Black;
+                tpsad.Text = arr[1];
+                tpsad.ForeColor = Color.Black;
+                tptel.Text = arr[6];
+                tptel.ForeColor = Color.Black;
+                tpadres.ForeColor = Color.Black;
+                tpadres.Text = arr[5];
+                tpmail.ForeColor = Color.Black;
+                tpmail.Text = arr[2];
+                tpmaas.ForeColor = Color.Black;
+                tpmaas.Text = arr[3];
+                tpbolum.ForeColor = Color.Black;
+                tpbolum.Text = arr[4];
+                tppoz.ForeColor = Color.Black;
+                tppoz.Text = arr[7];
+            }
+            catch (Exception)
+            {
+                DBconnect conn = new DBconnect();
+                conn.connectionclose();
+                MessageBox.Show("Persone id'sini Eksik veya Yanlış Girdiniz");
+            }
+
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void bexit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void bhome_Click(object sender, EventArgs e)
         {
             IKMain nextForm = new IKMain();
             nextForm.Show();
             this.Dispose();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void blogout_Click(object sender, EventArgs e)
         {
             Form1 nextForm = new Form1();
             nextForm.Show();
             this.Dispose();
         }
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        private void tptel_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
             decimal x;
@@ -81,9 +96,23 @@ namespace login
             {
                 e.Handled = false;
             }
-            else if (!char.IsDigit(ch) && ch != '.' || !Decimal.TryParse(textBox3.Text + ch, out x))
+            else if (!char.IsDigit(ch) && ch != '.' || !Decimal.TryParse(tptel.Text + ch, out x))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void bupdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PersonelClass myclass = new PersonelClass();
+                myclass.PersonelGuncelle(tpad.Text, tpsad.Text, tpmail.Text,Convert.ToDouble(tpmaas.Text),Convert.ToInt32(tpbolum.Text), tpadres.Text,tptel.Text, tppoz.Text,pid);
+                MessageBox.Show("yuppi");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Hatalı Veya Eksik bilgi girdiniz Güncelleme Başarısız");
             }
         }
     }

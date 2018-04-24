@@ -113,6 +113,7 @@ namespace login
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
+            int x=-1;
             panel3.BackColor = Color.White;
             panel12.BackColor = Color.White;
             if (textBox1.Text.Length < 6 || textBox1.Text.Length > 20)
@@ -120,6 +121,17 @@ namespace login
                 panel3.BackColor = Color.FromArgb(218, 68, 83);
                 NK = false;
                 MessageBox.Show("Kullanıcı adınız en az 6 en çok 20 karakterden oluşmalıdır.");
+            }
+            else
+            {
+                KayitInsert kontrolkad = new KayitInsert();
+                x =  kontrolkad.kadkontrol(textBox1.Text);
+            }
+
+            if (x!=0)
+            {
+                panel3.BackColor = Color.FromArgb(218, 68, 83);
+                NK = false;
             }
             else NK = true;
             

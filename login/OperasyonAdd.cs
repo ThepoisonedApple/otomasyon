@@ -15,11 +15,11 @@ namespace login
         public OperasyonAdd()
         {
             InitializeComponent();
-            button1.FlatAppearance.BorderSize = 0;
-            button9.FlatAppearance.BorderSize = 0;
-            button10.FlatAppearance.BorderSize = 0;
-            button11.FlatAppearance.BorderSize = 0;
-            button12.FlatAppearance.BorderSize = 0;
+            badd.FlatAppearance.BorderSize = 0;
+            bhome.FlatAppearance.BorderSize = 0;
+            binfo.FlatAppearance.BorderSize = 0;
+            blogout.FlatAppearance.BorderSize = 0;
+            bexit.FlatAppearance.BorderSize = 0;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -54,6 +54,20 @@ namespace login
             Form1 nextForm = new Form1();
             nextForm.Show();
             this.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OperasyonClass myclass = new OperasyonClass();
+                myclass.operasyonekle(toadi.Text,totanim.Text);
+                MessageBox.Show("yuppi");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("hatalı");
+            }
         }
     }
 }

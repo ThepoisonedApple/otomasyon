@@ -16,108 +16,108 @@ namespace login
         {
             InitializeComponent();
             
-            button1.FlatAppearance.BorderSize = 0;
-            button9.FlatAppearance.BorderSize = 0;
-            button10.FlatAppearance.BorderSize = 0;
-            button11.FlatAppearance.BorderSize = 0;
-            button12.FlatAppearance.BorderSize = 0;
+            badd.FlatAppearance.BorderSize = 0;
+            bhome.FlatAppearance.BorderSize = 0;
+            binfo.FlatAppearance.BorderSize = 0;
+            blogout.FlatAppearance.BorderSize = 0;
+            bexit.FlatAppearance.BorderSize = 0;
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void bhome_Click(object sender, EventArgs e)
         {
             IKMain nextForm = new IKMain();
             nextForm.Show();
             this.Dispose();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void blogout_Click(object sender, EventArgs e)
         {
             Form1 nextForm = new Form1();
             nextForm.Show();
             this.Dispose();
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void bexit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
       
         #region textbox geçişleri
-        private void textBox1_Click(object sender, EventArgs e)
+        private void tpad_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text== "Personel Adı")
+            if (tpad.Text== "Personel Adı")
             {
-                textBox1.Text = "";
-                textBox1.ForeColor = Color.Black;
+                tpad.Text = "";
+                tpad.ForeColor = Color.Black;
             }
             
         }
 
-        private void textBox2_Click(object sender, EventArgs e)
+        private void tpsad_Click(object sender, EventArgs e)
         {
 
-            if (textBox2.Text == "Personel Soyadı")
+            if (tpsad.Text == "Personel Soyadı")
             {
-                textBox2.Text = "";
-                textBox2.ForeColor = Color.Black;
+                tpsad.Text = "";
+                tpsad.ForeColor = Color.Black;
             }
         }
-        private void textBox4_Click(object sender, EventArgs e)
+        private void tpadres_Click(object sender, EventArgs e)
         {
-            if (textBox4.Text == "Personel Adresi")
+            if (tpadres.Text == "Personel Adresi")
             {
-                textBox4.Text = "";
-                textBox4.ForeColor = Color.Black;
+                tpadres.Text = "";
+                tpadres.ForeColor = Color.Black;
             }
         }
-        private void textBox3_Click(object sender, EventArgs e)
+        private void tptel_Click(object sender, EventArgs e)
         {
             {
-                 if (textBox3.Text == "Personel Telefonu")
+                 if (tptel.Text == "Personel Telefonu")
                     {
-                textBox3.Text = "";
-                textBox3.ForeColor = Color.Black;
+                tptel.Text = "";
+                tptel.ForeColor = Color.Black;
                   }
             }
         }
 
 
 
-        private void textBox5_Click(object sender, EventArgs e)
+        private void tpmail_Click(object sender, EventArgs e)
         {
-            if (textBox5.Text == "Personel e-mail")
+            if (tpmail.Text == "Personel e-mail")
             {
-                textBox5.Text = "";
-                textBox5.ForeColor = Color.Black;
+                tpmail.Text = "";
+                tpmail.ForeColor = Color.Black;
             }
         }
 
-        private void textBox6_Click(object sender, EventArgs e)
+        private void tpmaas_Click(object sender, EventArgs e)
         {
-            if (textBox6.Text == "Maaş")
+            if (tpmaas.Text == "Maaş")
             {
-                textBox6.Text = "";
-                textBox6.ForeColor = Color.Black;
+                tpmaas.Text = "";
+                tpmaas.ForeColor = Color.Black;
             }
         }
 
-        private void textBox7_Click(object sender, EventArgs e)
+        private void tpbolum_Click(object sender, EventArgs e)
         {
             
-           if (textBox7.Text == "Çalıştığı Bölüm")
+           if (tpbolum.Text == "Çalıştığı Bölüm")
             {
-                textBox7.Text = "";
-                textBox7.ForeColor = Color.Black;
+                tpbolum.Text = "";
+                tpbolum.ForeColor = Color.Black;
             }
         }
 
-        private void textBox8_Click(object sender, EventArgs e)
+        private void tppoz_Click(object sender, EventArgs e)
         {
-            if (textBox8.Text == "Çalıştığı Pozisyon")
+            if (tppoz.Text == "Çalıştığı Pozisyon")
             {
-                textBox8.Text = "";
-                textBox8.ForeColor = Color.Black;
+                tppoz.Text = "";
+                tppoz.ForeColor = Color.Black;
             }
         }
 
@@ -126,7 +126,7 @@ namespace login
 
         #endregion
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        private void tptel_KeyPress(object sender, KeyPressEventArgs e)
         {
             
                 char ch = e.KeyChar;
@@ -135,10 +135,26 @@ namespace login
                 {
                     e.Handled = false;
                 }
-                else if (!char.IsDigit(ch) && ch != '.' || !Decimal.TryParse(textBox3.Text + ch, out x))
+                else if (!char.IsDigit(ch) && ch != '.' || !Decimal.TryParse(tptel.Text + ch, out x))
                 {
                     e.Handled = true;
                 }
+            
+        }
+
+        private void badd_Click(object sender, EventArgs e)
+        {
+            PersonelClass myclass = new PersonelClass();
+            try
+            {
+                myclass.Personelekle(tpad.Text, tpsad.Text, tpmail.Text, Convert.ToDouble(tpmaas.Text), Convert.ToInt32(tpbolum.Text), tpadres.Text, tptel.Text, tppoz.Text);
+                MessageBox.Show("Personel başarıyla eklendi.");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Personel ekleme başarısız.");
+                
+            }
             
         }
     }

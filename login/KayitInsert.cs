@@ -16,8 +16,10 @@ namespace login
             bool x;
             DBconnect mycon = new DBconnect();
             mycon.connectionopen();
-            string query = "select COUNT(*) FROM personel WHERE personel_id="+pid+";";
-            NpgsqlCommand comm1 = new NpgsqlCommand(query, DBconnect.baglanti);
+            NpgsqlCommand comm1 = new NpgsqlCommand();
+            comm1.Connection = DBconnect.baglanti;
+            comm1.CommandText = "SELECT COUNT(*) FROM personel WHERE personel_id=@pid;";
+            comm1.Parameters.AddWithValue("@pid",Convert.ToInt32(pid));
             Int32 count1 = Convert.ToInt32(comm1.ExecuteScalar());
             if (count1 == 0)
             {
@@ -29,8 +31,10 @@ namespace login
 
             else mycon.connectionclose();
             mycon.connectionopen();
-            query = "SELECT COUNT(*) FROM kullanici WHERE personel_id="+pid+";";
-            NpgsqlCommand comm = new NpgsqlCommand(query,DBconnect.baglanti);
+            NpgsqlCommand comm = new NpgsqlCommand();
+            comm.Connection = DBconnect.baglanti;
+            comm.CommandText = "SELECT COUNT(*) FROM kullanici WHERE personel_id=@pid;";
+            comm.Parameters.AddWithValue("@pid",Convert.ToInt32(pid));
             Int32 count = Convert.ToInt32(comm.ExecuteScalar());
             mycon.connectionclose();
             if (count != 0)
@@ -50,9 +54,11 @@ namespace login
             DBconnect mycon = new DBconnect();
 
             mycon.connectionopen();
-            string query = "SELECT bolum_id FROM personel WHERE personel_id=" + pid + ";";
-            NpgsqlCommand yetkicek = new NpgsqlCommand(query, DBconnect.baglanti);
-            var yetki = yetkicek.ExecuteReader();
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.Connection = DBconnect.baglanti;
+            command.CommandText= "SELECT bolum_id FROM personel WHERE personel_id=@pid;";
+            command.Parameters.AddWithValue("@pid", Convert.ToInt32(pid));
+            var yetki = command.ExecuteReader();
             int x;
 
             yetki.Read();
@@ -62,17 +68,37 @@ namespace login
             return x;
         }
 
+        public int kadkontrol(string kad)
+        {
+            DBconnect mycon = new DBconnect();
+            mycon.connectionopen();
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.Connection = DBconnect.baglanti;
+            command.CommandText = "SELECT COUNT(*) FROM kullanici WHERE kullanici_adi=@kad;";
+            command.Parameters.AddWithValue("@kad", kad);
+            int x = Convert.ToInt32(command.ExecuteScalar());
+            if (x!=0)
+            {
+                MessageBox.Show("Kullanıcı Adı başka bir kullanıcı tarafından Kullanılmaktadır.");
+            }
+            return x;
+        }
+
         public void InsertKullanici(string kad,string sifre,string yid,string gs,string gc,string pid)
         {
             DBconnect mycon = new DBconnect();
-
-
             mycon.connectionopen();
-
-            string query = string.Format("insert into kullanici (kullanici_adi,sifre,yetki_id,guvenlik_soru,guvenlik_cevap,personel_id) values ('{0}','{1}','{2}','{3}','{4}','{5}') ",
-              kad,sifre,yid,gs,gc,pid);
-            NpgsqlCommand newcommand = new NpgsqlCommand(query, DBconnect.baglanti);
-            var reader = newcommand.ExecuteNonQuery();
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.Connection = DBconnect.baglanti;
+            command.CommandText = "INSERT INTO kullanici (kullanici_adi,sifre,yetki_id,guvenlik_soru,guvenlik_cevap,personel_id) " +
+            "VALUES (@kad,@sifre,@yid,@gs,@gc,@pid)";
+            command.Parameters.AddWithValue("@kad", kad);
+            command.Parameters.AddWithValue("@sifre", sifre);
+            command.Parameters.AddWithValue("@yid", Convert.ToInt32(yid));
+            command.Parameters.AddWithValue("@gs", gs);
+            command.Parameters.AddWithValue("@gc", gc);
+            command.Parameters.AddWithValue("@pid", Convert.ToInt32(pid));
+            var reader = command.ExecuteNonQuery();
             mycon.connectionclose();
         }
 

@@ -57,6 +57,7 @@
     <Compile Include="DBconnect.cs" />
     <Compile Include="KayitInsert.cs" />
     <Compile Include="LoginClass.cs" />
+    <Compile Include="OperasyonClass.cs" />
     <Compile Include="OperasyonSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +69,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OtomasyonDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PersonelClass.cs" />
     <Compile Include="SifreUnuttumClass.cs" />
     <Compile Include="UrunSearch.cs">
       <SubType>Form</SubType>

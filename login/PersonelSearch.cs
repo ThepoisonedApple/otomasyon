@@ -20,12 +20,12 @@ namespace login
         public PersonelSearch()
         {
             InitializeComponent();
-            button1.FlatAppearance.BorderSize = 0;
+            bsearch.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.BorderSize = 0;
-            button9.FlatAppearance.BorderSize = 0;
-            button10.FlatAppearance.BorderSize = 0;
-            button11.FlatAppearance.BorderSize = 0;
-            button12.FlatAppearance.BorderSize = 0;
+            bhome.FlatAppearance.BorderSize = 0;
+            binfo.FlatAppearance.BorderSize = 0;
+            blogout.FlatAppearance.BorderSize = 0;
+            bexit.FlatAppearance.BorderSize = 0;
 
 
         }
@@ -123,19 +123,19 @@ namespace login
         }
         #endregion
         #region sayfa gecisi
-        private void button12_Click(object sender, EventArgs e)
+        private void bexit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void bhome_Click(object sender, EventArgs e)
         {
             IKMain nextForm = new IKMain();
             nextForm.Show();
             this.Dispose();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void blogout_Click(object sender, EventArgs e)
         {
             Form1 nextForm = new Form1();
             nextForm.Show();
@@ -152,6 +152,37 @@ namespace login
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
+
+        private void bsearch_Click(object sender, EventArgs e)
+        { DBconnect mycon = new DBconnect();
+            dataGridView1.DataSource = DBconnect.baglanti;
+            PersonelClass myclas = new PersonelClass();
+            string query ="SELECT * FROM personel WHERE ad LIKE '"+tpad.Text+"';";
+            myclas.GetData(query,this.dataGridView1,this.bindingSource1);
+
+
+
+
+            /* try
+             {
+                 PersonelClass myclas = new PersonelClass();
+                 myclas.PersonelAra(tpad.Text,tpsad.Text,this.dataGridView1);
+
+             }
+             catch (Exception)
+             {
+
+                 throw;
+             }*/
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

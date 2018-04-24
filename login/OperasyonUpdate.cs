@@ -15,7 +15,7 @@ namespace login
         public OperasyonUpdate()
         {
             InitializeComponent();
-            button1.FlatAppearance.BorderSize = 0;                 
+            button1.FlatAppearance.BorderSize = 0;
             button4.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;
             button10.FlatAppearance.BorderSize = 0;
@@ -75,6 +75,42 @@ namespace login
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OperasyonClass myclass = new OperasyonClass();
+                myclass.OperasyonGuncelle(toadi.Text, totanim.Text);
+                MessageBox.Show("yuppi");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("hatalı");
+                throw;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string[] arr = new string[2];
+            try
+            {
+                OperasyonClass myclass = new OperasyonClass();
+               arr= myclass.OperasyonBilgiGetir(toid.Text);
+                toadi.Text = arr[0];
+                totanim.Text = arr[1];
+                toadi.ForeColor = Color.Black;
+                totanim.ForeColor = Color.Black;
+
+                MessageBox.Show("yuppi");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("hatalı");
+                throw;
+            }
         }
     }
 }

@@ -32,26 +32,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.blogout = new System.Windows.Forms.Button();
+            this.binfo = new System.Windows.Forms.Button();
+            this.bhome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bbilgi = new System.Windows.Forms.Button();
+            this.bdelete = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tpid = new System.Windows.Forms.TextBox();
+            this.tppoz = new System.Windows.Forms.TextBox();
+            this.tpbolum = new System.Windows.Forms.TextBox();
+            this.tpmaas = new System.Windows.Forms.TextBox();
+            this.tpmail = new System.Windows.Forms.TextBox();
+            this.tpadres = new System.Windows.Forms.TextBox();
+            this.tptel = new System.Windows.Forms.TextBox();
+            this.tpsad = new System.Windows.Forms.TextBox();
+            this.tpad = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
+            this.bexit = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -91,48 +91,48 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(156)))), ((int)(((byte)(236)))));
-            this.panel3.Controls.Add(this.button11);
-            this.panel3.Controls.Add(this.button10);
-            this.panel3.Controls.Add(this.button9);
+            this.panel3.Controls.Add(this.blogout);
+            this.panel3.Controls.Add(this.binfo);
+            this.panel3.Controls.Add(this.bhome);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(50, 650);
             this.panel3.TabIndex = 12;
             // 
-            // button11
+            // blogout
             // 
-            this.button11.BackgroundImage = global::login.Properties.Resources.Shutdown;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(0, 234);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(50, 50);
-            this.button11.TabIndex = 2;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.blogout.BackgroundImage = global::login.Properties.Resources.Shutdown;
+            this.blogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.blogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.blogout.Location = new System.Drawing.Point(0, 234);
+            this.blogout.Name = "blogout";
+            this.blogout.Size = new System.Drawing.Size(50, 50);
+            this.blogout.TabIndex = 2;
+            this.blogout.UseVisualStyleBackColor = true;
+            this.blogout.Click += new System.EventHandler(this.blogout_Click);
             // 
-            // button10
+            // binfo
             // 
-            this.button10.BackgroundImage = global::login.Properties.Resources.Info;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(0, 178);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(50, 50);
-            this.button10.TabIndex = 1;
-            this.button10.UseVisualStyleBackColor = true;
+            this.binfo.BackgroundImage = global::login.Properties.Resources.Info;
+            this.binfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.binfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.binfo.Location = new System.Drawing.Point(0, 178);
+            this.binfo.Name = "binfo";
+            this.binfo.Size = new System.Drawing.Size(50, 50);
+            this.binfo.TabIndex = 1;
+            this.binfo.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // bhome
             // 
-            this.button9.BackgroundImage = global::login.Properties.Resources.Home;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(0, 122);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(50, 50);
-            this.button9.TabIndex = 0;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.bhome.BackgroundImage = global::login.Properties.Resources.Home;
+            this.bhome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bhome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bhome.Location = new System.Drawing.Point(0, 122);
+            this.bhome.Name = "bhome";
+            this.bhome.Size = new System.Drawing.Size(50, 50);
+            this.bhome.TabIndex = 0;
+            this.bhome.UseVisualStyleBackColor = false;
+            this.bhome.Click += new System.EventHandler(this.bhome_Click);
             // 
             // panel1
             // 
@@ -141,7 +141,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button12);
+            this.panel1.Controls.Add(this.bexit);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -152,50 +152,51 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.bbilgi);
+            this.panel5.Controls.Add(this.bdelete);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.textBox9);
-            this.panel5.Controls.Add(this.textBox8);
-            this.panel5.Controls.Add(this.textBox7);
-            this.panel5.Controls.Add(this.textBox6);
-            this.panel5.Controls.Add(this.textBox5);
-            this.panel5.Controls.Add(this.textBox4);
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.textBox2);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.tpid);
+            this.panel5.Controls.Add(this.tppoz);
+            this.panel5.Controls.Add(this.tpbolum);
+            this.panel5.Controls.Add(this.tpmaas);
+            this.panel5.Controls.Add(this.tpmail);
+            this.panel5.Controls.Add(this.tpadres);
+            this.panel5.Controls.Add(this.tptel);
+            this.panel5.Controls.Add(this.tpsad);
+            this.panel5.Controls.Add(this.tpad);
             this.panel5.Location = new System.Drawing.Point(80, 136);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(595, 483);
             this.panel5.TabIndex = 27;
             // 
-            // button2
+            // bbilgi
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(193)))), ((int)(((byte)(82)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(354, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 33);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Bilgilerini Getir";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bbilgi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(193)))), ((int)(((byte)(82)))));
+            this.bbilgi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bbilgi.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bbilgi.ForeColor = System.Drawing.Color.White;
+            this.bbilgi.Location = new System.Drawing.Point(354, 17);
+            this.bbilgi.Name = "bbilgi";
+            this.bbilgi.Size = new System.Drawing.Size(188, 33);
+            this.bbilgi.TabIndex = 36;
+            this.bbilgi.Text = "Bilgilerini Getir";
+            this.bbilgi.UseVisualStyleBackColor = false;
+            this.bbilgi.Click += new System.EventHandler(this.bbilgi_Click);
             // 
-            // button1
+            // bdelete
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(68)))), ((int)(((byte)(83)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(405, 403);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 66);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Sil";
-            this.button1.UseVisualStyleBackColor = false;
+            this.bdelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(68)))), ((int)(((byte)(83)))));
+            this.bdelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bdelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bdelete.ForeColor = System.Drawing.Color.White;
+            this.bdelete.Location = new System.Drawing.Point(405, 403);
+            this.bdelete.Name = "bdelete";
+            this.bdelete.Size = new System.Drawing.Size(159, 66);
+            this.bdelete.TabIndex = 26;
+            this.bdelete.Text = "Sil";
+            this.bdelete.UseVisualStyleBackColor = false;
+            this.bdelete.Click += new System.EventHandler(this.bdelete_Click);
             // 
             // label3
             // 
@@ -221,114 +222,114 @@
             this.label2.TabIndex = 34;
             this.label2.Text = "Sileceğiniz personelin id\'sine";
             // 
-            // textBox9
+            // tpid
             // 
-            this.textBox9.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox9.ForeColor = System.Drawing.Color.Silver;
-            this.textBox9.Location = new System.Drawing.Point(42, 17);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(233, 33);
-            this.textBox9.TabIndex = 33;
-            this.textBox9.Text = "Personel ID";
-            this.textBox9.Enter += new System.EventHandler(this.textBox9_Enter);
+            this.tpid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpid.ForeColor = System.Drawing.Color.Silver;
+            this.tpid.Location = new System.Drawing.Point(42, 17);
+            this.tpid.Name = "tpid";
+            this.tpid.Size = new System.Drawing.Size(233, 33);
+            this.tpid.TabIndex = 33;
+            this.tpid.Text = "Personel ID";
+            this.tpid.Enter += new System.EventHandler(this.tpid_Enter);
             // 
-            // textBox8
+            // tppoz
             // 
-            this.textBox8.BackColor = System.Drawing.Color.White;
-            this.textBox8.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox8.ForeColor = System.Drawing.Color.Silver;
-            this.textBox8.Location = new System.Drawing.Point(42, 403);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(233, 33);
-            this.textBox8.TabIndex = 31;
-            this.textBox8.Text = "Çalıştığı Pozisyon";
+            this.tppoz.BackColor = System.Drawing.Color.White;
+            this.tppoz.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tppoz.ForeColor = System.Drawing.Color.Silver;
+            this.tppoz.Location = new System.Drawing.Point(42, 403);
+            this.tppoz.Name = "tppoz";
+            this.tppoz.ReadOnly = true;
+            this.tppoz.Size = new System.Drawing.Size(233, 33);
+            this.tppoz.TabIndex = 31;
+            this.tppoz.Text = "Çalıştığı Pozisyon";
             // 
-            // textBox7
+            // tpbolum
             // 
-            this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox7.ForeColor = System.Drawing.Color.Silver;
-            this.textBox7.Location = new System.Drawing.Point(42, 336);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(233, 33);
-            this.textBox7.TabIndex = 30;
-            this.textBox7.Text = "Çalıştığı Bölüm";
+            this.tpbolum.BackColor = System.Drawing.Color.White;
+            this.tpbolum.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpbolum.ForeColor = System.Drawing.Color.Silver;
+            this.tpbolum.Location = new System.Drawing.Point(42, 336);
+            this.tpbolum.Name = "tpbolum";
+            this.tpbolum.ReadOnly = true;
+            this.tpbolum.Size = new System.Drawing.Size(233, 33);
+            this.tpbolum.TabIndex = 30;
+            this.tpbolum.Text = "Çalıştığı Bölüm";
             // 
-            // textBox6
+            // tpmaas
             // 
-            this.textBox6.BackColor = System.Drawing.Color.White;
-            this.textBox6.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox6.ForeColor = System.Drawing.Color.Silver;
-            this.textBox6.Location = new System.Drawing.Point(331, 336);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(233, 33);
-            this.textBox6.TabIndex = 29;
-            this.textBox6.Text = "Maaş";
+            this.tpmaas.BackColor = System.Drawing.Color.White;
+            this.tpmaas.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpmaas.ForeColor = System.Drawing.Color.Silver;
+            this.tpmaas.Location = new System.Drawing.Point(331, 336);
+            this.tpmaas.Name = "tpmaas";
+            this.tpmaas.ReadOnly = true;
+            this.tpmaas.Size = new System.Drawing.Size(233, 33);
+            this.tpmaas.TabIndex = 29;
+            this.tpmaas.Text = "Maaş";
             // 
-            // textBox5
+            // tpmail
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.Color.Silver;
-            this.textBox5.Location = new System.Drawing.Point(331, 272);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(233, 33);
-            this.textBox5.TabIndex = 28;
-            this.textBox5.Text = "Personel e-mail";
+            this.tpmail.BackColor = System.Drawing.Color.White;
+            this.tpmail.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpmail.ForeColor = System.Drawing.Color.Silver;
+            this.tpmail.Location = new System.Drawing.Point(331, 272);
+            this.tpmail.Name = "tpmail";
+            this.tpmail.ReadOnly = true;
+            this.tpmail.Size = new System.Drawing.Size(233, 33);
+            this.tpmail.TabIndex = 28;
+            this.tpmail.Text = "Personel e-mail";
             // 
-            // textBox4
+            // tpadres
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.ForeColor = System.Drawing.Color.Silver;
-            this.textBox4.Location = new System.Drawing.Point(42, 152);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(522, 94);
-            this.textBox4.TabIndex = 27;
-            this.textBox4.Text = "Personel Adresi";
+            this.tpadres.BackColor = System.Drawing.Color.White;
+            this.tpadres.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpadres.ForeColor = System.Drawing.Color.Silver;
+            this.tpadres.Location = new System.Drawing.Point(42, 152);
+            this.tpadres.Multiline = true;
+            this.tpadres.Name = "tpadres";
+            this.tpadres.ReadOnly = true;
+            this.tpadres.Size = new System.Drawing.Size(522, 94);
+            this.tpadres.TabIndex = 27;
+            this.tpadres.Text = "Personel Adresi";
             // 
-            // textBox3
+            // tptel
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.ForeColor = System.Drawing.Color.Silver;
-            this.textBox3.Location = new System.Drawing.Point(42, 272);
-            this.textBox3.MaxLength = 10;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(233, 33);
-            this.textBox3.TabIndex = 26;
-            this.textBox3.Text = "Personel Telefonu";
+            this.tptel.BackColor = System.Drawing.Color.White;
+            this.tptel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tptel.ForeColor = System.Drawing.Color.Silver;
+            this.tptel.Location = new System.Drawing.Point(42, 272);
+            this.tptel.MaxLength = 10;
+            this.tptel.Name = "tptel";
+            this.tptel.ReadOnly = true;
+            this.tptel.Size = new System.Drawing.Size(233, 33);
+            this.tptel.TabIndex = 26;
+            this.tptel.Text = "Personel Telefonu";
             // 
-            // textBox2
+            // tpsad
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(331, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(233, 33);
-            this.textBox2.TabIndex = 25;
-            this.textBox2.Text = "Personel Soyadı";
+            this.tpsad.BackColor = System.Drawing.Color.White;
+            this.tpsad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpsad.ForeColor = System.Drawing.Color.Silver;
+            this.tpsad.Location = new System.Drawing.Point(331, 99);
+            this.tpsad.Name = "tpsad";
+            this.tpsad.ReadOnly = true;
+            this.tpsad.Size = new System.Drawing.Size(233, 33);
+            this.tpsad.TabIndex = 25;
+            this.tpsad.Text = "Personel Soyadı";
             // 
-            // textBox1
+            // tpad
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(42, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(233, 33);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Personel Adı";
+            this.tpad.BackColor = System.Drawing.Color.White;
+            this.tpad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpad.ForeColor = System.Drawing.Color.Silver;
+            this.tpad.Location = new System.Drawing.Point(42, 99);
+            this.tpad.Name = "tpad";
+            this.tpad.ReadOnly = true;
+            this.tpad.Size = new System.Drawing.Size(233, 33);
+            this.tpad.TabIndex = 24;
+            this.tpad.Text = "Personel Adı";
             // 
             // panel4
             // 
@@ -340,17 +341,17 @@
             this.panel4.Size = new System.Drawing.Size(161, 84);
             this.panel4.TabIndex = 14;
             // 
-            // button12
+            // bexit
             // 
-            this.button12.BackgroundImage = global::login.Properties.Resources.Exit;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(675, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(25, 25);
-            this.button12.TabIndex = 4;
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.bexit.BackgroundImage = global::login.Properties.Resources.Exit;
+            this.bexit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bexit.Location = new System.Drawing.Point(675, 0);
+            this.bexit.Name = "bexit";
+            this.bexit.Size = new System.Drawing.Size(25, 25);
+            this.bexit.TabIndex = 4;
+            this.bexit.UseVisualStyleBackColor = true;
+            this.bexit.Click += new System.EventHandler(this.bexit_Click);
             // 
             // PersonelDelete
             // 
@@ -373,29 +374,29 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button bhome;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button blogout;
+        private System.Windows.Forms.Button binfo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button bexit;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bdelete;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bbilgi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tpid;
+        private System.Windows.Forms.TextBox tppoz;
+        private System.Windows.Forms.TextBox tpbolum;
+        private System.Windows.Forms.TextBox tpmaas;
+        private System.Windows.Forms.TextBox tpmail;
+        private System.Windows.Forms.TextBox tpadres;
+        private System.Windows.Forms.TextBox tptel;
+        private System.Windows.Forms.TextBox tpsad;
+        private System.Windows.Forms.TextBox tpad;
     }
 }

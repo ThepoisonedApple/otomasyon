@@ -60,5 +60,25 @@ namespace login
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+             string[] arr = new string[2];
+            try
+            {
+                OperasyonClass myclass = new OperasyonClass();
+               arr= myclass.OperasyonBilgiGetir(toid.Text);
+                toadi.Text = arr[0];
+                totanim.Text = arr[1];
+                MessageBox.Show("başarılı");
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }
