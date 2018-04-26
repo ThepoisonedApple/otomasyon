@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.blogout = new System.Windows.Forms.Button();
@@ -35,7 +36,6 @@
             this.bhome = new System.Windows.Forms.Button();
             this.bupdate = new System.Windows.Forms.Button();
             this.tppoz = new System.Windows.Forms.TextBox();
-            this.tpbolum = new System.Windows.Forms.TextBox();
             this.tpmaas = new System.Windows.Forms.TextBox();
             this.tpmail = new System.Windows.Forms.TextBox();
             this.tpadres = new System.Windows.Forms.TextBox();
@@ -45,6 +45,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.yetkibolumBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.otomasyonDataSet = new login.OtomasyonDataSet();
             this.bbilgi = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,9 +55,12 @@
             this.tpsad = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bexit = new System.Windows.Forms.Button();
+            this.yetki_bolumTableAdapter = new login.OtomasyonDataSetTableAdapters.yetki_bolumTableAdapter();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.yetkibolumBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.otomasyonDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -136,17 +142,6 @@
             this.tppoz.TabIndex = 31;
             this.tppoz.Text = "Çalıştığı Pozisyon";
             // 
-            // tpbolum
-            // 
-            this.tpbolum.BackColor = System.Drawing.Color.White;
-            this.tpbolum.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tpbolum.ForeColor = System.Drawing.Color.Silver;
-            this.tpbolum.Location = new System.Drawing.Point(42, 336);
-            this.tpbolum.Name = "tpbolum";
-            this.tpbolum.Size = new System.Drawing.Size(233, 33);
-            this.tpbolum.TabIndex = 30;
-            this.tpbolum.Text = "Çalıştığı Bölüm";
-            // 
             // tpmaas
             // 
             this.tpmaas.BackColor = System.Drawing.Color.White;
@@ -157,6 +152,7 @@
             this.tpmaas.Size = new System.Drawing.Size(233, 33);
             this.tpmaas.TabIndex = 29;
             this.tpmaas.Text = "Maaş";
+            this.tpmaas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tpmaas_KeyPress);
             // 
             // tpmail
             // 
@@ -246,13 +242,13 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.MintCream;
+            this.panel5.Controls.Add(this.comboBox2);
             this.panel5.Controls.Add(this.bbilgi);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.tpid);
             this.panel5.Controls.Add(this.bupdate);
             this.panel5.Controls.Add(this.tppoz);
-            this.panel5.Controls.Add(this.tpbolum);
             this.panel5.Controls.Add(this.tpmaas);
             this.panel5.Controls.Add(this.tpmail);
             this.panel5.Controls.Add(this.tpadres);
@@ -263,6 +259,29 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(595, 483);
             this.panel5.TabIndex = 24;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataSource = this.yetkibolumBindingSource;
+            this.comboBox2.DisplayMember = "adi";
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(42, 336);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(233, 33);
+            this.comboBox2.TabIndex = 38;
+            this.comboBox2.ValueMember = "id";
+            // 
+            // yetkibolumBindingSource
+            // 
+            this.yetkibolumBindingSource.DataMember = "yetki_bolum";
+            this.yetkibolumBindingSource.DataSource = this.otomasyonDataSet;
+            // 
+            // otomasyonDataSet
+            // 
+            this.otomasyonDataSet.DataSetName = "OtomasyonDataSet";
+            this.otomasyonDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bbilgi
             // 
@@ -346,6 +365,10 @@
             this.bexit.UseVisualStyleBackColor = true;
             this.bexit.Click += new System.EventHandler(this.bexit_Click);
             // 
+            // yetki_bolumTableAdapter
+            // 
+            this.yetki_bolumTableAdapter.ClearBeforeFill = true;
+            // 
             // PersonelUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,11 +379,14 @@
             this.Name = "PersonelUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PersonelUpdate";
+            this.Load += new System.EventHandler(this.PersonelUpdate_Load);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.yetkibolumBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.otomasyonDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -374,7 +400,6 @@
         private System.Windows.Forms.Button binfo;
         private System.Windows.Forms.Button bupdate;
         private System.Windows.Forms.TextBox tppoz;
-        private System.Windows.Forms.TextBox tpbolum;
         private System.Windows.Forms.TextBox tpmaas;
         private System.Windows.Forms.TextBox tpmail;
         private System.Windows.Forms.Panel panel4;
@@ -391,5 +416,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button bbilgi;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private OtomasyonDataSet otomasyonDataSet;
+        private System.Windows.Forms.BindingSource yetkibolumBindingSource;
+        private OtomasyonDataSetTableAdapters.yetki_bolumTableAdapter yetki_bolumTableAdapter;
     }
 }

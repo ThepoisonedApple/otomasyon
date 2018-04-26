@@ -55,8 +55,7 @@ namespace login
                 tpmail.Text = arr[2];
                 tpmaas.ForeColor = Color.Black;
                 tpmaas.Text = arr[3];
-                tpbolum.ForeColor = Color.Black;
-                tpbolum.Text = arr[4];
+                comboBox2.SelectedIndex =Convert.ToInt32(arr[4])-1;
                 tppoz.ForeColor = Color.Black;
                 tppoz.Text = arr[7];
             }
@@ -96,7 +95,7 @@ namespace login
             {
                 e.Handled = false;
             }
-            else if (!char.IsDigit(ch) && ch != '.' || !Decimal.TryParse(tptel.Text + ch, out x))
+            else if (!char.IsDigit(ch) || !Decimal.TryParse(tptel.Text + ch, out x))
             {
                 e.Handled = true;
             }
@@ -107,12 +106,33 @@ namespace login
             try
             {
                 PersonelClass myclass = new PersonelClass();
-                myclass.PersonelGuncelle(tpad.Text, tpsad.Text, tpmail.Text,Convert.ToDouble(tpmaas.Text),Convert.ToInt32(tpbolum.Text), tpadres.Text,tptel.Text, tppoz.Text,pid);
+                myclass.PersonelGuncelle(tpad.Text, tpsad.Text, tpmail.Text,Convert.ToDouble(tpmaas.Text),comboBox2.SelectedIndex+1, tpadres.Text,tptel.Text, tppoz.Text,pid);
                 MessageBox.Show("yuppi");
             }
             catch (Exception)
             {
                 MessageBox.Show("Hatalı Veya Eksik bilgi girdiniz Güncelleme Başarısız");
+            }
+        }
+
+        private void PersonelUpdate_Load(object sender, EventArgs e)
+        {
+            // TODO: Bu kod satırı 'otomasyonDataSet.yetki_bolum' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.yetki_bolumTableAdapter.Fill(this.otomasyonDataSet.yetki_bolum);
+
+        }
+
+        private void tpmaas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            decimal x;
+            if (ch == (char)Keys.Back)
+            {
+                e.Handled = false;
+            }
+            else if (!char.IsDigit(ch) && ch != ',' || !Decimal.TryParse(tpmaas.Text + ch, out x))
+            {
+                e.Handled = true;
             }
         }
     }

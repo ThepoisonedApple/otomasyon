@@ -404,6 +404,7 @@
     <Compile Include="VerimAdd.Designer.cs">
       <DependentUpon>VerimAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerimClass.cs" />
     <Compile Include="VerimDelete.cs">
       <SubType>Form</SubType>
     </Compile>

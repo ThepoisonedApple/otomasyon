@@ -33,31 +33,31 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ttarih = new System.Windows.Forms.TextBox();
+            this.tpid = new System.Windows.Forms.TextBox();
+            this.tpad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tpsad = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.ttoplam = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tadet3 = new System.Windows.Forms.TextBox();
+            this.tdemet3 = new System.Windows.Forms.TextBox();
+            this.tadet2 = new System.Windows.Forms.TextBox();
+            this.tadet1 = new System.Windows.Forms.TextBox();
+            this.tdemet2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tdemet1 = new System.Windows.Forms.TextBox();
+            this.tuid = new System.Windows.Forms.TextBox();
+            this.toid = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
@@ -121,36 +121,38 @@
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // textBox5
+            // ttarih
             // 
-            this.textBox5.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(319, 96);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(233, 33);
-            this.textBox5.TabIndex = 28;
-            this.textBox5.Text = "Tarih";
+            this.ttarih.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ttarih.ForeColor = System.Drawing.Color.Black;
+            this.ttarih.Location = new System.Drawing.Point(319, 96);
+            this.ttarih.Name = "ttarih";
+            this.ttarih.Size = new System.Drawing.Size(233, 33);
+            this.ttarih.TabIndex = 28;
+            this.ttarih.Text = "Tarih";
             // 
-            // textBox3
+            // tpid
             // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.ForeColor = System.Drawing.Color.Silver;
-            this.textBox3.Location = new System.Drawing.Point(42, 96);
-            this.textBox3.MaxLength = 10;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 33);
-            this.textBox3.TabIndex = 26;
-            this.textBox3.Text = "Personel ID";
+            this.tpid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpid.ForeColor = System.Drawing.Color.Silver;
+            this.tpid.Location = new System.Drawing.Point(42, 96);
+            this.tpid.MaxLength = 10;
+            this.tpid.Name = "tpid";
+            this.tpid.Size = new System.Drawing.Size(233, 33);
+            this.tpid.TabIndex = 26;
+            this.tpid.Text = "Personel ID";
+            this.tpid.Enter += new System.EventHandler(this.tpad_Enter);
             // 
-            // textBox1
+            // tpad
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(42, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 33);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Personel Adı";
+            this.tpad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpad.ForeColor = System.Drawing.Color.Silver;
+            this.tpad.Location = new System.Drawing.Point(42, 46);
+            this.tpad.Name = "tpad";
+            this.tpad.Size = new System.Drawing.Size(233, 33);
+            this.tpad.TabIndex = 24;
+            this.tpad.Text = "Personel Adı";
+            this.tpad.Enter += new System.EventHandler(this.tpad_Enter);
             // 
             // label4
             // 
@@ -178,24 +180,25 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Azure;
-            this.panel5.Controls.Add(this.textBox5);
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.textBox2);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.ttarih);
+            this.panel5.Controls.Add(this.tpid);
+            this.panel5.Controls.Add(this.tpsad);
+            this.panel5.Controls.Add(this.tpad);
             this.panel5.Location = new System.Drawing.Point(82, 122);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(595, 162);
             this.panel5.TabIndex = 24;
             // 
-            // textBox2
+            // tpsad
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(319, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 33);
-            this.textBox2.TabIndex = 25;
-            this.textBox2.Text = "Personel Soyadı";
+            this.tpsad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpsad.ForeColor = System.Drawing.Color.Silver;
+            this.tpsad.Location = new System.Drawing.Point(319, 46);
+            this.tpsad.Name = "tpsad";
+            this.tpsad.Size = new System.Drawing.Size(233, 33);
+            this.tpsad.TabIndex = 25;
+            this.tpsad.Text = "Personel Soyadı";
+            this.tpsad.Enter += new System.EventHandler(this.tpad_Enter);
             // 
             // panel1
             // 
@@ -219,15 +222,15 @@
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.textBox12);
-            this.panel6.Controls.Add(this.textBox11);
-            this.panel6.Controls.Add(this.textBox10);
-            this.panel6.Controls.Add(this.textBox9);
-            this.panel6.Controls.Add(this.textBox4);
+            this.panel6.Controls.Add(this.tadet3);
+            this.panel6.Controls.Add(this.tdemet3);
+            this.panel6.Controls.Add(this.tadet2);
+            this.panel6.Controls.Add(this.tadet1);
+            this.panel6.Controls.Add(this.tdemet2);
             this.panel6.Controls.Add(this.button1);
-            this.panel6.Controls.Add(this.textBox8);
-            this.panel6.Controls.Add(this.textBox7);
-            this.panel6.Controls.Add(this.textBox6);
+            this.panel6.Controls.Add(this.tdemet1);
+            this.panel6.Controls.Add(this.tuid);
+            this.panel6.Controls.Add(this.toid);
             this.panel6.Location = new System.Drawing.Point(82, 291);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(595, 367);
@@ -238,7 +241,7 @@
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(187)))), ((int)(((byte)(66)))));
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.button2);
-            this.panel7.Controls.Add(this.textBox13);
+            this.panel7.Controls.Add(this.ttoplam);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Location = new System.Drawing.Point(42, 262);
             this.panel7.Name = "panel7";
@@ -267,19 +270,18 @@
             this.button2.Text = "Kaydet";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // textBox13
+            // ttoplam
             // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(187)))), ((int)(((byte)(66)))));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox13.ForeColor = System.Drawing.Color.Black;
-            this.textBox13.Location = new System.Drawing.Point(245, 27);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(110, 40);
-            this.textBox13.TabIndex = 45;
-            this.textBox13.Text = "13113";
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ttoplam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(187)))), ((int)(((byte)(66)))));
+            this.ttoplam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ttoplam.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ttoplam.ForeColor = System.Drawing.Color.Black;
+            this.ttoplam.Location = new System.Drawing.Point(245, 27);
+            this.ttoplam.Name = "ttoplam";
+            this.ttoplam.ReadOnly = true;
+            this.ttoplam.Size = new System.Drawing.Size(110, 40);
+            this.ttoplam.TabIndex = 45;
+            this.ttoplam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -315,50 +317,50 @@
             this.label2.TabIndex = 42;
             this.label2.Text = "Demet";
             // 
-            // textBox12
+            // tadet3
             // 
-            this.textBox12.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox12.ForeColor = System.Drawing.Color.Silver;
-            this.textBox12.Location = new System.Drawing.Point(382, 173);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(99, 33);
-            this.textBox12.TabIndex = 41;
+            this.tadet3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tadet3.ForeColor = System.Drawing.Color.Black;
+            this.tadet3.Location = new System.Drawing.Point(382, 173);
+            this.tadet3.Name = "tadet3";
+            this.tadet3.Size = new System.Drawing.Size(99, 33);
+            this.tadet3.TabIndex = 41;
             // 
-            // textBox11
+            // tdemet3
             // 
-            this.textBox11.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox11.ForeColor = System.Drawing.Color.Silver;
-            this.textBox11.Location = new System.Drawing.Point(42, 173);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(233, 33);
-            this.textBox11.TabIndex = 40;
+            this.tdemet3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tdemet3.ForeColor = System.Drawing.Color.Black;
+            this.tdemet3.Location = new System.Drawing.Point(42, 173);
+            this.tdemet3.Name = "tdemet3";
+            this.tdemet3.Size = new System.Drawing.Size(233, 33);
+            this.tdemet3.TabIndex = 40;
             // 
-            // textBox10
+            // tadet2
             // 
-            this.textBox10.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox10.ForeColor = System.Drawing.Color.Silver;
-            this.textBox10.Location = new System.Drawing.Point(382, 134);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(99, 33);
-            this.textBox10.TabIndex = 39;
+            this.tadet2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tadet2.ForeColor = System.Drawing.Color.Black;
+            this.tadet2.Location = new System.Drawing.Point(382, 134);
+            this.tadet2.Name = "tadet2";
+            this.tadet2.Size = new System.Drawing.Size(99, 33);
+            this.tadet2.TabIndex = 39;
             // 
-            // textBox9
+            // tadet1
             // 
-            this.textBox9.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox9.ForeColor = System.Drawing.Color.Silver;
-            this.textBox9.Location = new System.Drawing.Point(382, 95);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(99, 33);
-            this.textBox9.TabIndex = 38;
+            this.tadet1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tadet1.ForeColor = System.Drawing.Color.Black;
+            this.tadet1.Location = new System.Drawing.Point(382, 95);
+            this.tadet1.Name = "tadet1";
+            this.tadet1.Size = new System.Drawing.Size(99, 33);
+            this.tadet1.TabIndex = 38;
             // 
-            // textBox4
+            // tdemet2
             // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.ForeColor = System.Drawing.Color.Silver;
-            this.textBox4.Location = new System.Drawing.Point(42, 134);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(233, 33);
-            this.textBox4.TabIndex = 37;
+            this.tdemet2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tdemet2.ForeColor = System.Drawing.Color.Black;
+            this.tdemet2.Location = new System.Drawing.Point(42, 134);
+            this.tdemet2.Name = "tdemet2";
+            this.tdemet2.Size = new System.Drawing.Size(233, 33);
+            this.tdemet2.TabIndex = 37;
             // 
             // button1
             // 
@@ -372,35 +374,38 @@
             this.button1.TabIndex = 36;
             this.button1.Text = "Topla";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox8
+            // tdemet1
             // 
-            this.textBox8.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox8.ForeColor = System.Drawing.Color.Silver;
-            this.textBox8.Location = new System.Drawing.Point(42, 95);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(233, 33);
-            this.textBox8.TabIndex = 35;
+            this.tdemet1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tdemet1.ForeColor = System.Drawing.Color.Black;
+            this.tdemet1.Location = new System.Drawing.Point(42, 95);
+            this.tdemet1.Name = "tdemet1";
+            this.tdemet1.Size = new System.Drawing.Size(233, 33);
+            this.tdemet1.TabIndex = 35;
             // 
-            // textBox7
+            // tuid
             // 
-            this.textBox7.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox7.ForeColor = System.Drawing.Color.Silver;
-            this.textBox7.Location = new System.Drawing.Point(42, 10);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(233, 33);
-            this.textBox7.TabIndex = 34;
-            this.textBox7.Text = "Model No";
+            this.tuid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tuid.ForeColor = System.Drawing.Color.Silver;
+            this.tuid.Location = new System.Drawing.Point(42, 10);
+            this.tuid.Name = "tuid";
+            this.tuid.Size = new System.Drawing.Size(233, 33);
+            this.tuid.TabIndex = 34;
+            this.tuid.Text = "Ürün ID";
+            this.tuid.Enter += new System.EventHandler(this.tpad_Enter);
             // 
-            // textBox6
+            // toid
             // 
-            this.textBox6.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox6.ForeColor = System.Drawing.Color.Silver;
-            this.textBox6.Location = new System.Drawing.Point(319, 10);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(233, 33);
-            this.textBox6.TabIndex = 33;
-            this.textBox6.Text = "Operasyon no";
+            this.toid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.toid.ForeColor = System.Drawing.Color.Silver;
+            this.toid.Location = new System.Drawing.Point(319, 10);
+            this.toid.Name = "toid";
+            this.toid.Size = new System.Drawing.Size(233, 33);
+            this.toid.TabIndex = 33;
+            this.toid.Text = "Operasyon ID";
+            this.toid.Enter += new System.EventHandler(this.tpad_Enter);
             // 
             // panel4
             // 
@@ -454,32 +459,32 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox ttarih;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tpid;
+        private System.Windows.Forms.TextBox tpad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tpsad;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tdemet1;
+        private System.Windows.Forms.TextBox tuid;
+        private System.Windows.Forms.TextBox toid;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tadet3;
+        private System.Windows.Forms.TextBox tdemet3;
+        private System.Windows.Forms.TextBox tadet2;
+        private System.Windows.Forms.TextBox tadet1;
+        private System.Windows.Forms.TextBox tdemet2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox ttoplam;
     }
 }

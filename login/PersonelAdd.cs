@@ -102,16 +102,6 @@ namespace login
             }
         }
 
-        private void tpbolum_Click(object sender, EventArgs e)
-        {
-            
-           if (tpbolum.Text == "Çalıştığı Bölüm")
-            {
-                tpbolum.Text = "";
-                tpbolum.ForeColor = Color.Black;
-            }
-        }
-
         private void tppoz_Click(object sender, EventArgs e)
         {
             if (tppoz.Text == "Çalıştığı Pozisyon")
@@ -128,18 +118,16 @@ namespace login
 
         private void tptel_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
-                char ch = e.KeyChar;
-                decimal x;
-                if (ch == (char)Keys.Back)
-                {
-                    e.Handled = false;
-                }
-                else if (!char.IsDigit(ch) && ch != '.' || !Decimal.TryParse(tptel.Text + ch, out x))
-                {
-                    e.Handled = true;
-                }
-            
+            char ch = e.KeyChar;
+            decimal x;
+            if (ch == (char)Keys.Back)
+            {
+                e.Handled = false;
+            }
+            else if (!char.IsDigit(ch) || !Decimal.TryParse(tptel.Text + ch, out x))
+            {
+                e.Handled = true;
+            }
         }
 
         private void badd_Click(object sender, EventArgs e)
@@ -147,7 +135,7 @@ namespace login
             PersonelClass myclass = new PersonelClass();
             try
             {
-                myclass.Personelekle(tpad.Text, tpsad.Text, tpmail.Text, Convert.ToDouble(tpmaas.Text), Convert.ToInt32(tpbolum.Text), tpadres.Text, tptel.Text, tppoz.Text);
+                myclass.Personelekle(tpad.Text, tpsad.Text, tpmail.Text, Convert.ToDouble(tpmaas.Text), comboBox2.SelectedIndex+1, tpadres.Text, tptel.Text, tppoz.Text);
                 MessageBox.Show("Personel başarıyla eklendi.");
             }
             catch (Exception)
@@ -156,6 +144,27 @@ namespace login
                 
             }
             
+        }
+
+        private void PersonelAdd_Load(object sender, EventArgs e)
+        {
+            // TODO: Bu kod satırı 'otomasyonDataSet.yetki_bolum' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.yetki_bolumTableAdapter.Fill(this.otomasyonDataSet.yetki_bolum);
+
+        }
+
+        private void tpmaas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            decimal x;
+            if (ch == (char)Keys.Back)
+            {
+                e.Handled = false;
+            }
+            else if (!char.IsDigit(ch) && ch != ',' || !Decimal.TryParse(tpmaas.Text + ch, out x))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.yetkibolumBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.otomasyonDataSet = new login.OtomasyonDataSet();
             this.badd = new System.Windows.Forms.Button();
             this.tppoz = new System.Windows.Forms.TextBox();
-            this.tpbolum = new System.Windows.Forms.TextBox();
             this.tpmaas = new System.Windows.Forms.TextBox();
             this.tpmail = new System.Windows.Forms.TextBox();
             this.tpadres = new System.Windows.Forms.TextBox();
@@ -48,8 +51,11 @@
             this.blogout = new System.Windows.Forms.Button();
             this.binfo = new System.Windows.Forms.Button();
             this.bhome = new System.Windows.Forms.Button();
+            this.yetki_bolumTableAdapter = new login.OtomasyonDataSetTableAdapters.yetki_bolumTableAdapter();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.yetkibolumBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.otomasyonDataSet)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,9 +100,9 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Azure;
+            this.panel5.Controls.Add(this.comboBox2);
             this.panel5.Controls.Add(this.badd);
             this.panel5.Controls.Add(this.tppoz);
-            this.panel5.Controls.Add(this.tpbolum);
             this.panel5.Controls.Add(this.tpmaas);
             this.panel5.Controls.Add(this.tpmail);
             this.panel5.Controls.Add(this.tpadres);
@@ -107,6 +113,29 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(595, 435);
             this.panel5.TabIndex = 24;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataSource = this.yetkibolumBindingSource;
+            this.comboBox2.DisplayMember = "adi";
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(42, 272);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(233, 33);
+            this.comboBox2.TabIndex = 33;
+            this.comboBox2.ValueMember = "id";
+            // 
+            // yetkibolumBindingSource
+            // 
+            this.yetkibolumBindingSource.DataMember = "yetki_bolum";
+            this.yetkibolumBindingSource.DataSource = this.otomasyonDataSet;
+            // 
+            // otomasyonDataSet
+            // 
+            this.otomasyonDataSet.DataSetName = "OtomasyonDataSet";
+            this.otomasyonDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // badd
             // 
@@ -133,17 +162,6 @@
             this.tppoz.Text = "Çalıştığı Pozisyon";
             this.tppoz.Enter += new System.EventHandler(this.tppoz_Click);
             // 
-            // tpbolum
-            // 
-            this.tpbolum.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tpbolum.ForeColor = System.Drawing.Color.Silver;
-            this.tpbolum.Location = new System.Drawing.Point(42, 272);
-            this.tpbolum.Name = "tpbolum";
-            this.tpbolum.Size = new System.Drawing.Size(233, 33);
-            this.tpbolum.TabIndex = 30;
-            this.tpbolum.Text = "Çalıştığı Bölüm";
-            this.tpbolum.Enter += new System.EventHandler(this.tpbolum_Click);
-            // 
             // tpmaas
             // 
             this.tpmaas.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -154,6 +172,7 @@
             this.tpmaas.TabIndex = 29;
             this.tpmaas.Text = "Maaş";
             this.tpmaas.Enter += new System.EventHandler(this.tpmaas_Click);
+            this.tpmaas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tpmaas_KeyPress);
             // 
             // tpmail
             // 
@@ -290,6 +309,10 @@
             this.bhome.UseVisualStyleBackColor = false;
             this.bhome.Click += new System.EventHandler(this.bhome_Click);
             // 
+            // yetki_bolumTableAdapter
+            // 
+            this.yetki_bolumTableAdapter.ClearBeforeFill = true;
+            // 
             // PersonelAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,10 +323,13 @@
             this.Name = "PersonelAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PersonelAdd";
+            this.Load += new System.EventHandler(this.PersonelAdd_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.yetkibolumBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.otomasyonDataSet)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -322,7 +348,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button badd;
         private System.Windows.Forms.TextBox tppoz;
-        private System.Windows.Forms.TextBox tpbolum;
         private System.Windows.Forms.TextBox tpmaas;
         private System.Windows.Forms.TextBox tpmail;
         private System.Windows.Forms.TextBox tpadres;
@@ -331,5 +356,9 @@
         private System.Windows.Forms.TextBox tpad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private OtomasyonDataSet otomasyonDataSet;
+        private System.Windows.Forms.BindingSource yetkibolumBindingSource;
+        private OtomasyonDataSetTableAdapters.yetki_bolumTableAdapter yetki_bolumTableAdapter;
     }
 }

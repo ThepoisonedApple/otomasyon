@@ -62,8 +62,7 @@ namespace login
                 tpmail.Text = arr[2];
                 tpmaas.ForeColor = Color.Black;
                 tpmaas.Text = arr[3];
-                tpbolum.ForeColor = Color.Black;
-                tpbolum.Text = arr[4];
+                comboBox2.SelectedIndex=Convert.ToInt32(arr[4])-1;
                 tppoz.ForeColor = Color.Black;
                 tppoz.Text = arr[7];
             }
@@ -107,6 +106,13 @@ namespace login
                 conn.connectionclose();
                 MessageBox.Show("Personel silme başarısız");
             }
+        }
+
+        private void PersonelDelete_Load(object sender, EventArgs e)
+        {
+            // TODO: Bu kod satırı 'otomasyonDataSet.yetki_bolum' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.yetki_bolumTableAdapter.Fill(this.otomasyonDataSet.yetki_bolum);
+
         }
     }
 }
