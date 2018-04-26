@@ -30,14 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.bsearch = new System.Windows.Forms.Button();
-            this.tpsad = new System.Windows.Forms.TextBox();
-            this.tpad = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,36 +47,52 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.PID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Pad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Sad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.mail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Bolum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.adres = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.poz = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label5 = new System.Windows.Forms.Label();
+            this.bsearch = new System.Windows.Forms.Button();
+            this.tpsad = new System.Windows.Forms.TextBox();
+            this.tpad = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.blogout = new System.Windows.Forms.Button();
             this.binfo = new System.Windows.Forms.Button();
             this.bhome = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Soyad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Maas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bolum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pozisyon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.otomasyonDataSet = new login.OtomasyonDataSet();
+            this.yetkibolumBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.yetki_bolumTableAdapter = new login.OtomasyonDataSetTableAdapters.yetki_bolumTableAdapter();
+            this.maas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.otomasyonDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yetkibolumBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel10);
@@ -91,108 +101,53 @@
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel11);
             this.panel1.Location = new System.Drawing.Point(50, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1022, 650);
+            this.panel1.Size = new System.Drawing.Size(807, 650);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Azure;
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.bsearch);
-            this.panel2.Controls.Add(this.tpsad);
-            this.panel2.Controls.Add(this.tpad);
-            this.panel2.Location = new System.Drawing.Point(12, 190);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(988, 441);
-            this.panel2.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label5.Location = new System.Drawing.Point(67, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(260, 29);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Aranan Personelin";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(23, 229);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(430, 190);
-            this.textBox1.TabIndex = 18;
-            // 
-            // bsearch
-            // 
-            this.bsearch.BackColor = System.Drawing.Color.SkyBlue;
-            this.bsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bsearch.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bsearch.Location = new System.Drawing.Point(819, 67);
-            this.bsearch.Name = "bsearch";
-            this.bsearch.Size = new System.Drawing.Size(105, 42);
-            this.bsearch.TabIndex = 5;
-            this.bsearch.Text = "Ara";
-            this.bsearch.UseVisualStyleBackColor = false;
-            this.bsearch.Click += new System.EventHandler(this.bsearch_Click);
-            // 
-            // tpsad
-            // 
-            this.tpsad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tpsad.Location = new System.Drawing.Point(436, 72);
-            this.tpsad.Name = "tpsad";
-            this.tpsad.Size = new System.Drawing.Size(290, 33);
-            this.tpsad.TabIndex = 2;
-            this.tpsad.Text = "soyadı";
-            // 
-            // tpad
-            // 
-            this.tpad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tpad.Location = new System.Drawing.Point(67, 72);
-            this.tpad.Name = "tpad";
-            this.tpad.Size = new System.Drawing.Size(286, 33);
-            this.tpad.TabIndex = 1;
-            this.tpad.Text = "adı";
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Honeydew;
-            this.panel11.Controls.Add(this.textBox4);
+            this.panel11.Controls.Add(this.listView2);
+            this.panel11.Controls.Add(this.comboBox2);
+            this.panel11.Controls.Add(this.textBox1);
             this.panel11.Controls.Add(this.button2);
             this.panel11.Controls.Add(this.comboBox1);
             this.panel11.Controls.Add(this.label6);
             this.panel11.Location = new System.Drawing.Point(12, 190);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(474, 441);
+            this.panel11.Size = new System.Drawing.Size(768, 441);
             this.panel11.TabIndex = 20;
             // 
-            // textBox4
+            // comboBox2
             // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.Location = new System.Drawing.Point(18, 134);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(430, 285);
-            this.textBox4.TabIndex = 23;
+            this.comboBox2.DataSource = this.yetkibolumBindingSource;
+            this.comboBox2.DisplayMember = "adi";
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(267, 53);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(195, 33);
+            this.comboBox2.TabIndex = 24;
+            this.comboBox2.ValueMember = "id";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.MediumAquamarine;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(333, 67);
+            this.button2.Location = new System.Drawing.Point(582, 42);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 44);
             this.button2.TabIndex = 22;
             this.button2.Text = "Listele";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox1
             // 
@@ -200,20 +155,20 @@
             this.comboBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Ünvan",
-            "Yetki Düzeyi",
+            "Pozisyon",
             "Bölüm"});
-            this.comboBox1.Location = new System.Drawing.Point(253, 18);
+            this.comboBox1.Location = new System.Drawing.Point(267, 14);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(195, 33);
             this.comboBox1.TabIndex = 21;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label6.Location = new System.Drawing.Point(13, 18);
+            this.label6.Location = new System.Drawing.Point(18, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(243, 29);
             this.label6.TabIndex = 20;
@@ -224,7 +179,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(466, 55);
+            this.label4.Location = new System.Drawing.Point(264, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(376, 38);
             this.label4.TabIndex = 17;
@@ -235,7 +190,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label3.Location = new System.Drawing.Point(228, 55);
+            this.label3.Location = new System.Drawing.Point(324, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(232, 38);
             this.label3.TabIndex = 16;
@@ -256,7 +211,7 @@
             this.bexit.BackgroundImage = global::login.Properties.Resources.Exit;
             this.bexit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bexit.Location = new System.Drawing.Point(997, 0);
+            this.bexit.Location = new System.Drawing.Point(782, 0);
             this.bexit.Name = "bexit";
             this.bexit.Size = new System.Drawing.Size(25, 25);
             this.bexit.TabIndex = 5;
@@ -347,7 +302,122 @@
             this.panel6.Size = new System.Drawing.Size(49, 49);
             this.panel6.TabIndex = 1;
             this.panel6.Click += new System.EventHandler(this.panel6_Click);
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Azure;
+            this.panel2.Controls.Add(this.listView1);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.bsearch);
+            this.panel2.Controls.Add(this.tpsad);
+            this.panel2.Controls.Add(this.tpad);
+            this.panel2.Location = new System.Drawing.Point(12, 190);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(768, 441);
+            this.panel2.TabIndex = 0;
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.Color.LightBlue;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.PID,
+            this.Pad,
+            this.Sad,
+            this.mail,
+            this.maas,
+            this.Bolum,
+            this.adres,
+            this.tel,
+            this.poz});
+            this.listView1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(23, 134);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(735, 297);
+            this.listView1.TabIndex = 20;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // PID
+            // 
+            this.PID.Tag = "PID";
+            this.PID.Text = "ID";
+            this.PID.Width = 37;
+            // 
+            // Pad
+            // 
+            this.Pad.Text = "Personel Adı";
+            this.Pad.Width = 110;
+            // 
+            // Sad
+            // 
+            this.Sad.Text = "Personel Soyadı";
+            this.Sad.Width = 135;
+            // 
+            // mail
+            // 
+            this.mail.Text = "E-Mail";
+            this.mail.Width = 90;
+            // 
+            // Bolum
+            // 
+            this.Bolum.Text = "Bolum";
+            // 
+            // adres
+            // 
+            this.adres.Text = "Adres";
+            // 
+            // tel
+            // 
+            this.tel.Text = "Telefon";
+            this.tel.Width = 95;
+            // 
+            // poz
+            // 
+            this.poz.Text = "Pozisyon";
+            this.poz.Width = 83;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label5.Location = new System.Drawing.Point(67, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(260, 29);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Aranan Personelin";
+            // 
+            // bsearch
+            // 
+            this.bsearch.BackColor = System.Drawing.Color.SkyBlue;
+            this.bsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bsearch.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bsearch.Location = new System.Drawing.Point(561, 68);
+            this.bsearch.Name = "bsearch";
+            this.bsearch.Size = new System.Drawing.Size(105, 42);
+            this.bsearch.TabIndex = 5;
+            this.bsearch.Text = "Ara";
+            this.bsearch.UseVisualStyleBackColor = false;
+            this.bsearch.Click += new System.EventHandler(this.bsearch_Click);
+            // 
+            // tpsad
+            // 
+            this.tpsad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpsad.Location = new System.Drawing.Point(281, 67);
+            this.tpsad.Name = "tpsad";
+            this.tpsad.Size = new System.Drawing.Size(200, 33);
+            this.tpsad.TabIndex = 2;
+            this.tpsad.Text = "soyadı";
+            // 
+            // tpad
+            // 
+            this.tpad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpad.Location = new System.Drawing.Point(23, 67);
+            this.tpad.Name = "tpad";
+            this.tpad.Size = new System.Drawing.Size(220, 33);
+            this.tpad.TabIndex = 1;
+            this.tpad.Text = "adı";
             // 
             // panel9
             // 
@@ -395,98 +465,125 @@
             this.bhome.UseVisualStyleBackColor = false;
             this.bhome.Click += new System.EventHandler(this.bhome_Click);
             // 
-            // dataGridView1
+            // textBox1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Ad,
-            this.Soyad,
-            this.Email,
-            this.Maas,
-            this.Bolum,
-            this.Adres,
-            this.Telefon,
-            this.Pozisyon});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 157);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(943, 262);
-            this.dataGridView1.TabIndex = 20;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.Location = new System.Drawing.Point(267, 53);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(233, 33);
+            this.textBox1.TabIndex = 25;
+            this.textBox1.Text = "Pozisyon";
+            this.textBox1.Visible = false;
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
-            // ID
+            // otomasyonDataSet
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
+            this.otomasyonDataSet.DataSetName = "OtomasyonDataSet";
+            this.otomasyonDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Ad
+            // yetkibolumBindingSource
             // 
-            this.Ad.HeaderText = "Ad";
-            this.Ad.Name = "Ad";
+            this.yetkibolumBindingSource.DataMember = "yetki_bolum";
+            this.yetkibolumBindingSource.DataSource = this.otomasyonDataSet;
             // 
-            // Soyad
+            // yetki_bolumTableAdapter
             // 
-            this.Soyad.HeaderText = "Soyad";
-            this.Soyad.Name = "Soyad";
+            this.yetki_bolumTableAdapter.ClearBeforeFill = true;
             // 
-            // Email
+            // maas
             // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
+            this.maas.Text = "Maaş";
             // 
-            // Maas
+            // listView2
             // 
-            this.Maas.HeaderText = "Maas";
-            this.Maas.Name = "Maas";
+            this.listView2.BackColor = System.Drawing.Color.LightBlue;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9});
+            this.listView2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listView2.GridLines = true;
+            this.listView2.Location = new System.Drawing.Point(13, 116);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(735, 297);
+            this.listView2.TabIndex = 26;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
             // 
-            // Bolum
+            // columnHeader1
             // 
-            this.Bolum.HeaderText = "Bolum";
-            this.Bolum.Name = "Bolum";
+            this.columnHeader1.Tag = "PID";
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 37;
             // 
-            // Adres
+            // columnHeader2
             // 
-            this.Adres.HeaderText = "Adres";
-            this.Adres.Name = "Adres";
+            this.columnHeader2.Text = "Personel Adı";
+            this.columnHeader2.Width = 110;
             // 
-            // Telefon
+            // columnHeader3
             // 
-            this.Telefon.HeaderText = "Telefon";
-            this.Telefon.Name = "Telefon";
+            this.columnHeader3.Text = "Personel Soyadı";
+            this.columnHeader3.Width = 135;
             // 
-            // Pozisyon
+            // columnHeader4
             // 
-            this.Pozisyon.HeaderText = "Pozisyon";
-            this.Pozisyon.Name = "Pozisyon";
+            this.columnHeader4.Text = "E-Mail";
+            this.columnHeader4.Width = 90;
             // 
-            // bindingSource1
+            // columnHeader5
             // 
-            this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
+            this.columnHeader5.Text = "Maaş";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Bolum";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Adres";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Telefon";
+            this.columnHeader8.Width = 95;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Pozisyon";
+            this.columnHeader9.Width = 83;
             // 
             // PersonelSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 650);
+            this.ClientSize = new System.Drawing.Size(879, 650);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PersonelSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PersonelSearch";
+            this.Load += new System.EventHandler(this.PersonelSearch_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.otomasyonDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yetkibolumBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -510,27 +607,39 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Soyad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Maas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bolum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Adres;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pozisyon;
-        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader PID;
+        private System.Windows.Forms.ColumnHeader Pad;
+        private System.Windows.Forms.ColumnHeader Sad;
+        private System.Windows.Forms.ColumnHeader mail;
+        private System.Windows.Forms.ColumnHeader Bolum;
+        private System.Windows.Forms.ColumnHeader adres;
+        private System.Windows.Forms.ColumnHeader tel;
+        private System.Windows.Forms.ColumnHeader poz;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private OtomasyonDataSet otomasyonDataSet;
+        private System.Windows.Forms.BindingSource yetkibolumBindingSource;
+        private OtomasyonDataSetTableAdapters.yetki_bolumTableAdapter yetki_bolumTableAdapter;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader maas;
     }
 }

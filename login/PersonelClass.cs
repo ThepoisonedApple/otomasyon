@@ -11,7 +11,7 @@ namespace login
 {
     class PersonelClass
     {
-        public List<Personel> mylist = new List<Personel>();
+        public static List<string> mylist = new List<string>();
 
         public struct Personel
         {
@@ -81,6 +81,7 @@ namespace login
             arr[5] = comread["adres"].ToString();
             arr[6] = comread["telefon"].ToString();
             arr[7] = comread["pozisyon"].ToString();
+            comread.Close();
             mycon.connectionclose();
             return arr;
         }
@@ -122,68 +123,76 @@ namespace login
             mycon.connectionclose();
         }
 
-        public DataGridView PersonelAra(string pad,string sad,DataGridView x)
+        public void PersonelAra(string pad,string sad)
         {
-      /*      DBconnect mycon = new DBconnect();
+            DBconnect mycon = new DBconnect();
             mycon.connectionopen();
-          NpgsqlCommand command = new NpgsqlCommand();
-            command.Connection = DBconnect.baglanti;
-            command.CommandText = 
-                "SELECT * FROM personel WHERE ad LIKE '@pad' " +
-                "INTERSECT" +
-                " SELECT * FROM personel WHERE ad LIKE '@sad'";
-            command.Parameters.AddWithValue("@pad",pad);
-            command.Parameters.AddWithValue("@sad",sad);
-            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter();
-            DataSet ds = new DataSet();
-            dataAdapter.SelectCommand = command;
-   /*         dataAdapter.InsertCommand.Connection = DBconnect.baglanti;
-            dataAdapter.InsertCommand.CommandText = 
-                "SELECT * FROM personel WHERE ad LIKE '@pad' " +
-                "INTERSECT" +
-                " SELECT * FROM personel WHERE ad LIKE '@sad'";
-            dataAdapter.InsertCommand.Parameters.AddWithValue("@pad",pad);
-            dataAdapter.InsertCommand.Parameters.AddWithValue("@sad", sad);
-            dataAdapter.Fill(ds);
-            x.DataSource = ds;
-            x.DataMember = ds.WriteXml(sad);
-            mycon.connectionclose();*/
-            return x;
+            NpgsqlCommand comm = new NpgsqlCommand();
+            comm.Connection = DBconnect.baglanti;
+            comm.CommandText = "SELECT * FROM personel WHERE ad like @pad and soyad like @sad;";
+            comm.Parameters.AddWithValue("@pad", "%" + pad + "%");
+            comm.Parameters.AddWithValue("@sad", "%" + sad + "%");
+            NpgsqlDataReader reader = comm.ExecuteReader();
+            int x = 0;
+            while (reader.Read())
+            {
+
+                mylist.Add(reader.GetValue(x).ToString());
+                mylist.Add(reader.GetValue(x + 1).ToString());
+                mylist.Add(reader.GetValue(x + 2).ToString());
+                mylist.Add(reader.GetValue(x + 3).ToString());
+                mylist.Add(reader.GetValue(x + 4).ToString());
+                mylist.Add(reader.GetValue(x + 5).ToString());
+                mylist.Add(reader.GetValue(x + 6).ToString());
+                mylist.Add(reader.GetValue(x + 7).ToString());
+                mylist.Add(reader.GetValue(x + 8).ToString());
+
+            }
+
+            mycon.connectionclose();
+
 
         }
 
-
-        public void GetData(string selectCommand,DataGridView dataGridView1,BindingSource bindingSource1)
+        public void Personellistele(string sword,string sorgu)
         {
-            try
+
+            DBconnect mycon = new DBconnect();
+            mycon.connectionopen();
+            NpgsqlCommand comm = new NpgsqlCommand();
+            comm.Connection = DBconnect.baglanti;
+
+            if (sorgu=="bolum_id")
             {
-                DBconnect mycon = new DBconnect();
-                // Create a new data adapter based on the specified query.
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, DBconnect.baglantiSatiri);
-
-                // Create a command builder to generate SQL update, insert, and
-                // delete commands based on selectCommand. These are used to
-                // update the database.
-                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
-
-                // Populate a new data table and bind it to the BindingSource.
-                DataTable table = new DataTable();
-                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
-                dataAdapter.Fill(table);
-                bindingSource1.DataSource = table;
-
-                // Resize the DataGridView columns to fit the newly loaded content.
-                dataGridView1.AutoResizeColumns(
-                    DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+                comm.CommandText = "SELECT * FROM personel WHERE bolum_id=@pad;";
+                comm.Parameters.AddWithValue("@pad", Convert.ToInt32(sword));
             }
-            catch (SqlException)
+            else if (sorgu=="pozisyon")
             {
-                MessageBox.Show("To run this example, replace the value of the " +
-                    "connectionString variable with a connection string that is " +
-                    "valid for your system.");
+                comm.CommandText = "SELECT * FROM personel WHERE pozisyon=@pad;";
+                comm.Parameters.AddWithValue("@pad", sword);
             }
+
+            NpgsqlDataReader reader = comm.ExecuteReader();
+            int x = 0;
+            while (reader.Read())
+            {
+
+                mylist.Add(reader.GetValue(x).ToString());
+                mylist.Add(reader.GetValue(x + 1).ToString());
+                mylist.Add(reader.GetValue(x + 2).ToString());
+                mylist.Add(reader.GetValue(x + 3).ToString());
+                mylist.Add(reader.GetValue(x + 4).ToString());
+                mylist.Add(reader.GetValue(x + 5).ToString());
+                mylist.Add(reader.GetValue(x + 6).ToString());
+                mylist.Add(reader.GetValue(x + 7).ToString());
+                mylist.Add(reader.GetValue(x + 8).ToString());
+
+            }
+
+            mycon.connectionclose();
+
         }
-
 
 
     }

@@ -70,6 +70,7 @@
       <DependentUpon>OtomasyonDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="PersonelClass.cs" />
+    <Compile Include="PersonStruct.cs" />
     <Compile Include="SifreUnuttumClass.cs" />
     <Compile Include="UrunSearch.cs">
       <SubType>Form</SubType>

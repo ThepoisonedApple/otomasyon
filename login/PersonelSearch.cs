@@ -14,9 +14,9 @@ namespace login
     {
         Graphics gr_graphics = default(Graphics);
         //need a pen for drawing and make it black
-        
-
-
+        string sorgu;
+        List<string> bolumler = new List<string>();
+        string z;
         public PersonelSearch()
         {
             InitializeComponent();
@@ -26,7 +26,15 @@ namespace login
             binfo.FlatAppearance.BorderSize = 0;
             blogout.FlatAppearance.BorderSize = 0;
             bexit.FlatAppearance.BorderSize = 0;
-
+            //comboBox2.SelectedIndex = 2;
+            bolumler.Add("yok");
+            bolumler.Add("Yönetici");
+            bolumler.Add("Bölüm Şefi");
+            bolumler.Add("İnsan Kaynakları");
+            bolumler.Add("Müşteri Temsilcisi");
+            bolumler.Add("Stok");
+            bolumler.Add("Modelleme");
+            bolumler.Add("Makine Bakım");
 
         }
 
@@ -147,41 +155,118 @@ namespace login
 
         #endregion
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void bsearch_Click(object sender, EventArgs e)
-        { DBconnect mycon = new DBconnect();
-            dataGridView1.DataSource = DBconnect.baglanti;
-            PersonelClass myclas = new PersonelClass();
-            string query ="SELECT * FROM personel WHERE ad LIKE '"+tpad.Text+"';";
-            myclas.GetData(query,this.dataGridView1,this.bindingSource1);
+        {
+            try
+            {
+                PersonelClass.mylist.Clear();
+                listView1.Items.Clear();
+                bool x = true;
+                int i = 0;
+                PersonelClass myclass = new PersonelClass();
+                myclass.PersonelAra(tpad.Text, tpsad.Text);
+                while (x)
+                {
+                    string p = PersonelClass.mylist[0];
+                    ListViewItem item = new ListViewItem(PersonelClass.mylist[i]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 1]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 2]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 3]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 4]);
+                    item.SubItems.Add(bolumler[Convert.ToInt32(PersonelClass.mylist[i + 5])]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 6]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 7]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 8]);
+                    i = i + 9;
+                    listView1.Items.Add(item);
+                    if (PersonelClass.mylist.Count == i)
+                    {
+                        x = false;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
 
+                MessageBox.Show("Aramanızla Eşleşen Sonuç Bulunamadı");
+            }
 
-
-
-            /* try
-             {
-                 PersonelClass myclas = new PersonelClass();
-                 myclas.PersonelAra(tpad.Text,tpsad.Text,this.dataGridView1);
-
-             }
-             catch (Exception)
-             {
-
-                 throw;
-             }*/
+            
         }
 
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            z = (comboBox2.SelectedIndex + 1).ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PersonelClass.mylist.Clear();
+                listView2.Items.Clear();
+                bool x = true;
+                int i = 0;
+                PersonelClass myclass = new PersonelClass();
+
+                myclass.Personellistele(z, sorgu);
+                while (x)
+                {
+                    ListViewItem item = new ListViewItem(PersonelClass.mylist[i]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 1]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 2]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 3]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 4]);
+                    item.SubItems.Add(bolumler[Convert.ToInt32(PersonelClass.mylist[i + 5])]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 6]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 7]);
+                    item.SubItems.Add(PersonelClass.mylist[i + 8]);
+                    i = i + 9;
+                    listView2.Items.Add(item);
+                    if (PersonelClass.mylist.Count == i)
+                    {
+                        x = false;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Aramanızla Eşleşen Sonuç Bulunamadı");
+            }
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 1)
+            {
+                textBox1.Hide();
+                comboBox2.Show();
+                sorgu = "bolum_id";
+                z = (comboBox2.SelectedIndex + 1).ToString();
+            }
+            else
+            {
+
+                comboBox2.Hide();
+                textBox1.Show();
+                sorgu = "pozisyon";
+            }
+            }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            z = textBox1.Text;
+        }
+
+        private void PersonelSearch_Load(object sender, EventArgs e)
+        {
+            // TODO: Bu kod satırı 'otomasyonDataSet.yetki_bolum' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.yetki_bolumTableAdapter.Fill(this.otomasyonDataSet.yetki_bolum);
 
         }
     }
