@@ -45,5 +45,86 @@ namespace login
             nextForm.Show();
             this.Dispose();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UrunClass myclass = new UrunClass();
+                string[] arr = new string[4];
+                arr=myclass.BilgiGetir(Convert.ToInt32(tuid.Text));
+                tuad.Text = arr[0];
+                tsid.Text = arr[3];
+                tutl.Text = arr[1];
+                tukl.Text = arr[2];
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UrunClass myclass = new UrunClass();
+                myclass.UruneOperasyonEkle(Convert.ToInt32(tuid.Text), Convert.ToInt32(toid.Text));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UrunClass myclass = new UrunClass();
+                myclass.UruneHammaddeEkle(Convert.ToInt32(tuid.Text), Convert.ToInt32(thid.Text));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UrunClass myclass = new UrunClass();
+                myclass.UrundenOperasyonSil(Convert.ToInt32(tuid.Text), Convert.ToInt32(toid.Text));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UrunClass myclass = new UrunClass();
+                myclass.UrunGuncelle(Convert.ToInt32(tuid.Text), tuad.Text, tutl.Text, tukl.Text, Convert.ToInt32(tsid.Text));
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+
+        }
     }
 }

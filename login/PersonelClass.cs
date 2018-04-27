@@ -13,33 +13,9 @@ namespace login
     {
         public static List<string> mylist = new List<string>();
 
-        public struct Personel
-        {
-            public int id;
-            public string Ad;
-            public string Soyad;
-            public string Email;
-            public double Maas;
-            public string Bolum;
-            public string Adres;
-            public string Telefon;
-            public string Pozisyon;
+       
 
-            public Personel(int a, string b, string c, string d, double e, string f, string g, string h, string i)
-            {
-                id = a;
-                Ad = b;
-                Soyad = c;
-                Email = d;
-                Maas = e;
-                Bolum = f;
-                Adres = g;
-                Telefon = h;
-                Pozisyon = i;
-            }
-          
-
-        }
+        
 
             public void Personelekle(string ad,string sad, string mail, double maas, int bolum_id,string adres, string tel,string poz)
         {

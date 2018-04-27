@@ -16,14 +16,14 @@ namespace login
         {
             InitializeComponent();
             DateTime thisDay1 = DateTime.Today;
-            textBox5.Text = thisDay1.ToString("d");           
+            ttarih.Text = thisDay1.ToString("d");           
             button1.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;
             button10.FlatAppearance.BorderSize = 0;
             button11.FlatAppearance.BorderSize = 0;
             button12.FlatAppearance.BorderSize = 0;
             button3.FlatAppearance.BorderSize = 0;
-            textBox13.Text = "125";
+            ttoplam.Text = "125";
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -43,6 +43,37 @@ namespace login
             Form1 nextForm = new Form1();
             nextForm.Show();
             this.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                VerimClass myclass = new VerimClass();
+                ttoplam.Text = myclass.BilgileriGetir(Convert.ToInt32(tuid.Text), Convert.ToInt32(toid.Text), Convert.ToInt32(tpid.Text), Convert.ToDateTime(ttarih.Text));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                VerimClass myclass = new VerimClass();
+                myclass.VerimSil();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
         }
     }
 }

@@ -41,17 +41,30 @@ namespace login
             mycon.connectionclose();
             return arr;
         }
-        public void OperasyonGuncelle(string oadi, string otanim)
+        public void OperasyonGuncelle(string oadi, string otanim, int oid)
         {
             DBconnect mycon = new DBconnect();
             mycon.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
-            command.CommandText = "UPDATE operasyon SET ad=@oadi,tanim=@otanim ";
+            command.CommandText = "UPDATE operasyon SET ad=@oadi,tanim=@otanim WHERE operasyon_id=@oid ";
             command.Parameters.AddWithValue("@oadi", oadi);
             command.Parameters.AddWithValue("@otanim", otanim);
+            command.Parameters.AddWithValue("@oid", Convert.ToInt32(oid));
             command.ExecuteNonQuery();
             mycon.connectionclose();
+        }
+        public void OperasyonSil(string oid)
+        {
+            DBconnect mycon = new DBconnect();
+            mycon.connectionopen();
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.Connection = DBconnect.baglanti;
+            command.CommandText = "DELETE FROM operasyon WHERE operasyon_id=@oid;";
+            command.Parameters.AddWithValue("@oid", Convert.ToInt32(oid));
+            command.ExecuteNonQuery();
+            mycon.connectionclose();
+
         }
     }
 }

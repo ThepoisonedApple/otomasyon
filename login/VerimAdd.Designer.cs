@@ -269,6 +269,7 @@
             this.button2.TabIndex = 46;
             this.button2.Text = "Kaydet";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ttoplam
             // 
@@ -279,7 +280,7 @@
             this.ttoplam.Location = new System.Drawing.Point(245, 27);
             this.ttoplam.Name = "ttoplam";
             this.ttoplam.ReadOnly = true;
-            this.ttoplam.Size = new System.Drawing.Size(110, 40);
+            this.ttoplam.Size = new System.Drawing.Size(84, 40);
             this.ttoplam.TabIndex = 45;
             this.ttoplam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

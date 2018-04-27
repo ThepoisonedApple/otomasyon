@@ -56,7 +56,8 @@ namespace login
 
         private void button10_Click(object sender, EventArgs e)
         {
-            /*hakkında sayfası yaz oraya aktar*/
+            Hakkında nextForm = new Hakkında();
+            nextForm.ShowDialog();
         }
 
         private void button7_Click(object sender, EventArgs e)

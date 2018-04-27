@@ -16,5 +16,15 @@ namespace login
         {
             InitializeComponent();
         }
+
+        private void panel18_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void Hakkında_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

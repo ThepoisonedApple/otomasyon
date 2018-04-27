@@ -28,48 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button11 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.blogout = new System.Windows.Forms.Button();
+            this.bhome = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.binfo = new System.Windows.Forms.Button();
+            this.tuadet = new System.Windows.Forms.TextBox();
+            this.badd = new System.Windows.Forms.Button();
+            this.tuadi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
+            this.ttid = new System.Windows.Forms.TextBox();
+            this.bexit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button11
+            // blogout
             // 
-            this.button11.BackgroundImage = global::login.Properties.Resources.Shutdown;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(0, 218);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(50, 50);
-            this.button11.TabIndex = 2;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.blogout.BackgroundImage = global::login.Properties.Resources.Shutdown;
+            this.blogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.blogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.blogout.Location = new System.Drawing.Point(0, 218);
+            this.blogout.Name = "blogout";
+            this.blogout.Size = new System.Drawing.Size(50, 50);
+            this.blogout.TabIndex = 2;
+            this.blogout.UseVisualStyleBackColor = true;
+            this.blogout.Click += new System.EventHandler(this.blogout_Click);
             // 
-            // button9
+            // bhome
             // 
-            this.button9.BackgroundImage = global::login.Properties.Resources.Home;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(0, 104);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(50, 50);
-            this.button9.TabIndex = 0;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.bhome.BackgroundImage = global::login.Properties.Resources.Home;
+            this.bhome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bhome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bhome.Location = new System.Drawing.Point(0, 104);
+            this.bhome.Name = "bhome";
+            this.bhome.Size = new System.Drawing.Size(50, 50);
+            this.bhome.TabIndex = 0;
+            this.bhome.UseVisualStyleBackColor = false;
+            this.bhome.Click += new System.EventHandler(this.bhome_Click);
             // 
             // panel4
             // 
@@ -92,58 +93,59 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(156)))), ((int)(((byte)(236)))));
-            this.panel3.Controls.Add(this.button11);
-            this.panel3.Controls.Add(this.button10);
-            this.panel3.Controls.Add(this.button9);
+            this.panel3.Controls.Add(this.blogout);
+            this.panel3.Controls.Add(this.binfo);
+            this.panel3.Controls.Add(this.bhome);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(50, 403);
             this.panel3.TabIndex = 12;
             // 
-            // button10
+            // binfo
             // 
-            this.button10.BackgroundImage = global::login.Properties.Resources.Info;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(0, 162);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(50, 50);
-            this.button10.TabIndex = 1;
-            this.button10.UseVisualStyleBackColor = true;
+            this.binfo.BackgroundImage = global::login.Properties.Resources.Info;
+            this.binfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.binfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.binfo.Location = new System.Drawing.Point(0, 162);
+            this.binfo.Name = "binfo";
+            this.binfo.Size = new System.Drawing.Size(50, 50);
+            this.binfo.TabIndex = 1;
+            this.binfo.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // tuadet
             // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.ForeColor = System.Drawing.Color.Silver;
-            this.textBox4.Location = new System.Drawing.Point(42, 112);
-            this.textBox4.MaxLength = 10;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(233, 33);
-            this.textBox4.TabIndex = 33;
-            this.textBox4.Text = "Ürün Adeti";
+            this.tuadet.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tuadet.ForeColor = System.Drawing.Color.Silver;
+            this.tuadet.Location = new System.Drawing.Point(42, 131);
+            this.tuadet.MaxLength = 10;
+            this.tuadet.Name = "tuadet";
+            this.tuadet.Size = new System.Drawing.Size(233, 33);
+            this.tuadet.TabIndex = 33;
+            this.tuadet.Text = "Ürün Adeti";
             // 
-            // button1
+            // badd
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(193)))), ((int)(((byte)(82)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(299, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 54);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Ekle";
-            this.button1.UseVisualStyleBackColor = false;
+            this.badd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(193)))), ((int)(((byte)(82)))));
+            this.badd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.badd.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.badd.ForeColor = System.Drawing.Color.White;
+            this.badd.Location = new System.Drawing.Point(299, 176);
+            this.badd.Name = "badd";
+            this.badd.Size = new System.Drawing.Size(126, 54);
+            this.badd.TabIndex = 32;
+            this.badd.Text = "Ekle";
+            this.badd.UseVisualStyleBackColor = false;
+            this.badd.Click += new System.EventHandler(this.badd_Click);
             // 
-            // textBox1
+            // tuadi
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(42, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 33);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Ürün Adı";
+            this.tuadi.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tuadi.ForeColor = System.Drawing.Color.Silver;
+            this.tuadi.Location = new System.Drawing.Point(42, 82);
+            this.tuadi.Name = "tuadi";
+            this.tuadi.Size = new System.Drawing.Size(233, 33);
+            this.tuadi.TabIndex = 24;
+            this.tuadi.Text = "Ürün Adı";
             // 
             // label4
             // 
@@ -171,25 +173,37 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Azure;
-            this.panel5.Controls.Add(this.textBox4);
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.ttid);
+            this.panel5.Controls.Add(this.tuadet);
+            this.panel5.Controls.Add(this.badd);
+            this.panel5.Controls.Add(this.tuadi);
             this.panel5.Location = new System.Drawing.Point(82, 122);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(436, 243);
             this.panel5.TabIndex = 24;
             // 
-            // button12
+            // ttid
             // 
-            this.button12.BackgroundImage = global::login.Properties.Resources.Exit;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(525, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(25, 25);
-            this.button12.TabIndex = 4;
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.ttid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ttid.ForeColor = System.Drawing.Color.Silver;
+            this.ttid.Location = new System.Drawing.Point(42, 30);
+            this.ttid.MaxLength = 10;
+            this.ttid.Name = "ttid";
+            this.ttid.Size = new System.Drawing.Size(233, 33);
+            this.ttid.TabIndex = 34;
+            this.ttid.Text = "Tedarikçi ID";
+            // 
+            // bexit
+            // 
+            this.bexit.BackgroundImage = global::login.Properties.Resources.Exit;
+            this.bexit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bexit.Location = new System.Drawing.Point(525, 0);
+            this.bexit.Name = "bexit";
+            this.bexit.Size = new System.Drawing.Size(25, 25);
+            this.bexit.TabIndex = 4;
+            this.bexit.UseVisualStyleBackColor = true;
+            this.bexit.Click += new System.EventHandler(this.bexit_Click);
             // 
             // panel1
             // 
@@ -198,7 +212,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button12);
+            this.panel1.Controls.Add(this.bexit);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -206,14 +220,14 @@
             this.panel1.Size = new System.Drawing.Size(550, 403);
             this.panel1.TabIndex = 4;
             // 
-            // UrünStokAdd
+            // HammaddestokAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 403);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "UrünStokAdd";
+            this.Name = "HammaddestokAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UrünStokAdd";
             this.panel3.ResumeLayout(false);
@@ -227,19 +241,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button blogout;
+        private System.Windows.Forms.Button bhome;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button binfo;
+        private System.Windows.Forms.TextBox tuadet;
+        private System.Windows.Forms.Button badd;
+        private System.Windows.Forms.TextBox tuadi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button bexit;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox ttid;
     }
 }

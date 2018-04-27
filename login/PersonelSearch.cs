@@ -168,7 +168,6 @@ namespace login
                 myclass.PersonelAra(tpad.Text, tpsad.Text);
                 while (x)
                 {
-                    string p = PersonelClass.mylist[0];
                     ListViewItem item = new ListViewItem(PersonelClass.mylist[i]);
                     item.SubItems.Add(PersonelClass.mylist[i + 1]);
                     item.SubItems.Add(PersonelClass.mylist[i + 2]);

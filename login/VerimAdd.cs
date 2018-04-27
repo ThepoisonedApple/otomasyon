@@ -23,6 +23,7 @@ namespace login
             button10.FlatAppearance.BorderSize = 0;
             button11.FlatAppearance.BorderSize = 0;
             button12.FlatAppearance.BorderSize = 0;
+            ttoplam.Text = "0";
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -63,8 +64,25 @@ namespace login
             if (textbox.ForeColor==Color.Silver)
             {
                 textbox.ResetText();
+                textbox.ForeColor = Color.Black;
             }
-            textbox.ForeColor = Color.Black;   
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                VerimClass myclass = new VerimClass();
+                myclass.VerimEkle(Convert.ToInt32(tpid.Text), Convert.ToInt32(tuid.Text), Convert.ToInt32(toid.Text), Convert.ToDateTime(ttarih.Text), Convert.ToInt32(ttoplam.Text));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
+
         }
     }
 }

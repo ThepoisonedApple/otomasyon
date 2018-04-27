@@ -12,6 +12,7 @@ namespace login
 {
     public partial class UrunAdd : Form
     {
+        static int iid=0;
         public UrunAdd()
         {
             InitializeComponent();
@@ -41,6 +42,59 @@ namespace login
             Form1 nextForm = new Form1();
             nextForm.Show();
             this.Dispose();
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UrunClass myclass = new UrunClass();
+               iid = myclass.UrunEkle(tuad.Text,tutl.Text,tukl.Text,Convert.ToInt32(tsid.Text));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UrunClass myclass = new UrunClass();
+                myclass.UruneOperasyonEkle(iid,Convert.ToInt32(toid.Text));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UrunClass myclass = new UrunClass();
+                myclass.UruneHammaddeEkle(iid, Convert.ToInt32(thid.Text));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

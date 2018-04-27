@@ -37,36 +37,37 @@ namespace login
 
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void bexit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void bhome_Click(object sender, EventArgs e)
         {
             ModellemeMain nextForm = new ModellemeMain();
             nextForm.Show();
             this.Dispose();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void blogout_Click(object sender, EventArgs e)
         {
             Form1 nextForm = new Form1();
             nextForm.Show();
             this.Dispose();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void badd_Click(object sender, EventArgs e)
         {
             try
             {
                 OperasyonClass myclass = new OperasyonClass();
                 myclass.operasyonekle(toadi.Text,totanim.Text);
-                MessageBox.Show("yuppi");
+                MessageBox.Show("Başarılı");
             }
             catch (Exception)
             {
-                MessageBox.Show("hatalı");
+                MessageBox.Show("Hatalı");
+                throw;
             }
         }
     }

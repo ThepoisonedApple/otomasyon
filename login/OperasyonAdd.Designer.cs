@@ -59,7 +59,7 @@
             this.badd.TabIndex = 32;
             this.badd.Text = "Ekle";
             this.badd.UseVisualStyleBackColor = false;
-            this.badd.Click += new System.EventHandler(this.button1_Click);
+            this.badd.Click += new System.EventHandler(this.badd_Click);
             // 
             // label1
             // 
@@ -154,7 +154,7 @@
             this.bexit.Size = new System.Drawing.Size(25, 25);
             this.bexit.TabIndex = 4;
             this.bexit.UseVisualStyleBackColor = true;
-            this.bexit.Click += new System.EventHandler(this.button12_Click);
+            this.bexit.Click += new System.EventHandler(this.bexit_Click);
             // 
             // panel3
             // 
@@ -177,7 +177,7 @@
             this.blogout.Size = new System.Drawing.Size(50, 50);
             this.blogout.TabIndex = 2;
             this.blogout.UseVisualStyleBackColor = true;
-            this.blogout.Click += new System.EventHandler(this.button11_Click);
+            this.blogout.Click += new System.EventHandler(this.blogout_Click);
             // 
             // binfo
             // 
@@ -200,7 +200,7 @@
             this.bhome.Size = new System.Drawing.Size(50, 50);
             this.bhome.TabIndex = 0;
             this.bhome.UseVisualStyleBackColor = false;
-            this.bhome.Click += new System.EventHandler(this.button9_Click);
+            this.bhome.Click += new System.EventHandler(this.bhome_Click);
             // 
             // panel2
             // 

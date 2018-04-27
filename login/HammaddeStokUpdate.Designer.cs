@@ -28,53 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button12 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bexit = new System.Windows.Forms.Button();
+            this.bbilgi = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ttid = new System.Windows.Forms.TextBox();
+            this.tuadet = new System.Windows.Forms.TextBox();
+            this.tuadi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bupdate = new System.Windows.Forms.Button();
+            this.tuid = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.blogout = new System.Windows.Forms.Button();
+            this.binfo = new System.Windows.Forms.Button();
+            this.bhome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button12
+            // bexit
             // 
-            this.button12.BackgroundImage = global::login.Properties.Resources.Exit;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(599, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(25, 25);
-            this.button12.TabIndex = 4;
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.bexit.BackgroundImage = global::login.Properties.Resources.Exit;
+            this.bexit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bexit.Location = new System.Drawing.Point(599, 0);
+            this.bexit.Name = "bexit";
+            this.bexit.Size = new System.Drawing.Size(25, 25);
+            this.bexit.TabIndex = 4;
+            this.bexit.UseVisualStyleBackColor = true;
+            this.bexit.Click += new System.EventHandler(this.bexit_Click);
             // 
-            // button2
+            // bbilgi
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(193)))), ((int)(((byte)(82)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(312, 30);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 33);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Bilgilerini Getir";
-            this.button2.UseVisualStyleBackColor = false;
+            this.bbilgi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(193)))), ((int)(((byte)(82)))));
+            this.bbilgi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bbilgi.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bbilgi.ForeColor = System.Drawing.Color.White;
+            this.bbilgi.Location = new System.Drawing.Point(312, 30);
+            this.bbilgi.Name = "bbilgi";
+            this.bbilgi.Size = new System.Drawing.Size(188, 33);
+            this.bbilgi.TabIndex = 40;
+            this.bbilgi.Text = "Bilgilerini Getir";
+            this.bbilgi.UseVisualStyleBackColor = false;
+            this.bbilgi.Click += new System.EventHandler(this.bbilgi_Click);
             // 
             // label3
             // 
@@ -114,27 +116,48 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.MintCream;
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.textBox2);
-            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.ttid);
+            this.panel5.Controls.Add(this.tuadet);
+            this.panel5.Controls.Add(this.tuadi);
+            this.panel5.Controls.Add(this.bbilgi);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.bupdate);
+            this.panel5.Controls.Add(this.tuid);
             this.panel5.Location = new System.Drawing.Point(82, 122);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(520, 242);
+            this.panel5.Size = new System.Drawing.Size(520, 333);
             this.panel5.TabIndex = 24;
             // 
-            // textBox2
+            // ttid
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(45, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 33);
-            this.textBox2.TabIndex = 41;
-            this.textBox2.Text = "Ürün Adı";
+            this.ttid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ttid.ForeColor = System.Drawing.Color.Silver;
+            this.ttid.Location = new System.Drawing.Point(45, 225);
+            this.ttid.Name = "ttid";
+            this.ttid.Size = new System.Drawing.Size(233, 33);
+            this.ttid.TabIndex = 43;
+            this.ttid.Text = "Tedarikçi ID";
+            // 
+            // tuadet
+            // 
+            this.tuadet.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tuadet.ForeColor = System.Drawing.Color.Silver;
+            this.tuadet.Location = new System.Drawing.Point(45, 172);
+            this.tuadet.Name = "tuadet";
+            this.tuadet.Size = new System.Drawing.Size(233, 33);
+            this.tuadet.TabIndex = 42;
+            this.tuadet.Text = "Ürün Adeti";
+            // 
+            // tuadi
+            // 
+            this.tuadi.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tuadi.ForeColor = System.Drawing.Color.Silver;
+            this.tuadi.Location = new System.Drawing.Point(45, 118);
+            this.tuadi.Name = "tuadi";
+            this.tuadi.Size = new System.Drawing.Size(233, 33);
+            this.tuadi.TabIndex = 41;
+            this.tuadi.Text = "Ürün Adı";
             // 
             // label2
             // 
@@ -148,28 +171,29 @@
             this.label2.TabIndex = 38;
             this.label2.Text = "Güncelleyeceğiniz ürünün id\'sine";
             // 
-            // button1
+            // bupdate
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(193)))), ((int)(((byte)(82)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(374, 163);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 54);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Güncelle";
-            this.button1.UseVisualStyleBackColor = false;
+            this.bupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(193)))), ((int)(((byte)(82)))));
+            this.bupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bupdate.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bupdate.ForeColor = System.Drawing.Color.White;
+            this.bupdate.Location = new System.Drawing.Point(374, 258);
+            this.bupdate.Name = "bupdate";
+            this.bupdate.Size = new System.Drawing.Size(126, 54);
+            this.bupdate.TabIndex = 32;
+            this.bupdate.Text = "Güncelle";
+            this.bupdate.UseVisualStyleBackColor = false;
+            this.bupdate.Click += new System.EventHandler(this.bupdate_Click);
             // 
-            // textBox1
+            // tuid
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(45, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 33);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Ürün ID";
+            this.tuid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tuid.ForeColor = System.Drawing.Color.Silver;
+            this.tuid.Location = new System.Drawing.Point(45, 30);
+            this.tuid.Name = "tuid";
+            this.tuid.Size = new System.Drawing.Size(233, 33);
+            this.tuid.TabIndex = 24;
+            this.tuid.Text = "Ürün ID";
             // 
             // panel4
             // 
@@ -184,7 +208,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Location = new System.Drawing.Point(50, 373);
+            this.panel2.Location = new System.Drawing.Point(50, 482);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(574, 25);
             this.panel2.TabIndex = 13;
@@ -192,48 +216,48 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(156)))), ((int)(((byte)(236)))));
-            this.panel3.Controls.Add(this.button11);
-            this.panel3.Controls.Add(this.button10);
-            this.panel3.Controls.Add(this.button9);
+            this.panel3.Controls.Add(this.blogout);
+            this.panel3.Controls.Add(this.binfo);
+            this.panel3.Controls.Add(this.bhome);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(50, 398);
+            this.panel3.Size = new System.Drawing.Size(50, 507);
             this.panel3.TabIndex = 12;
             // 
-            // button11
+            // blogout
             // 
-            this.button11.BackgroundImage = global::login.Properties.Resources.Shutdown;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(0, 212);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(50, 50);
-            this.button11.TabIndex = 2;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.blogout.BackgroundImage = global::login.Properties.Resources.Shutdown;
+            this.blogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.blogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.blogout.Location = new System.Drawing.Point(0, 268);
+            this.blogout.Name = "blogout";
+            this.blogout.Size = new System.Drawing.Size(50, 50);
+            this.blogout.TabIndex = 2;
+            this.blogout.UseVisualStyleBackColor = true;
+            this.blogout.Click += new System.EventHandler(this.blogout_Click);
             // 
-            // button10
+            // binfo
             // 
-            this.button10.BackgroundImage = global::login.Properties.Resources.Info;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(0, 156);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(50, 50);
-            this.button10.TabIndex = 1;
-            this.button10.UseVisualStyleBackColor = true;
+            this.binfo.BackgroundImage = global::login.Properties.Resources.Info;
+            this.binfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.binfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.binfo.Location = new System.Drawing.Point(0, 212);
+            this.binfo.Name = "binfo";
+            this.binfo.Size = new System.Drawing.Size(50, 50);
+            this.binfo.TabIndex = 1;
+            this.binfo.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // bhome
             // 
-            this.button9.BackgroundImage = global::login.Properties.Resources.Home;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(0, 100);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(50, 50);
-            this.button9.TabIndex = 0;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.bhome.BackgroundImage = global::login.Properties.Resources.Home;
+            this.bhome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bhome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bhome.Location = new System.Drawing.Point(0, 156);
+            this.bhome.Name = "bhome";
+            this.bhome.Size = new System.Drawing.Size(50, 50);
+            this.bhome.TabIndex = 0;
+            this.bhome.UseVisualStyleBackColor = false;
+            this.bhome.Click += new System.EventHandler(this.bhome_Click);
             // 
             // panel1
             // 
@@ -243,31 +267,21 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button12);
+            this.panel1.Controls.Add(this.bexit);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(624, 398);
+            this.panel1.Size = new System.Drawing.Size(624, 507);
             this.panel1.TabIndex = 5;
             // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.ForeColor = System.Drawing.Color.Silver;
-            this.textBox3.Location = new System.Drawing.Point(45, 163);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 33);
-            this.textBox3.TabIndex = 42;
-            this.textBox3.Text = "Ürün Adeti";
-            // 
-            // UrünStokUpdate
+            // HammaddeStokUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 398);
+            this.ClientSize = new System.Drawing.Size(624, 506);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "UrünStokUpdate";
+            this.Name = "HammaddeStokUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UrünStokUpdate";
             this.panel5.ResumeLayout(false);
@@ -281,23 +295,24 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bexit;
+        private System.Windows.Forms.Button bbilgi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tuadi;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button bupdate;
+        private System.Windows.Forms.TextBox tuid;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button blogout;
+        private System.Windows.Forms.Button binfo;
+        private System.Windows.Forms.Button bhome;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tuadet;
+        private System.Windows.Forms.TextBox ttid;
     }
 }
