@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using System.Windows.Forms;
 
 namespace login
 {
@@ -53,15 +54,43 @@ namespace login
         }
 
         public void UrunSil(int uid)
-        {
+        {   
             DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
-            command.CommandText = "DELETE FROM urun WHERE urun_id=@uid";
-            command.Parameters.AddWithValue("@uid", uid);
-            command.ExecuteNonQuery();
-            mycon.connectionclose();
+            mycon.connectionopen();
+            command.CommandText = "SELECT COUNT(urun_id) FROM verim WHERE urun_id=@uid";
+            command.Parameters.AddWithValue("@uid",uid);
+            int i =Convert.ToInt32(command.ExecuteScalar());
+            string x = "Bu ürün üretim aşamasına geçmiştir ilişkili " + i.ToString() + " veri bulunmaktadır silinemez.";
+            if (i==0)
+            {
+
+                mycon.connectionopen();
+                command.CommandText = "DELETE FROM urun_operasyon WHERE urun_id=@uid";
+                command.Parameters.AddWithValue("@uid", uid);
+                command.ExecuteNonQuery();
+                mycon.connectionclose();
+
+                mycon.connectionopen();
+                command.CommandText = "DELETE FROM urun_hammadde WHERE urun_id=@uid";
+                command.Parameters.AddWithValue("@uid", uid);
+                command.ExecuteNonQuery();
+                mycon.connectionclose();
+
+                mycon.connectionopen();
+                command.CommandText = "DELETE FROM urun WHERE urun_id=@uid";
+                command.Parameters.AddWithValue("@uid", uid);
+                command.ExecuteNonQuery();
+                mycon.connectionclose();
+
+            }
+            else
+            {
+                MessageBox.Show(x);
+            }
+
+
 
         }
 

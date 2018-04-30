@@ -34,9 +34,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tuadet = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tuid = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -111,16 +111,16 @@
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // tuadet
             // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.ForeColor = System.Drawing.Color.Silver;
-            this.textBox4.Location = new System.Drawing.Point(42, 112);
-            this.textBox4.MaxLength = 10;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(233, 33);
-            this.textBox4.TabIndex = 33;
-            this.textBox4.Text = "Ürün Adeti";
+            this.tuadet.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tuadet.ForeColor = System.Drawing.Color.Silver;
+            this.tuadet.Location = new System.Drawing.Point(42, 112);
+            this.tuadet.MaxLength = 10;
+            this.tuadet.Name = "tuadet";
+            this.tuadet.Size = new System.Drawing.Size(233, 33);
+            this.tuadet.TabIndex = 33;
+            this.tuadet.Text = "Ürün Adeti";
             // 
             // button1
             // 
@@ -134,16 +134,17 @@
             this.button1.TabIndex = 32;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // tuid
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(42, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 33);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Ürün Adı";
+            this.tuid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tuid.ForeColor = System.Drawing.Color.Silver;
+            this.tuid.Location = new System.Drawing.Point(42, 46);
+            this.tuid.Name = "tuid";
+            this.tuid.Size = new System.Drawing.Size(233, 33);
+            this.tuid.TabIndex = 24;
+            this.tuid.Text = "Ürün ID";
             // 
             // label4
             // 
@@ -171,9 +172,9 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Azure;
-            this.panel5.Controls.Add(this.textBox4);
+            this.panel5.Controls.Add(this.tuadet);
             this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.tuid);
             this.panel5.Location = new System.Drawing.Point(82, 122);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(436, 243);
@@ -206,14 +207,14 @@
             this.panel1.Size = new System.Drawing.Size(550, 403);
             this.panel1.TabIndex = 4;
             // 
-            // UrünStokAdd
+            // UrunStokAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 403);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "UrünStokAdd";
+            this.Name = "UrunStokAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UrünStokAdd";
             this.panel3.ResumeLayout(false);
@@ -233,9 +234,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tuadet;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tuid;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;

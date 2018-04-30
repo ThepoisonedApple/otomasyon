@@ -40,5 +40,52 @@ namespace login
             nextForm.Show();
             this.Dispose();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String[] arr = new string[2];
+                UrunStokClass myclass = new UrunStokClass();
+                arr=myclass.UrunStokBilgiGetir(Convert.ToInt32(tuid.Text));
+                tuad.Text = arr[0];
+                tuadet.Text = arr[1];
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int x = Convert.ToInt32(tuadet.Text)+Convert.ToInt32(tmiktar.Text);
+            try
+            {
+                UrunStokClass myclass = new UrunStokClass();
+                myclass.UrunStokGuncelle(Convert.ToInt32(tuid.Text),x);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int x = Convert.ToInt32(tuadet.Text) - Convert.ToInt32(tmiktar.Text);
+            try
+            {
+                UrunStokClass myclass = new UrunStokClass();
+                myclass.UrunStokGuncelle(Convert.ToInt32(tuid.Text), x);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

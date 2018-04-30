@@ -126,5 +126,10 @@ namespace login
             panel2.Show();
             panel11.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

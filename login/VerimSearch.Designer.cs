@@ -49,7 +49,6 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -58,6 +57,13 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.UID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.OID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Tarih = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Adet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -113,7 +119,7 @@
             this.button12.BackgroundImage = global::login.Properties.Resources.Exit;
             this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(475, 0);
+            this.button12.Location = new System.Drawing.Point(777, 0);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(25, 25);
             this.button12.TabIndex = 5;
@@ -300,31 +306,23 @@
             this.label5.TabIndex = 19;
             this.label5.Text = "Aranan Verimin";
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(23, 229);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(430, 190);
-            this.textBox1.TabIndex = 18;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.SkyBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(348, 164);
+            this.button1.Location = new System.Drawing.Point(652, 69);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 42);
             this.button1.TabIndex = 5;
             this.button1.Text = "Ara";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.Location = new System.Drawing.Point(23, 167);
+            this.textBox3.Location = new System.Drawing.Point(276, 75);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(233, 33);
             this.textBox3.TabIndex = 2;
@@ -333,7 +331,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.Location = new System.Drawing.Point(23, 50);
+            this.textBox2.Location = new System.Drawing.Point(276, 18);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(233, 33);
             this.textBox2.TabIndex = 1;
@@ -342,22 +340,22 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
+            this.panel2.Controls.Add(this.listView1);
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.textBox5);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Location = new System.Drawing.Point(12, 190);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(474, 441);
+            this.panel2.Size = new System.Drawing.Size(790, 441);
             this.panel2.TabIndex = 0;
             // 
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox6.Location = new System.Drawing.Point(23, 128);
+            this.textBox6.Location = new System.Drawing.Point(18, 75);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(233, 33);
             this.textBox6.TabIndex = 21;
@@ -366,7 +364,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.Location = new System.Drawing.Point(23, 89);
+            this.textBox5.Location = new System.Drawing.Point(524, 18);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(233, 33);
             this.textBox5.TabIndex = 20;
@@ -398,14 +396,64 @@
             this.panel1.Controls.Add(this.panel11);
             this.panel1.Location = new System.Drawing.Point(50, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 650);
+            this.panel1.Size = new System.Drawing.Size(827, 650);
             this.panel1.TabIndex = 16;
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.Color.LightBlue;
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.UID,
+            this.OID,
+            this.PID,
+            this.Tarih,
+            this.Adet});
+            this.listView1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(18, 122);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(739, 297);
+            this.listView1.TabIndex = 22;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            // 
+            // UID
+            // 
+            this.UID.Text = "Ürün ID";
+            this.UID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.UID.Width = 127;
+            // 
+            // OID
+            // 
+            this.OID.Text = "Operasyon ID";
+            this.OID.Width = 127;
+            // 
+            // PID
+            // 
+            this.PID.Text = "Personel ID";
+            this.PID.Width = 117;
+            // 
+            // Tarih
+            // 
+            this.Tarih.Text = "Tarih";
+            this.Tarih.Width = 167;
+            // 
+            // Adet
+            // 
+            this.Adet.Text = "Adet";
+            this.Adet.Width = 137;
             // 
             // VerimSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 650);
+            this.ClientSize = new System.Drawing.Size(1224, 650);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -450,7 +498,6 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
@@ -459,5 +506,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader UID;
+        private System.Windows.Forms.ColumnHeader OID;
+        private System.Windows.Forms.ColumnHeader PID;
+        private System.Windows.Forms.ColumnHeader Tarih;
+        private System.Windows.Forms.ColumnHeader Adet;
     }
 }

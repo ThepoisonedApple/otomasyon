@@ -32,7 +32,7 @@ namespace login
         #region Karakter kontrol
         private void CharKontrol(object sender, KeyPressEventArgs e)
         {
-
+            var textbox = (TextBox)sender;
             if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
@@ -52,6 +52,16 @@ namespace login
             {
                 e.Handled = true;
                 MessageBox.Show("Lütfen İşaret veya Türkçe Karakter Kullanmayınız.");
+            }
+            if (textbox.Name=="textBox2" && e.KeyChar==13)
+            {
+                if (textBox2.Text.Length < 6 || textBox2.Text.Length > 20)
+                {
+                    panel4.BackColor = Color.FromArgb(218, 68, 83);
+                    pw = false;
+                }
+                else pw = true;
+                button1_Click(this, new EventArgs());
             }
 
         }

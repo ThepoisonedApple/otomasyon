@@ -74,8 +74,14 @@ namespace login
             command.Parameters.AddWithValue("@x",vid);
             command.ExecuteNonQuery();
             mycon.connectionclose();
+        }
+
+        public void VerimListele()
+        {
+
 
         }
+
 
 
     }

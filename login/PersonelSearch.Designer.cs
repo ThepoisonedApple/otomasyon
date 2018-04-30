@@ -42,6 +42,21 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.PID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Pad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Sad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.mail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.maas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Bolum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.adres = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.poz = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label5 = new System.Windows.Forms.Label();
+            this.bsearch = new System.Windows.Forms.Button();
+            this.tpsad = new System.Windows.Forms.TextBox();
+            this.tpad = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -60,21 +75,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.PID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Pad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Sad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.mail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.maas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Bolum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.adres = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.poz = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label5 = new System.Windows.Forms.Label();
-            this.bsearch = new System.Windows.Forms.Button();
-            this.tpsad = new System.Windows.Forms.TextBox();
-            this.tpad = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.blogout = new System.Windows.Forms.Button();
             this.binfo = new System.Windows.Forms.Button();
@@ -83,10 +83,10 @@
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.yetkibolumBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.otomasyonDataSet)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -236,6 +236,127 @@
             this.panel6.Size = new System.Drawing.Size(49, 49);
             this.panel6.TabIndex = 1;
             this.panel6.Click += new System.EventHandler(this.panel6_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Azure;
+            this.panel2.Controls.Add(this.listView1);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.bsearch);
+            this.panel2.Controls.Add(this.tpsad);
+            this.panel2.Controls.Add(this.tpad);
+            this.panel2.Location = new System.Drawing.Point(12, 190);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(768, 441);
+            this.panel2.TabIndex = 0;
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.Color.LightBlue;
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.PID,
+            this.Pad,
+            this.Sad,
+            this.mail,
+            this.maas,
+            this.Bolum,
+            this.adres,
+            this.tel,
+            this.poz});
+            this.listView1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(23, 134);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(734, 297);
+            this.listView1.TabIndex = 20;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // PID
+            // 
+            this.PID.Tag = "PID";
+            this.PID.Text = "ID";
+            this.PID.Width = 37;
+            // 
+            // Pad
+            // 
+            this.Pad.Text = "Personel Adı";
+            this.Pad.Width = 110;
+            // 
+            // Sad
+            // 
+            this.Sad.Text = "Personel Soyadı";
+            this.Sad.Width = 135;
+            // 
+            // mail
+            // 
+            this.mail.Text = "E-Mail";
+            this.mail.Width = 90;
+            // 
+            // maas
+            // 
+            this.maas.Text = "Maaş";
+            // 
+            // Bolum
+            // 
+            this.Bolum.Text = "Bolum";
+            // 
+            // adres
+            // 
+            this.adres.Text = "Adres";
+            // 
+            // tel
+            // 
+            this.tel.Text = "Telefon";
+            this.tel.Width = 95;
+            // 
+            // poz
+            // 
+            this.poz.Text = "Pozisyon";
+            this.poz.Width = 83;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label5.Location = new System.Drawing.Point(67, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(260, 29);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Aranan Personelin";
+            // 
+            // bsearch
+            // 
+            this.bsearch.BackColor = System.Drawing.Color.SkyBlue;
+            this.bsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bsearch.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bsearch.Location = new System.Drawing.Point(561, 68);
+            this.bsearch.Name = "bsearch";
+            this.bsearch.Size = new System.Drawing.Size(105, 42);
+            this.bsearch.TabIndex = 5;
+            this.bsearch.Text = "Ara";
+            this.bsearch.UseVisualStyleBackColor = false;
+            this.bsearch.Click += new System.EventHandler(this.bsearch_Click);
+            // 
+            // tpsad
+            // 
+            this.tpsad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpsad.Location = new System.Drawing.Point(281, 67);
+            this.tpsad.Name = "tpsad";
+            this.tpsad.Size = new System.Drawing.Size(200, 33);
+            this.tpsad.TabIndex = 2;
+            this.tpsad.Text = "soyadı";
+            // 
+            // tpad
+            // 
+            this.tpad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpad.Location = new System.Drawing.Point(23, 67);
+            this.tpad.Name = "tpad";
+            this.tpad.Size = new System.Drawing.Size(220, 33);
+            this.tpad.TabIndex = 1;
+            this.tpad.Text = "adı";
             // 
             // panel11
             // 
@@ -389,126 +510,6 @@
             this.label6.TabIndex = 20;
             this.label6.Text = "Listeleme kriteri:";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Azure;
-            this.panel2.Controls.Add(this.listView1);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.bsearch);
-            this.panel2.Controls.Add(this.tpsad);
-            this.panel2.Controls.Add(this.tpad);
-            this.panel2.Location = new System.Drawing.Point(12, 190);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(768, 441);
-            this.panel2.TabIndex = 0;
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.Color.LightBlue;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.PID,
-            this.Pad,
-            this.Sad,
-            this.mail,
-            this.maas,
-            this.Bolum,
-            this.adres,
-            this.tel,
-            this.poz});
-            this.listView1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(23, 134);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(735, 297);
-            this.listView1.TabIndex = 20;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // PID
-            // 
-            this.PID.Tag = "PID";
-            this.PID.Text = "ID";
-            this.PID.Width = 37;
-            // 
-            // Pad
-            // 
-            this.Pad.Text = "Personel Adı";
-            this.Pad.Width = 110;
-            // 
-            // Sad
-            // 
-            this.Sad.Text = "Personel Soyadı";
-            this.Sad.Width = 135;
-            // 
-            // mail
-            // 
-            this.mail.Text = "E-Mail";
-            this.mail.Width = 90;
-            // 
-            // maas
-            // 
-            this.maas.Text = "Maaş";
-            // 
-            // Bolum
-            // 
-            this.Bolum.Text = "Bolum";
-            // 
-            // adres
-            // 
-            this.adres.Text = "Adres";
-            // 
-            // tel
-            // 
-            this.tel.Text = "Telefon";
-            this.tel.Width = 95;
-            // 
-            // poz
-            // 
-            this.poz.Text = "Pozisyon";
-            this.poz.Width = 83;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label5.Location = new System.Drawing.Point(67, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(260, 29);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Aranan Personelin";
-            // 
-            // bsearch
-            // 
-            this.bsearch.BackColor = System.Drawing.Color.SkyBlue;
-            this.bsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bsearch.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bsearch.Location = new System.Drawing.Point(561, 68);
-            this.bsearch.Name = "bsearch";
-            this.bsearch.Size = new System.Drawing.Size(105, 42);
-            this.bsearch.TabIndex = 5;
-            this.bsearch.Text = "Ara";
-            this.bsearch.UseVisualStyleBackColor = false;
-            this.bsearch.Click += new System.EventHandler(this.bsearch_Click);
-            // 
-            // tpsad
-            // 
-            this.tpsad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tpsad.Location = new System.Drawing.Point(281, 67);
-            this.tpsad.Name = "tpsad";
-            this.tpsad.Size = new System.Drawing.Size(200, 33);
-            this.tpsad.TabIndex = 2;
-            this.tpsad.Text = "soyadı";
-            // 
-            // tpad
-            // 
-            this.tpad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tpad.Location = new System.Drawing.Point(23, 67);
-            this.tpad.Name = "tpad";
-            this.tpad.Size = new System.Drawing.Size(220, 33);
-            this.tpad.TabIndex = 1;
-            this.tpad.Text = "adı";
-            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(156)))), ((int)(((byte)(236)))));
@@ -577,12 +578,12 @@
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.yetkibolumBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.otomasyonDataSet)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
 

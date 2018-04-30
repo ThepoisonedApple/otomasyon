@@ -317,6 +317,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Ara";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -368,7 +369,7 @@
             this.panel1.Size = new System.Drawing.Size(500, 650);
             this.panel1.TabIndex = 16;
             // 
-            // Makine_Search
+            // UrunSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -376,7 +377,7 @@
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Makine_Search";
+            this.Name = "UrunSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Makine_Search";
             this.panel3.ResumeLayout(false);

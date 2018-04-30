@@ -125,5 +125,92 @@ namespace login
             panel2.Show();
             panel11.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HammaddeClass.mylist.Clear();
+            listView1.Items.Clear();
+            bool x = true;
+            int i = 0;
+            HammaddeClass myclass = new HammaddeClass();
+            myclass.UrunStokAra(thad.Text);
+            while (x)
+            {
+                ListViewItem item = new ListViewItem(HammaddeClass.mylist[i]);
+                item.SubItems.Add(HammaddeClass.mylist[i + 1]);
+                item.SubItems.Add(HammaddeClass.mylist[i + 2]);
+                item.SubItems.Add(HammaddeClass.mylist[i + 3]);
+                i = i + 4;
+                listView1.Items.Add(item);
+                if (HammaddeClass.mylist.Count == i)
+                {
+                    x = false;
+                    break;
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                HammaddeClass.mylist.Clear();
+                listView2.Items.Clear();
+                bool x = true;
+                int i = 0;
+                HammaddeClass myclass = new HammaddeClass();
+                myclass.UrunStokAra("");
+                while (x)
+                {
+                    ListViewItem item = new ListViewItem(HammaddeClass.mylist[i]);
+                    item.SubItems.Add(HammaddeClass.mylist[i + 1]);
+                    item.SubItems.Add(HammaddeClass.mylist[i + 2]);
+                    item.SubItems.Add(HammaddeClass.mylist[i + 3]);
+                    i = i + 4;
+                    listView2.Items.Add(item);
+                    if (HammaddeClass.mylist.Count == i)
+                    {
+                        x = false;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                HammaddeClass.mylist.Clear();
+                listView2.Items.Clear();
+                bool x = true;
+                int i = 0;
+                HammaddeClass myclass = new HammaddeClass();
+                myclass.UrunStokListele(Convert.ToInt32(textBox1.Text));
+                while (x)
+                {
+                    ListViewItem item = new ListViewItem(HammaddeClass.mylist[i]);
+                    item.SubItems.Add(HammaddeClass.mylist[i + 1]);
+                    item.SubItems.Add(HammaddeClass.mylist[i + 2]);
+                    item.SubItems.Add(HammaddeClass.mylist[i + 3]);
+                    i = i + 4;
+                    listView2.Items.Add(item);
+                    if (HammaddeClass.mylist.Count == i)
+                    {
+                        x = false;
+                        break;
+                    }
+                }
+            }
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex==1)
+            {
+                textBox1.Show();
+            }
+            else
+            {
+                textBox1.Hide();
+            }
+        }
     }
 }

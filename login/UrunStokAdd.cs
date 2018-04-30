@@ -40,5 +40,19 @@ namespace login
             nextForm.Show();
             this.Dispose();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UrunStokClass myclass = new UrunStokClass();
+                myclass.UrunStokEkle(Convert.ToInt32(tuid.Text),Convert.ToInt32(tuadet.Text));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

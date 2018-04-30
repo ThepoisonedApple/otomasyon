@@ -72,6 +72,7 @@ namespace login
             catch (Exception)
             {
                 MessageBox.Show("Urun Silinemedi");
+                throw;
             }
         }
     }

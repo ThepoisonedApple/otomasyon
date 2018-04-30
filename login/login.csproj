@@ -71,7 +71,6 @@
       <DependentUpon>OtomasyonDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="PersonelClass.cs" />
-    <Compile Include="PersonStruct.cs" />
     <Compile Include="SifreUnuttumClass.cs" />
     <Compile Include="UrunClass.cs" />
     <Compile Include="UrunSearch.cs">
@@ -370,6 +369,7 @@
     <Compile Include="UrunDelete.Designer.cs">
       <DependentUpon>UrunDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="UrunStokClass.cs" />
     <Compile Include="UrunUpdate.cs">
       <SubType>Form</SubType>
     </Compile>

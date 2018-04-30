@@ -9,6 +9,8 @@ namespace login
 {
     class HammaddeClass
     {
+
+        public static List<string> mylist = new List<string>();
         public void HammaddeEkle(string adi, int adet, int tid)
         {
             DBconnect mycon = new DBconnect();
@@ -21,8 +23,6 @@ namespace login
             command.Parameters.AddWithValue("@tid", tid);
             command.ExecuteNonQuery();
             mycon.connectionclose();
-
-
         }
         public string[] HammaddeBilgiGetir(string uid)
         {
@@ -68,6 +68,46 @@ namespace login
             command.ExecuteNonQuery();
             mycon.connectionclose();
             
+        }
+
+        public void UrunStokAra(string ad)
+        {
+            DBconnect mycon = new DBconnect();
+            mycon.connectionopen();
+            NpgsqlCommand comm = new NpgsqlCommand();
+            comm.Connection = DBconnect.baglanti;
+            comm.CommandText = "SELECT * FROM hammadde WHERE adi like @ad";
+            comm.Parameters.AddWithValue("@ad", "%" + ad + "%");
+            NpgsqlDataReader reader = comm.ExecuteReader();
+            int x = 0;
+            while (reader.Read())
+            {
+                mylist.Add(reader.GetValue(x).ToString());
+                mylist.Add(reader.GetValue(x + 1).ToString());
+                mylist.Add(reader.GetValue(x + 2).ToString());
+                mylist.Add(reader.GetValue(x + 3).ToString());
+            }
+            mycon.connectionclose();
+        }
+
+        public void UrunStokListele(int ID)
+        {
+            DBconnect mycon = new DBconnect();
+            mycon.connectionopen();
+            NpgsqlCommand comm = new NpgsqlCommand();
+            comm.Connection = DBconnect.baglanti;
+            comm.CommandText = "SELECT * FROM hammadde WHERE tedarikci_id=@ID";
+            comm.Parameters.AddWithValue("@ID",ID);
+            NpgsqlDataReader reader = comm.ExecuteReader();
+            int x = 0;
+            while (reader.Read())
+            {
+                mylist.Add(reader.GetValue(x).ToString());
+                mylist.Add(reader.GetValue(x + 1).ToString());
+                mylist.Add(reader.GetValue(x + 2).ToString());
+                mylist.Add(reader.GetValue(x + 3).ToString());
+            }
+            mycon.connectionclose();
         }
     }
 }

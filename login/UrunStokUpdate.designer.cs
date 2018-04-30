@@ -34,11 +34,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.tmiktar = new System.Windows.Forms.TextBox();
+            this.tuadet = new System.Windows.Forms.TextBox();
+            this.tuad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tuid = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -75,6 +77,7 @@
             this.button2.TabIndex = 40;
             this.button2.Text = "Bilgilerini Getir";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -114,37 +117,67 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.MintCream;
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.textBox2);
+            this.panel5.Controls.Add(this.button3);
+            this.panel5.Controls.Add(this.tmiktar);
+            this.panel5.Controls.Add(this.tuadet);
+            this.panel5.Controls.Add(this.tuad);
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.tuid);
             this.panel5.Location = new System.Drawing.Point(82, 122);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(520, 242);
+            this.panel5.Size = new System.Drawing.Size(520, 279);
             this.panel5.TabIndex = 24;
             // 
-            // textBox3
+            // button3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.ForeColor = System.Drawing.Color.Silver;
-            this.textBox3.Location = new System.Drawing.Point(45, 163);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 33);
-            this.textBox3.TabIndex = 42;
-            this.textBox3.Text = "Ürün Adeti";
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(68)))), ((int)(((byte)(83)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(30, 213);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(87, 33);
+            this.button3.TabIndex = 44;
+            this.button3.Text = "Çıkar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox2
+            // tmiktar
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(45, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 33);
-            this.textBox2.TabIndex = 41;
-            this.textBox2.Text = "Ürün Adı";
+            this.tmiktar.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tmiktar.ForeColor = System.Drawing.Color.Silver;
+            this.tmiktar.Location = new System.Drawing.Point(146, 213);
+            this.tmiktar.Name = "tmiktar";
+            this.tmiktar.Size = new System.Drawing.Size(233, 33);
+            this.tmiktar.TabIndex = 43;
+            this.tmiktar.Text = "Ürün Adeti";
+            // 
+            // tuadet
+            // 
+            this.tuadet.BackColor = System.Drawing.Color.White;
+            this.tuadet.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tuadet.ForeColor = System.Drawing.Color.Silver;
+            this.tuadet.Location = new System.Drawing.Point(146, 167);
+            this.tuadet.Name = "tuadet";
+            this.tuadet.ReadOnly = true;
+            this.tuadet.Size = new System.Drawing.Size(233, 33);
+            this.tuadet.TabIndex = 42;
+            this.tuadet.Text = "Ürün Adeti";
+            // 
+            // tuad
+            // 
+            this.tuad.BackColor = System.Drawing.Color.White;
+            this.tuad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tuad.ForeColor = System.Drawing.Color.Silver;
+            this.tuad.Location = new System.Drawing.Point(146, 122);
+            this.tuad.Name = "tuad";
+            this.tuad.ReadOnly = true;
+            this.tuad.Size = new System.Drawing.Size(233, 33);
+            this.tuad.TabIndex = 41;
+            this.tuad.Text = "Ürün Adı";
             // 
             // label2
             // 
@@ -164,22 +197,23 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(374, 163);
+            this.button1.Location = new System.Drawing.Point(413, 213);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 54);
+            this.button1.Size = new System.Drawing.Size(87, 33);
             this.button1.TabIndex = 32;
-            this.button1.Text = "Güncelle";
+            this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // tuid
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(45, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 33);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Ürün ID";
+            this.tuid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tuid.ForeColor = System.Drawing.Color.Silver;
+            this.tuid.Location = new System.Drawing.Point(45, 30);
+            this.tuid.Name = "tuid";
+            this.tuid.Size = new System.Drawing.Size(233, 33);
+            this.tuid.TabIndex = 24;
+            this.tuid.Text = "Ürün ID";
             // 
             // panel4
             // 
@@ -194,7 +228,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Location = new System.Drawing.Point(50, 373);
+            this.panel2.Location = new System.Drawing.Point(50, 425);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(574, 25);
             this.panel2.TabIndex = 13;
@@ -207,7 +241,7 @@
             this.panel3.Controls.Add(this.button9);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(50, 398);
+            this.panel3.Size = new System.Drawing.Size(50, 450);
             this.panel3.TabIndex = 12;
             // 
             // button11
@@ -257,14 +291,14 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(624, 398);
+            this.panel1.Size = new System.Drawing.Size(624, 450);
             this.panel1.TabIndex = 5;
             // 
             // UrunStokUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 398);
+            this.ClientSize = new System.Drawing.Size(624, 450);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UrunStokUpdate";
@@ -287,10 +321,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tuad;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tuid;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -298,6 +332,8 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tuadet;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox tmiktar;
     }
 }
