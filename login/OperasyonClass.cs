@@ -9,6 +9,7 @@ namespace login
 {
     class OperasyonClass
     {
+        public static List<string> mylist = new List<string>();
         public void operasyonekle(string oadi,string otanim)
         {
             DBconnect mycon = new DBconnect();
@@ -66,5 +67,26 @@ namespace login
             mycon.connectionclose();
 
         }
+        public void OperasyonAra(string oad)
+        {
+            DBconnect mycon = new DBconnect();
+            mycon.connectionopen();
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.Connection = DBconnect.baglanti;
+            command.CommandText = "SELECT * FROM operasyon WHERE ad LIKE @mad";
+            command.Parameters.AddWithValue("@mad", "%" + oad + "%");
+            NpgsqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                mylist.Add(Convert.ToString(reader.GetValue(0)));
+                mylist.Add(Convert.ToString(reader.GetValue(1)));
+                mylist.Add(Convert.ToString(reader.GetValue(2)));
+
+            }
+            mycon.connectionclose();
+        }
+
+
+
     }
 }

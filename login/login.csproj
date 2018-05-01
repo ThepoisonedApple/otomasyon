@@ -58,6 +58,7 @@
     <Compile Include="HammaddeClass.cs" />
     <Compile Include="KayitInsert.cs" />
     <Compile Include="LoginClass.cs" />
+    <Compile Include="MakineClass.cs" />
     <Compile Include="OperasyonClass.cs" />
     <Compile Include="OperasyonSearch.cs">
       <SubType>Form</SubType>

@@ -45,9 +45,37 @@ namespace login
         private void button4_Click(object sender, EventArgs e)
         {
             try
-            {
+            {   
                 UrunClass myclass = new UrunClass();
+                myclass.AratabloListele(Convert.ToInt32(tuid.Text));
                 arr=myclass.BilgiGetir(Convert.ToInt32(tuid.Text));
+                foreach (Control c in panel5.Controls)
+                {
+                    if (c is TextBox)
+                    {
+                        ((TextBox)c).ForeColor = Color.Black;
+                        if (c.Name!="tuid")
+                        {
+                            ((TextBox)c).ResetText();
+                        }
+
+                    }
+                }
+                thid.ForeColor = Color.Black;
+                toid.ForeColor = Color.Black;
+                toid.ResetText();
+                thid.ResetText();
+                for (int i = 0; i < UrunClass.operasyonlist.Count; i++)
+                {
+                    toid.Text += UrunClass.operasyonlist[i]+ Environment.NewLine;
+
+                }
+                for (int i = 0; i < UrunClass.hammaddelist.Count; i++)
+                {
+                    toid.Text += UrunClass.hammaddelist[i] + Environment.NewLine;
+
+                }
+
                 tuad.Text = arr[0];
                 tutl.Text = arr[1];
                 tukl.Text = arr[2];

@@ -10,6 +10,9 @@ namespace login
 {
     class UrunClass
     {
+        public static List<string> hammaddelist = new List<string>();
+        public static List<string> operasyonlist = new List<string>();
+
         public int UrunEkle(string uad,string utl,string ukl,int sid)
         {
             int adet=0;
@@ -157,6 +160,32 @@ namespace login
             command.Parameters.AddWithValue("@uid", uid);
             command.Parameters.AddWithValue("@hid", hid);
             command.ExecuteNonQuery();
+            mycon.connectionclose();
+        }
+
+        public void AratabloListele(int uid)
+        {
+            DBconnect mycon = new DBconnect();
+            mycon.connectionopen();
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.Connection = DBconnect.baglanti;
+            command.CommandText = "select operasyon_id from urun_operasyon where urun_id=@uid";
+            command.Parameters.AddWithValue("@uid", uid);
+            NpgsqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                operasyonlist.Add(Convert.ToString(reader.GetValue(0)));
+            }
+            reader.Close();
+            mycon.connectionclose();
+            mycon.connectionopen();
+            command.CommandText = "select hammadde_id from urun_hammadde where urun_id=@uid";
+            command.Parameters.AddWithValue("@uid", uid);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                hammaddelist.Add(Convert.ToString(reader.GetValue(0)));
+            }
             mycon.connectionclose();
         }
 

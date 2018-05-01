@@ -126,5 +126,92 @@ namespace login
             panel2.Show();
             panel11.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MakineClass.mylist.Clear();
+            listView1.Items.Clear();
+            bool x = true;
+            int i = 0;
+            MakineClass myclass = new MakineClass();
+            myclass.MakineAra(tmad.Text);
+
+            while (x)
+            {
+                ListViewItem item = new ListViewItem(MakineClass.mylist[i]);
+                item.SubItems.Add(MakineClass.mylist[i + 1]);
+                item.SubItems.Add(MakineClass.mylist[i + 2]);
+                item.SubItems.Add(MakineClass.mylist[i + 3]);
+                if (MakineClass.mylist[i+4]=="True")
+                {
+                    MakineClass.mylist[i + 4] = "Çalışıyor";
+                }
+                else
+                {
+                    MakineClass.mylist[i + 4] = "Çalışmıyor";
+                }
+                item.SubItems.Add(MakineClass.mylist[i + 4]);
+                i = i + 5;
+                listView1.Items.Add(item);
+                if (MakineClass.mylist.Count == i)
+                {
+                    x = false;
+                    break;
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            MakineClass.mylist.Clear();
+            listView2.Items.Clear();
+            bool x = true;
+            int i = 0;
+            if (comboBox1.SelectedIndex==0)
+            {
+                MakineClass myclass = new MakineClass();
+                myclass.MakineAra("");
+            }
+            else if(comboBox1.SelectedIndex == 1)
+            {
+                MakineClass myclass = new MakineClass();
+                myclass.MakineDurumListele(true);
+            }
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                MakineClass myclass = new MakineClass();
+                myclass.MakineDurumListele(false);
+            }
+            else if (comboBox1.SelectedIndex == 3)
+            {
+                MakineClass myclass = new MakineClass();
+                myclass.MakineTarihListele();
+            }
+            while (x)
+            {
+                ListViewItem item = new ListViewItem(MakineClass.mylist[i]);
+                item.SubItems.Add(MakineClass.mylist[i + 1]);
+                item.SubItems.Add(MakineClass.mylist[i + 2]);
+                item.SubItems.Add(MakineClass.mylist[i + 3]);
+                if (MakineClass.mylist[i + 4] == "True")
+                {
+                    MakineClass.mylist[i + 4] = "Çalışıyor";
+                }
+                else
+                {
+                    MakineClass.mylist[i + 4] = "Çalışmıyor";
+                }
+                item.SubItems.Add(MakineClass.mylist[i + 4]);
+                i = i + 5;
+                listView2.Items.Add(item);
+                if (MakineClass.mylist.Count == i)
+                {
+                    x = false;
+                    break;
+                }
+            }
+
+        }
     }
 }

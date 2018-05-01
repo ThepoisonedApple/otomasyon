@@ -102,9 +102,7 @@ namespace login
 
             mycon.connectionclose();
 
-
         }
-
 
 
     }

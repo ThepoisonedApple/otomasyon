@@ -22,6 +22,7 @@ namespace login
             button10.FlatAppearance.BorderSize = 0;
             button11.FlatAppearance.BorderSize = 0;
             button12.FlatAppearance.BorderSize = 0;
+            comboBox1.SelectedIndex = 0;
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -125,6 +126,55 @@ namespace login
             panel8.Hide();
             panel2.Show();
             panel11.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OperasyonClass.mylist.Clear();
+            listView1.Items.Clear();
+            bool x = true;
+            int i = 0;
+            OperasyonClass myclass = new OperasyonClass();
+            myclass.OperasyonAra(toad.Text);
+
+            while (x)
+            {
+                ListViewItem item = new ListViewItem(OperasyonClass.mylist[i]);
+                item.SubItems.Add(OperasyonClass.mylist[i + 1]);
+                item.SubItems.Add(OperasyonClass.mylist[i + 2]);
+                i = i + 3;
+                listView1.Items.Add(item);
+                if (OperasyonClass.mylist.Count == i)
+                {
+                    x = false;
+                    break;
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            OperasyonClass.mylist.Clear();
+            listView1.Items.Clear();
+            bool x = true;
+            int i = 0;
+            OperasyonClass myclass = new OperasyonClass();
+            myclass.OperasyonAra("");
+
+            while (x)
+            {
+                ListViewItem item = new ListViewItem(OperasyonClass.mylist[i]);
+                item.SubItems.Add(OperasyonClass.mylist[i + 1]);
+                item.SubItems.Add(OperasyonClass.mylist[i + 2]);
+                i = i + 3;
+                listView1.Items.Add(item);
+                if (OperasyonClass.mylist.Count == i)
+                {
+                    x = false;
+                    break;
+                }
+            }
         }
     }
 }

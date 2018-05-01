@@ -137,11 +137,13 @@
             // 
             // tukl
             // 
+            this.tukl.BackColor = System.Drawing.Color.White;
             this.tukl.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tukl.ForeColor = System.Drawing.Color.Silver;
             this.tukl.Location = new System.Drawing.Point(42, 244);
             this.tukl.Multiline = true;
             this.tukl.Name = "tukl";
+            this.tukl.ReadOnly = true;
             this.tukl.Size = new System.Drawing.Size(510, 66);
             this.tukl.TabIndex = 33;
             this.tukl.Text = "Kesim Kağıdı Linki";
@@ -162,53 +164,65 @@
             // 
             // tutl
             // 
+            this.tutl.BackColor = System.Drawing.Color.White;
             this.tutl.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tutl.ForeColor = System.Drawing.Color.Silver;
             this.tutl.Location = new System.Drawing.Point(42, 163);
             this.tutl.Multiline = true;
             this.tutl.Name = "tutl";
+            this.tutl.ReadOnly = true;
             this.tutl.Size = new System.Drawing.Size(510, 66);
             this.tutl.TabIndex = 27;
             this.tutl.Text = "Tasarım Kağıdı Linki";
             // 
             // tsid
             // 
+            this.tsid.BackColor = System.Drawing.Color.White;
             this.tsid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tsid.ForeColor = System.Drawing.Color.Silver;
             this.tsid.Location = new System.Drawing.Point(319, 112);
             this.tsid.Name = "tsid";
+            this.tsid.ReadOnly = true;
             this.tsid.Size = new System.Drawing.Size(233, 33);
             this.tsid.TabIndex = 25;
             this.tsid.Text = "Sipraiş ID";
             // 
             // tuad
             // 
+            this.tuad.BackColor = System.Drawing.Color.White;
             this.tuad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tuad.ForeColor = System.Drawing.Color.Silver;
             this.tuad.Location = new System.Drawing.Point(42, 112);
             this.tuad.Name = "tuad";
+            this.tuad.ReadOnly = true;
             this.tuad.Size = new System.Drawing.Size(233, 33);
             this.tuad.TabIndex = 24;
             this.tuad.Text = "Ürün Adı";
             // 
             // thid
             // 
+            this.thid.BackColor = System.Drawing.Color.White;
             this.thid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.thid.ForeColor = System.Drawing.Color.Silver;
             this.thid.Location = new System.Drawing.Point(23, 13);
             this.thid.Multiline = true;
             this.thid.Name = "thid";
+            this.thid.ReadOnly = true;
+            this.thid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.thid.Size = new System.Drawing.Size(189, 90);
             this.thid.TabIndex = 26;
             this.thid.Text = "Hammadde ID";
             // 
             // toid
             // 
+            this.toid.BackColor = System.Drawing.Color.White;
             this.toid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.toid.ForeColor = System.Drawing.Color.Silver;
             this.toid.Location = new System.Drawing.Point(21, 13);
             this.toid.Multiline = true;
             this.toid.Name = "toid";
+            this.toid.ReadOnly = true;
+            this.toid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.toid.Size = new System.Drawing.Size(189, 90);
             this.toid.TabIndex = 25;
             this.toid.Text = "Operasyon ID";
