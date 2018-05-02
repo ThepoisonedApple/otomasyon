@@ -16,6 +16,7 @@ namespace login
         public VerimSearch()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
             button1.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;
@@ -129,7 +130,86 @@ namespace login
 
         private void button1_Click(object sender, EventArgs e)
         {
+            VerimClass myclass = new VerimClass();
+            VerimClass.mylist.Clear();
+            listView1.Items.Clear();
+            bool x = true;
+            int i = 0;
+            if (tpid.ForeColor==Color.Silver)
+            {
+                tpid.ResetText();
+            }
+            if (tuid.ForeColor == Color.Silver)
+            {
+                tuid.ResetText();
+            }
+            if (toid.ForeColor == Color.Silver)
+            {
+                toid.ResetText();
+            }
+            if (ttarih.ForeColor == Color.Silver)
+            {
+                ttarih.ResetText();
+            }
+            myclass.VerimAra(tuid.Text,toid.Text,tpid.Text,ttarih.Text);
+            while (x)
+            {
+                ListViewItem item = new ListViewItem(VerimClass.mylist[i]);
+                item.SubItems.Add(VerimClass.mylist[i + 1]);
+                item.SubItems.Add(VerimClass.mylist[i + 2]);
+                item.SubItems.Add(VerimClass.mylist[i + 3]);
+                item.SubItems.Add(VerimClass.mylist[i + 4]);
+                item.SubItems.Add(VerimClass.mylist[i + 5]);
 
+                i = i + 6;
+                listView1.Items.Add(item);
+                if (VerimClass.mylist.Count == i)
+                {
+                    x = false;
+                    break;
+                }
+            }
+
+
+        }
+
+        private void tpid_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            VerimClass myclass = new VerimClass();
+            VerimClass.mylist.Clear();
+            listView2.Items.Clear();
+            bool x = true;
+            int i = 0;
+
+
+            myclass.VerimListele(textBox1.Text,comboBox1.SelectedIndex);
+            while (x)
+            {
+                ListViewItem item = new ListViewItem(VerimClass.mylist[i]);
+                item.SubItems.Add(VerimClass.mylist[i + 1]);
+                item.SubItems.Add(VerimClass.mylist[i + 2]);
+                item.SubItems.Add(VerimClass.mylist[i + 3]);
+                item.SubItems.Add(VerimClass.mylist[i + 4]);
+                item.SubItems.Add(VerimClass.mylist[i + 5]);
+
+                i = i + 6;
+                listView2.Items.Add(item);
+                if (VerimClass.mylist.Count == i)
+                {
+                    x = false;
+                    break;
+                }
+            }
         }
     }
 }

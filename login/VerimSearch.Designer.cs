@@ -38,7 +38,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,13 +49,9 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.toid = new System.Windows.Forms.TextBox();
+            this.tpid = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -64,6 +59,18 @@
             this.PID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tarih = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Adet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tuid = new System.Windows.Forms.TextBox();
+            this.ttarih = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -119,7 +126,7 @@
             this.button12.BackgroundImage = global::login.Properties.Resources.Exit;
             this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(777, 0);
+            this.button12.Location = new System.Drawing.Point(793, 0);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(25, 25);
             this.button12.TabIndex = 5;
@@ -180,26 +187,18 @@
             this.label2.Text = "Listele";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.Location = new System.Drawing.Point(18, 134);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(430, 285);
-            this.textBox4.TabIndex = 23;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.MediumAquamarine;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(333, 67);
+            this.button2.Location = new System.Drawing.Point(642, 42);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 44);
             this.button2.TabIndex = 22;
             this.button2.Text = "Listele";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox1
             // 
@@ -207,12 +206,13 @@
             this.comboBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Ünvan",
-            "Yetki Düzeyi",
-            "Bölüm"});
+            "Ürün ID\'e Göre Listele",
+            "Opesrasyon ID\'e Göre Listele",
+            "Personel ID\'e Göre Listele",
+            "Tarih\'e Göre Listele"});
             this.comboBox1.Location = new System.Drawing.Point(253, 18);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(195, 33);
+            this.comboBox1.Size = new System.Drawing.Size(364, 33);
             this.comboBox1.TabIndex = 21;
             // 
             // label6
@@ -229,13 +229,14 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Honeydew;
-            this.panel11.Controls.Add(this.textBox4);
+            this.panel11.Controls.Add(this.textBox1);
+            this.panel11.Controls.Add(this.listView2);
             this.panel11.Controls.Add(this.button2);
             this.panel11.Controls.Add(this.comboBox1);
             this.panel11.Controls.Add(this.label6);
             this.panel11.Location = new System.Drawing.Point(12, 190);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(474, 441);
+            this.panel11.Size = new System.Drawing.Size(790, 441);
             this.panel11.TabIndex = 20;
             // 
             // panel5
@@ -319,85 +320,42 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox3
+            // toid
             // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.Location = new System.Drawing.Point(276, 75);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 33);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "Operasyon ID";
+            this.toid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.toid.ForeColor = System.Drawing.Color.Silver;
+            this.toid.Location = new System.Drawing.Point(276, 75);
+            this.toid.Name = "toid";
+            this.toid.Size = new System.Drawing.Size(233, 33);
+            this.toid.TabIndex = 2;
+            this.toid.Text = "Operasyon ID";
+            this.toid.Enter += new System.EventHandler(this.tpid_Enter);
             // 
-            // textBox2
+            // tpid
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.Location = new System.Drawing.Point(276, 18);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 33);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Personel ID";
+            this.tpid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpid.ForeColor = System.Drawing.Color.Silver;
+            this.tpid.Location = new System.Drawing.Point(276, 18);
+            this.tpid.Name = "tpid";
+            this.tpid.Size = new System.Drawing.Size(233, 33);
+            this.tpid.TabIndex = 1;
+            this.tpid.Text = "Personel ID";
+            this.tpid.Enter += new System.EventHandler(this.tpid_Enter);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
             this.panel2.Controls.Add(this.listView1);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.tuid);
+            this.panel2.Controls.Add(this.ttarih);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.toid);
+            this.panel2.Controls.Add(this.tpid);
             this.panel2.Location = new System.Drawing.Point(12, 190);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(790, 441);
             this.panel2.TabIndex = 0;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox6.Location = new System.Drawing.Point(18, 75);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(233, 33);
-            this.textBox6.TabIndex = 21;
-            this.textBox6.Text = "Ürün ID";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.Location = new System.Drawing.Point(524, 18);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(233, 33);
-            this.textBox5.TabIndex = 20;
-            this.textBox5.Text = "Tarih";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(200, 126);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(170, 49);
-            this.panel4.TabIndex = 2;
-            this.panel4.Click += new System.EventHandler(this.panel4_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.panel10);
-            this.panel1.Controls.Add(this.button12);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel11);
-            this.panel1.Location = new System.Drawing.Point(50, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(827, 650);
-            this.panel1.TabIndex = 16;
             // 
             // listView1
             // 
@@ -415,6 +373,7 @@
             this.listView1.Location = new System.Drawing.Point(18, 122);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(739, 297);
+            this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 22;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -449,11 +408,124 @@
             this.Adet.Text = "Adet";
             this.Adet.Width = 137;
             // 
+            // tuid
+            // 
+            this.tuid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tuid.ForeColor = System.Drawing.Color.Silver;
+            this.tuid.Location = new System.Drawing.Point(18, 75);
+            this.tuid.Name = "tuid";
+            this.tuid.Size = new System.Drawing.Size(233, 33);
+            this.tuid.TabIndex = 21;
+            this.tuid.Text = "Ürün ID";
+            this.tuid.Enter += new System.EventHandler(this.tpid_Enter);
+            // 
+            // ttarih
+            // 
+            this.ttarih.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ttarih.ForeColor = System.Drawing.Color.Silver;
+            this.ttarih.Location = new System.Drawing.Point(524, 18);
+            this.ttarih.Name = "ttarih";
+            this.ttarih.Size = new System.Drawing.Size(233, 33);
+            this.ttarih.TabIndex = 20;
+            this.ttarih.Text = "Tarih";
+            this.ttarih.Enter += new System.EventHandler(this.tpid_Enter);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Location = new System.Drawing.Point(200, 126);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(170, 49);
+            this.panel4.TabIndex = 2;
+            this.panel4.Click += new System.EventHandler(this.panel4_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel8);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.panel10);
+            this.panel1.Controls.Add(this.button12);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel11);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(50, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(818, 650);
+            this.panel1.TabIndex = 16;
+            // 
+            // listView2
+            // 
+            this.listView2.BackColor = System.Drawing.Color.LightBlue;
+            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.listView2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listView2.GridLines = true;
+            this.listView2.Location = new System.Drawing.Point(23, 122);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(739, 297);
+            this.listView2.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.listView2.TabIndex = 23;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Ürün ID";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 127;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Operasyon ID";
+            this.columnHeader3.Width = 127;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Personel ID";
+            this.columnHeader4.Width = 117;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Tarih";
+            this.columnHeader5.Width = 167;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Adet";
+            this.columnHeader6.Width = 137;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.ForeColor = System.Drawing.Color.Silver;
+            this.textBox1.Location = new System.Drawing.Point(253, 69);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(364, 33);
+            this.textBox1.TabIndex = 24;
+            this.textBox1.Text = "Seçtiğiniz Kriterin Değerini Giriniz";
+            this.textBox1.Enter += new System.EventHandler(this.tpid_Enter);
+            // 
             // VerimSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 650);
+            this.ClientSize = new System.Drawing.Size(868, 650);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -487,7 +559,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label6;
@@ -499,13 +570,13 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox toid;
+        private System.Windows.Forms.TextBox tpid;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox ttarih;
+        private System.Windows.Forms.TextBox tuid;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader UID;
@@ -513,5 +584,13 @@
         private System.Windows.Forms.ColumnHeader PID;
         private System.Windows.Forms.ColumnHeader Tarih;
         private System.Windows.Forms.ColumnHeader Adet;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

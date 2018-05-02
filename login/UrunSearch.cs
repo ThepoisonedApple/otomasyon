@@ -129,6 +129,74 @@ namespace login
 
         private void button1_Click(object sender, EventArgs e)
         {
+            UrunClass.mylist.Clear();
+            listView1.Items.Clear();
+            bool x = true;
+            int i = 0;
+            UrunClass myclass = new UrunClass();
+            myclass.UrunAra(uad.Text);
+            while (x)
+            {
+                ListViewItem item = new ListViewItem(UrunClass.mylist[i]);
+                item.SubItems.Add(UrunClass.mylist[i + 1]);
+                item.SubItems.Add(UrunClass.mylist[i + 2]);
+                item.SubItems.Add(UrunClass.mylist[i + 3]);
+                item.SubItems.Add(UrunClass.mylist[i + 4]);
+                item.SubItems.Add(UrunClass.mylist[i + 5]);
+                item.SubItems.Add(UrunClass.mylist[i + 6]);
+                i = i + 7;
+                listView1.Items.Add(item);
+                if (UrunClass.mylist.Count == i)
+                {
+                    x = false;
+                    break;
+                }
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 1)
+            {
+                textBox1.Hide();
+            }
+            else textBox1.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UrunClass.mylist.Clear();
+            listView2.Items.Clear();
+            if (comboBox1.SelectedIndex==1)
+            {
+                UrunClass myclass = new UrunClass();
+                myclass.UrunAra("");
+            }
+            else
+            {
+                UrunClass myclass = new UrunClass();
+                myclass.UrunListele(textBox1.Text);
+            }
+            bool x = true;
+            int i = 0;
+            while (x)
+            {
+                ListViewItem item = new ListViewItem(UrunClass.mylist[i]);
+                item.SubItems.Add(UrunClass.mylist[i + 1]);
+                item.SubItems.Add(UrunClass.mylist[i + 2]);
+                item.SubItems.Add(UrunClass.mylist[i + 3]);
+                item.SubItems.Add(UrunClass.mylist[i + 4]);
+                item.SubItems.Add(UrunClass.mylist[i + 5]);
+                item.SubItems.Add(UrunClass.mylist[i + 6]);
+                i = i + 7;
+                listView2.Items.Add(item);
+                if (UrunClass.mylist.Count == i)
+                {
+                    x = false;
+                    break;
+                }
+            }
+
 
         }
     }
