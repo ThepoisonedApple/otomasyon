@@ -15,6 +15,8 @@ namespace login
         public YoneticiMain()
         {
             InitializeComponent();
+            RaporClass myclass = new RaporClass();
+            myclass.YeniRapor();
             button1.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.BorderSize = 0;
             button3.FlatAppearance.BorderSize = 0;
@@ -108,6 +110,18 @@ namespace login
         private void button9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Rapor nextForm = new Rapor();
+            nextForm.Show();
+            this.Dispose();
         }
     }
 }
