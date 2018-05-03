@@ -34,9 +34,7 @@ namespace login
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MakineMain nextForm = new MakineMain();
-            nextForm.Show();
-            this.Dispose();
+
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -78,7 +76,7 @@ namespace login
 
         private void rapor_Click(object sender, EventArgs e)
         {
-            MusteritemsilcisiMain nextForm = new MusteritemsilcisiMain();
+            MakineMain nextForm = new MakineMain();
             nextForm.Show();
             this.Dispose();
         }
@@ -97,7 +95,9 @@ namespace login
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // modellemeden operasyon ara formunu cek
+            OperasyonSearch nextForm = new OperasyonSearch();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -120,6 +120,13 @@ namespace login
         private void button4_Click(object sender, EventArgs e)
         {
             Rapor nextForm = new Rapor();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            MusteritemsilcisiMain nextForm = new MusteritemsilcisiMain();
             nextForm.Show();
             this.Dispose();
         }

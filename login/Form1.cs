@@ -16,6 +16,7 @@ namespace login
 
         #region Degiskenler ve main
         public static string KID;
+        public static int YID;
         public string K_ad;
         public string K_pw;
         bool ka = false, pw = false;

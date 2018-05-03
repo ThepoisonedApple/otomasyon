@@ -543,6 +543,7 @@
             this.binfo.Size = new System.Drawing.Size(50, 50);
             this.binfo.TabIndex = 1;
             this.binfo.UseVisualStyleBackColor = true;
+            this.binfo.Click += new System.EventHandler(this.binfo_Click);
             // 
             // bhome
             // 
@@ -564,7 +565,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 650);
+            this.ClientSize = new System.Drawing.Size(862, 650);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

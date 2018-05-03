@@ -280,6 +280,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel9
             // 
@@ -321,7 +322,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label5.Location = new System.Drawing.Point(18, 9);
+            this.label5.Location = new System.Drawing.Point(20, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(217, 29);
             this.label5.TabIndex = 19;
@@ -332,7 +333,7 @@
             this.button1.BackColor = System.Drawing.Color.SkyBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(343, 134);
+            this.button1.Location = new System.Drawing.Point(333, 66);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 42);
             this.button1.TabIndex = 5;
@@ -343,11 +344,13 @@
             // tuad
             // 
             this.tuad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tuad.ForeColor = System.Drawing.Color.Silver;
             this.tuad.Location = new System.Drawing.Point(23, 75);
             this.tuad.Name = "tuad";
             this.tuad.Size = new System.Drawing.Size(233, 33);
             this.tuad.TabIndex = 1;
             this.tuad.Text = "Ürün Adı";
+            this.tuad.Enter += new System.EventHandler(this.tuad_Enter);
             // 
             // panel2
             // 
@@ -371,9 +374,9 @@
             this.listView1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listView1.GridLines = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.Location = new System.Drawing.Point(23, 188);
+            this.listView1.Location = new System.Drawing.Point(23, 134);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(425, 231);
+            this.listView1.Size = new System.Drawing.Size(425, 285);
             this.listView1.TabIndex = 20;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;

@@ -27,9 +27,18 @@ namespace login
 
         private void button9_Click(object sender, EventArgs e)
         {
-            MakineMain nextForm = new MakineMain();
-            nextForm.Show();
-            this.Dispose();
+            if (Form1.YID == 1)
+            {
+                YoneticiMain NextForm = new YoneticiMain();
+                NextForm.Show();
+                this.Dispose();
+            }
+            else
+            {
+                ModellemeMain nextForm = new ModellemeMain();
+                nextForm.Show();
+                this.Dispose();
+            }
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -156,7 +165,7 @@ namespace login
         {
 
             OperasyonClass.mylist.Clear();
-            listView1.Items.Clear();
+            listView2.Items.Clear();
             bool x = true;
             int i = 0;
             OperasyonClass myclass = new OperasyonClass();
@@ -168,7 +177,7 @@ namespace login
                 item.SubItems.Add(OperasyonClass.mylist[i + 1]);
                 item.SubItems.Add(OperasyonClass.mylist[i + 2]);
                 i = i + 3;
-                listView1.Items.Add(item);
+                listView2.Items.Add(item);
                 if (OperasyonClass.mylist.Count == i)
                 {
                     x = false;

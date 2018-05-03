@@ -140,7 +140,6 @@
             this.ttoplam.Name = "ttoplam";
             this.ttoplam.Size = new System.Drawing.Size(110, 40);
             this.ttoplam.TabIndex = 45;
-            this.ttoplam.Text = "13113";
             this.ttoplam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
@@ -188,6 +187,7 @@
             this.tpid.Size = new System.Drawing.Size(233, 33);
             this.tpid.TabIndex = 40;
             this.tpid.Text = "Personel ID";
+            this.tpid.Enter += new System.EventHandler(this.tpad_Enter);
             // 
             // tsad
             // 
@@ -198,6 +198,7 @@
             this.tsad.Size = new System.Drawing.Size(233, 33);
             this.tsad.TabIndex = 39;
             this.tsad.Text = "Personel Soyadı";
+            this.tsad.Enter += new System.EventHandler(this.tpad_Enter);
             // 
             // tpad
             // 
@@ -208,6 +209,7 @@
             this.tpad.Size = new System.Drawing.Size(233, 33);
             this.tpad.TabIndex = 38;
             this.tpad.Text = "Personel Adı";
+            this.tpad.Enter += new System.EventHandler(this.tpad_Enter);
             // 
             // tuid
             // 
@@ -218,6 +220,7 @@
             this.tuid.Size = new System.Drawing.Size(233, 33);
             this.tuid.TabIndex = 43;
             this.tuid.Text = "Ürün ID";
+            this.tuid.Enter += new System.EventHandler(this.tpad_Enter);
             // 
             // toid
             // 
@@ -228,6 +231,7 @@
             this.toid.Size = new System.Drawing.Size(233, 33);
             this.toid.TabIndex = 42;
             this.toid.Text = "Operasyon no";
+            this.toid.Enter += new System.EventHandler(this.tpad_Enter);
             // 
             // button9
             // 
@@ -320,6 +324,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // VerimDelete
             // 

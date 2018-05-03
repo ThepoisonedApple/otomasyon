@@ -42,6 +42,14 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel5 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -63,14 +71,6 @@
             this.ttarih = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -92,22 +92,22 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(195, 75);
+            this.label4.Location = new System.Drawing.Point(240, 69);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(244, 29);
+            this.label4.Size = new System.Drawing.Size(503, 35);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Verim Ara,Listele";
+            this.label4.Text = "Verim Arama,Listeleme Paneli";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label3.Location = new System.Drawing.Point(230, 35);
+            this.label3.Location = new System.Drawing.Point(381, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 29);
+            this.label3.Size = new System.Drawing.Size(210, 35);
             this.label3.TabIndex = 16;
             this.label3.Text = "ModaVizyon";
             // 
@@ -116,9 +116,9 @@
             this.panel10.BackColor = System.Drawing.Color.Transparent;
             this.panel10.BackgroundImage = global::login.Properties.Resources.logo;
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel10.Location = new System.Drawing.Point(35, 35);
+            this.panel10.Location = new System.Drawing.Point(12, 23);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(130, 69);
+            this.panel10.Size = new System.Drawing.Size(170, 81);
             this.panel10.TabIndex = 15;
             // 
             // button12
@@ -239,6 +239,68 @@
             this.panel11.Size = new System.Drawing.Size(790, 441);
             this.panel11.TabIndex = 20;
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.ForeColor = System.Drawing.Color.Silver;
+            this.textBox1.Location = new System.Drawing.Point(253, 69);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(364, 33);
+            this.textBox1.TabIndex = 24;
+            this.textBox1.Text = "Seçtiğiniz Kriterin Değerini Giriniz";
+            this.textBox1.Enter += new System.EventHandler(this.tpid_Enter);
+            // 
+            // listView2
+            // 
+            this.listView2.BackColor = System.Drawing.Color.LightBlue;
+            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.listView2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listView2.GridLines = true;
+            this.listView2.Location = new System.Drawing.Point(23, 122);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(739, 297);
+            this.listView2.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.listView2.TabIndex = 23;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Ürün ID";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 127;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Operasyon ID";
+            this.columnHeader3.Width = 127;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Personel ID";
+            this.columnHeader4.Width = 117;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Tarih";
+            this.columnHeader5.Width = 167;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Adet";
+            this.columnHeader6.Width = 137;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
@@ -260,6 +322,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel9
             // 
@@ -452,74 +515,12 @@
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel11);
             this.panel1.Location = new System.Drawing.Point(50, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(818, 650);
             this.panel1.TabIndex = 16;
-            // 
-            // listView2
-            // 
-            this.listView2.BackColor = System.Drawing.Color.LightBlue;
-            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            this.listView2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(23, 122);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(739, 297);
-            this.listView2.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.listView2.TabIndex = 23;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Ürün ID";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 127;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Operasyon ID";
-            this.columnHeader3.Width = 127;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Personel ID";
-            this.columnHeader4.Width = 117;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Tarih";
-            this.columnHeader5.Width = 167;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Adet";
-            this.columnHeader6.Width = 137;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(253, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(364, 33);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Seçtiğiniz Kriterin Değerini Giriniz";
-            this.textBox1.Enter += new System.EventHandler(this.tpid_Enter);
             // 
             // VerimSearch
             // 

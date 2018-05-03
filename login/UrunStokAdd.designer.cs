@@ -78,7 +78,7 @@
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Location = new System.Drawing.Point(82, 29);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(161, 84);
+            this.panel4.Size = new System.Drawing.Size(143, 73);
             this.panel4.TabIndex = 14;
             // 
             // panel2
@@ -110,12 +110,13 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // tuadet
             // 
             this.tuadet.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tuadet.ForeColor = System.Drawing.Color.Silver;
-            this.tuadet.Location = new System.Drawing.Point(42, 112);
+            this.tuadet.Location = new System.Drawing.Point(42, 104);
             this.tuadet.MaxLength = 10;
             this.tuadet.Name = "tuadet";
             this.tuadet.Size = new System.Drawing.Size(233, 33);
@@ -128,7 +129,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(299, 176);
+            this.button1.Location = new System.Drawing.Point(282, 161);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 54);
             this.button1.TabIndex = 32;
@@ -152,18 +153,18 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(249, 65);
+            this.label4.Location = new System.Drawing.Point(231, 77);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(240, 25);
+            this.label4.Size = new System.Drawing.Size(300, 25);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Ürün Ekleme Paneli";
+            this.label4.Text = "Ürün Stok Ekleme Paneli";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(286, 29);
+            this.label1.Location = new System.Drawing.Point(292, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 25);
             this.label1.TabIndex = 25;
@@ -175,9 +176,9 @@
             this.panel5.Controls.Add(this.tuadet);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.tuid);
-            this.panel5.Location = new System.Drawing.Point(82, 122);
+            this.panel5.Location = new System.Drawing.Point(82, 120);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(436, 243);
+            this.panel5.Size = new System.Drawing.Size(436, 245);
             this.panel5.TabIndex = 24;
             // 
             // button12

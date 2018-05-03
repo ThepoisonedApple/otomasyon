@@ -26,9 +26,18 @@ namespace login
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Stokurun nextForm = new Stokurun();
-            nextForm.Show();
-            this.Dispose();
+            if (Form1.YID == 1)
+            {
+                YoneticiMain NextForm = new YoneticiMain();
+                NextForm.Show();
+                this.Dispose();
+            }
+            else
+            {
+                Stokurun nextForm = new Stokurun();
+                nextForm.Show();
+                this.Dispose();
+            }
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -171,6 +180,22 @@ namespace login
                     break;
                 }
             }
+        }
+
+        private void tuad_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
         }
     }
 }

@@ -42,6 +42,15 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel5 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -51,8 +60,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.uad = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Adi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -61,15 +68,8 @@
             this.Sid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Hammadde = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Operasyon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -93,20 +93,20 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(195, 75);
+            this.label4.Location = new System.Drawing.Point(294, 84);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(261, 29);
+            this.label4.Size = new System.Drawing.Size(403, 29);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Makine Ara,Listele";
+            this.label4.Text = "Ürün Arama,Listeleme Paneli";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label3.Location = new System.Drawing.Point(230, 35);
+            this.label3.Location = new System.Drawing.Point(405, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 29);
+            this.label3.Size = new System.Drawing.Size(199, 32);
             this.label3.TabIndex = 16;
             this.label3.Text = "ModaVizyon";
             // 
@@ -237,193 +237,16 @@
             this.panel11.Size = new System.Drawing.Size(817, 441);
             this.panel11.TabIndex = 20;
             // 
-            // panel5
+            // textBox1
             // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BackgroundImage = global::login.Properties.Resources.list_icon;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(49, 49);
-            this.panel5.TabIndex = 0;
-            this.panel5.Click += new System.EventHandler(this.panel5_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackgroundImage = global::login.Properties.Resources.Info;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(0, 178);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(50, 50);
-            this.button10.TabIndex = 1;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(156)))), ((int)(((byte)(236)))));
-            this.panel9.Controls.Add(this.button11);
-            this.panel9.Controls.Add(this.button10);
-            this.panel9.Controls.Add(this.button9);
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(50, 650);
-            this.panel9.TabIndex = 17;
-            // 
-            // button11
-            // 
-            this.button11.BackgroundImage = global::login.Properties.Resources.Shutdown;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(0, 234);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(50, 50);
-            this.button11.TabIndex = 2;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button9
-            // 
-            this.button9.BackgroundImage = global::login.Properties.Resources.Home;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(0, 122);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(50, 50);
-            this.button9.TabIndex = 0;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label5.Location = new System.Drawing.Point(18, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(256, 29);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Aranan Makinenin";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SkyBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(366, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 42);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Ara";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // uad
-            // 
-            this.uad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.uad.Location = new System.Drawing.Point(23, 57);
-            this.uad.Name = "uad";
-            this.uad.Size = new System.Drawing.Size(251, 33);
-            this.uad.TabIndex = 1;
-            this.uad.Text = "Ürün Adı";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Azure;
-            this.panel2.Controls.Add(this.listView1);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.uad);
-            this.panel2.Location = new System.Drawing.Point(12, 190);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(817, 441);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(200, 126);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(170, 49);
-            this.panel4.TabIndex = 2;
-            this.panel4.Click += new System.EventHandler(this.panel4_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.panel10);
-            this.panel1.Controls.Add(this.button12);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel11);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(50, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(854, 650);
-            this.panel1.TabIndex = 16;
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.Color.LightBlue;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ID,
-            this.Adi,
-            this.Tlink,
-            this.Klink,
-            this.Sid,
-            this.Hammadde,
-            this.Operasyon});
-            this.listView1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listView1.GridLines = true;
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.Location = new System.Drawing.Point(18, 100);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(769, 319);
-            this.listView1.TabIndex = 21;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // ID
-            // 
-            this.ID.Text = "ID";
-            this.ID.Width = 38;
-            // 
-            // Adi
-            // 
-            this.Adi.Text = "Adı";
-            this.Adi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Adi.Width = 99;
-            // 
-            // Tlink
-            // 
-            this.Tlink.Text = "Tasarım Linki";
-            this.Tlink.Width = 143;
-            // 
-            // Klink
-            // 
-            this.Klink.Text = "Kesim Kağıdı Linki";
-            this.Klink.Width = 110;
-            // 
-            // Sid
-            // 
-            this.Sid.Text = "Siparis ID";
-            this.Sid.Width = 109;
-            // 
-            // Hammadde
-            // 
-            this.Hammadde.Text = "Hammaddeler";
-            this.Hammadde.Width = 146;
-            // 
-            // Operasyon
-            // 
-            this.Operasyon.Text = "Operasyonlar";
-            this.Operasyon.Width = 141;
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.ForeColor = System.Drawing.Color.Silver;
+            this.textBox1.Location = new System.Drawing.Point(262, 61);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(195, 33);
+            this.textBox1.TabIndex = 24;
+            this.textBox1.Text = "Sipariş ID";
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
             // listView2
             // 
@@ -482,14 +305,196 @@
             this.columnHeader7.Text = "Operasyonlar";
             this.columnHeader7.Width = 141;
             // 
-            // textBox1
+            // panel5
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(262, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 33);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Sipariş ID";
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = global::login.Properties.Resources.list_icon;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(49, 49);
+            this.panel5.TabIndex = 0;
+            this.panel5.Click += new System.EventHandler(this.panel5_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackgroundImage = global::login.Properties.Resources.Info;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(0, 178);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(50, 50);
+            this.button10.TabIndex = 1;
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(156)))), ((int)(((byte)(236)))));
+            this.panel9.Controls.Add(this.button11);
+            this.panel9.Controls.Add(this.button10);
+            this.panel9.Controls.Add(this.button9);
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(50, 650);
+            this.panel9.TabIndex = 17;
+            // 
+            // button11
+            // 
+            this.button11.BackgroundImage = global::login.Properties.Resources.Shutdown;
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Location = new System.Drawing.Point(0, 234);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(50, 50);
+            this.button11.TabIndex = 2;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImage = global::login.Properties.Resources.Home;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Location = new System.Drawing.Point(0, 122);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(50, 50);
+            this.button9.TabIndex = 0;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label5.Location = new System.Drawing.Point(20, 37);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(217, 29);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Aranan Ürünün";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SkyBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(652, 37);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 42);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Ara";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // uad
+            // 
+            this.uad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.uad.ForeColor = System.Drawing.Color.Silver;
+            this.uad.Location = new System.Drawing.Point(262, 33);
+            this.uad.Name = "uad";
+            this.uad.Size = new System.Drawing.Size(251, 33);
+            this.uad.TabIndex = 1;
+            this.uad.Text = "Ürün Adı";
+            this.uad.Enter += new System.EventHandler(this.textBox1_Enter);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Azure;
+            this.panel2.Controls.Add(this.listView1);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.uad);
+            this.panel2.Location = new System.Drawing.Point(12, 190);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(817, 441);
+            this.panel2.TabIndex = 0;
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.Color.LightBlue;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.Adi,
+            this.Tlink,
+            this.Klink,
+            this.Sid,
+            this.Hammadde,
+            this.Operasyon});
+            this.listView1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listView1.GridLines = true;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView1.Location = new System.Drawing.Point(18, 100);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(769, 319);
+            this.listView1.TabIndex = 21;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            this.ID.Width = 38;
+            // 
+            // Adi
+            // 
+            this.Adi.Text = "Adı";
+            this.Adi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Adi.Width = 99;
+            // 
+            // Tlink
+            // 
+            this.Tlink.Text = "Tasarım Linki";
+            this.Tlink.Width = 143;
+            // 
+            // Klink
+            // 
+            this.Klink.Text = "Kesim Kağıdı Linki";
+            this.Klink.Width = 110;
+            // 
+            // Sid
+            // 
+            this.Sid.Text = "Siparis ID";
+            this.Sid.Width = 109;
+            // 
+            // Hammadde
+            // 
+            this.Hammadde.Text = "Hammaddeler";
+            this.Hammadde.Width = 146;
+            // 
+            // Operasyon
+            // 
+            this.Operasyon.Text = "Operasyonlar";
+            this.Operasyon.Width = 141;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Location = new System.Drawing.Point(200, 126);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(170, 49);
+            this.panel4.TabIndex = 2;
+            this.panel4.Click += new System.EventHandler(this.panel4_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel8);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.panel10);
+            this.panel1.Controls.Add(this.button12);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel11);
+            this.panel1.Location = new System.Drawing.Point(50, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(854, 650);
+            this.panel1.TabIndex = 16;
             // 
             // UrunSearch
             // 

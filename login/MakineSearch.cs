@@ -26,9 +26,18 @@ namespace login
 
         private void button9_Click(object sender, EventArgs e)
         {
-            MakineMain nextForm = new MakineMain();
-            nextForm.Show();
-            this.Dispose();
+            if (Form1.YID == 1)
+            {
+                YoneticiMain NextForm = new YoneticiMain();
+                NextForm.Show();
+                this.Dispose();
+            }
+            else
+            {
+                MakineMain nextForm = new MakineMain();
+                nextForm.Show();
+                this.Dispose();
+            }
         }
 
         private void button11_Click(object sender, EventArgs e)

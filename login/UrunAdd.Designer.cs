@@ -110,6 +110,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button1
             // 
@@ -176,18 +177,18 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(278, 74);
+            this.label4.Location = new System.Drawing.Point(305, 71);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(368, 32);
+            this.label4.Size = new System.Drawing.Size(309, 32);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Personel Ekleme Paneli";
+            this.label4.Text = "Ürün Ekleme Paneli";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(363, 29);
+            this.label1.Location = new System.Drawing.Point(359, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 32);
             this.label1.TabIndex = 25;

@@ -65,11 +65,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(293, 75);
+            this.label4.Location = new System.Drawing.Point(314, 75);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(517, 45);
+            this.label4.Size = new System.Drawing.Size(504, 45);
             this.label4.TabIndex = 21;
-            this.label4.Text = "İnsan Kaynakları Paneli";
+            this.label4.Text = "Hammadde Stok Paneli";
             // 
             // panel5
             // 
@@ -101,6 +101,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button1
             // 
@@ -163,7 +164,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(396, 30);
+            this.label1.Location = new System.Drawing.Point(426, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(269, 45);
             this.label1.TabIndex = 15;
@@ -212,6 +213,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.button1);

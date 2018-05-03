@@ -89,6 +89,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel4
             // 
@@ -261,9 +262,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(68)))), ((int)(((byte)(83)))));
             this.label2.Location = new System.Drawing.Point(39, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(270, 16);
+            this.label2.Size = new System.Drawing.Size(191, 16);
             this.label2.TabIndex = 38;
-            this.label2.Text = "Güncelleyeceğiniz personelin id\'sine";
+            this.label2.Text = "Sileceğiniz ürünün id\'sine";
             // 
             // tuid
             // 
@@ -274,6 +275,7 @@
             this.tuid.Size = new System.Drawing.Size(233, 33);
             this.tuid.TabIndex = 37;
             this.tuid.Text = "Ürün ID";
+            this.tuid.Enter += new System.EventHandler(this.tuid_Enter);
             // 
             // panel7
             // 
@@ -290,11 +292,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(278, 74);
+            this.label4.Location = new System.Drawing.Point(320, 71);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(368, 32);
+            this.label4.Size = new System.Drawing.Size(283, 32);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Personel Ekleme Paneli";
+            this.label4.Text = "Ürün Silme Paneli";
             // 
             // label1
             // 
@@ -324,7 +326,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.MintCream;
+            this.panel5.BackColor = System.Drawing.Color.GhostWhite;
             this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label2);

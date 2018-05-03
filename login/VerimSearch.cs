@@ -32,9 +32,18 @@ namespace login
 
         private void button9_Click(object sender, EventArgs e)
         {
-            BolumsefiMain nextForm = new BolumsefiMain();
-            nextForm.Show();
-            this.Dispose();
+            if (Form1.YID == 1)
+            {
+                YoneticiMain NextForm = new YoneticiMain();
+                NextForm.Show();
+                this.Dispose();
+            }
+            else
+            {
+                BolumsefiMain nextForm = new BolumsefiMain();
+                nextForm.Show();
+                this.Dispose();
+            }
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -210,6 +219,12 @@ namespace login
                     break;
                 }
             }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
         }
     }
 }

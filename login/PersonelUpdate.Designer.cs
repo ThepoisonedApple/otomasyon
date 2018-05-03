@@ -104,6 +104,7 @@
             this.binfo.Size = new System.Drawing.Size(50, 50);
             this.binfo.TabIndex = 1;
             this.binfo.UseVisualStyleBackColor = true;
+            this.binfo.Click += new System.EventHandler(this.binfo_Click);
             // 
             // bhome
             // 

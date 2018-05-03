@@ -35,6 +35,7 @@ namespace login
                 yetki_kid.Read();
                 Form1.KID = yetki_kid["kullanici_id"].ToString();
                 string x = yetki_kid["yetki_id"].ToString();
+                Form1.YID =Convert.ToInt32(x);
                 mycon.connectionclose();
                 return Convert.ToInt32(x);
                 

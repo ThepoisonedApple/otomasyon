@@ -138,9 +138,18 @@ namespace login
 
         private void bhome_Click(object sender, EventArgs e)
         {
-            IKMain nextForm = new IKMain();
-            nextForm.Show();
-            this.Dispose();
+            if (Form1.YID == 1)
+            {
+                YoneticiMain NextForm = new YoneticiMain();
+                NextForm.Show();
+                this.Dispose();
+            }
+            else
+            {
+                IKMain nextForm = new IKMain();
+                nextForm.Show();
+                this.Dispose();
+            }
         }
 
         private void blogout_Click(object sender, EventArgs e)
@@ -267,6 +276,12 @@ namespace login
             // TODO: Bu kod satırı 'otomasyonDataSet.yetki_bolum' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             this.yetki_bolumTableAdapter.Fill(this.otomasyonDataSet.yetki_bolum);
 
+        }
+
+        private void binfo_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
         }
     }
 }

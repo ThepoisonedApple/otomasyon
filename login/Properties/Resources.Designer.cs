@@ -123,6 +123,16 @@ namespace login.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap hamstok {
+            get {
+                object obj = ResourceManager.GetObject("hamstok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Home {
             get {
                 object obj = ResourceManager.GetObject("Home", resourceCulture);
@@ -266,6 +276,16 @@ namespace login.Properties {
         internal static System.Drawing.Bitmap unknown {
             get {
                 object obj = ResourceManager.GetObject("unknown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap urunstok {
+            get {
+                object obj = ResourceManager.GetObject("urunstok", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

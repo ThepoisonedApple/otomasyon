@@ -35,17 +35,6 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -58,19 +47,21 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.rapor = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.button15);
+            this.panel1.Controls.Add(this.button14);
             this.panel1.Controls.Add(this.button13);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
@@ -95,7 +86,7 @@
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(790, 416);
+            this.button13.Location = new System.Drawing.Point(790, 419);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(215, 125);
             this.button13.TabIndex = 18;
@@ -162,125 +153,6 @@
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(215)))), ((int)(((byte)(61)))));
-            this.panel6.Controls.Add(this.textBox4);
-            this.panel6.Controls.Add(this.panel9);
-            this.panel6.Controls.Add(this.label10);
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.label11);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.label12);
-            this.panel6.Controls.Add(this.label9);
-            this.panel6.Controls.Add(this.panel10);
-            this.panel6.Controls.Add(this.textBox3);
-            this.panel6.Location = new System.Drawing.Point(94, 419);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(447, 125);
-            this.panel6.TabIndex = 15;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(194)))), ((int)(((byte)(33)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.Location = new System.Drawing.Point(385, 48);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(45, 24);
-            this.textBox4.TabIndex = 13;
-            this.textBox4.Text = "123";
-            // 
-            // panel9
-            // 
-            this.panel9.BackgroundImage = global::login.Properties.Resources.Order_icon;
-            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel9.Location = new System.Drawing.Point(23, 30);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(59, 65);
-            this.panel9.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(286, 48);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 18);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Sipariş";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(88, 30);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 18);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Alınan";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(286, 66);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 18);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Sayısı:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(88, 66);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 18);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Sayısı:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(286, 30);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(122, 18);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "Tamamlanan";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(88, 48);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 18);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Sipariş";
-            // 
-            // panel10
-            // 
-            this.panel10.BackgroundImage = global::login.Properties.Resources.Order_icon;
-            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel10.Location = new System.Drawing.Point(221, 30);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(59, 65);
-            this.panel10.TabIndex = 9;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(194)))), ((int)(((byte)(33)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.Location = new System.Drawing.Point(160, 48);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(45, 24);
-            this.textBox3.TabIndex = 8;
-            this.textBox3.Text = "123";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -332,7 +204,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(215, 125);
             this.button8.TabIndex = 9;
-            this.button8.Text = "Tasarım Ara,Listele";
+            this.button8.Text = "  Ürün   Ara,Listele";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -388,7 +260,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(215, 125);
             this.button1.TabIndex = 4;
-            this.button1.Text = "   Stok   Ara,Listele";
+            this.button1.Text = "Ürün Stok Ara,Listele";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -416,7 +288,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(215, 125);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Makine Bakım Ara,Listele";
+            this.button2.Text = "Hammadde Stok Ara,Listele";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -430,9 +302,36 @@
             this.rapor.Name = "rapor";
             this.rapor.Size = new System.Drawing.Size(215, 125);
             this.rapor.TabIndex = 1;
-            this.rapor.Text = "Sipariş Ara,Listele";
+            this.rapor.Text = "Makine Bakım Ara,Listele";
             this.rapor.UseVisualStyleBackColor = false;
             this.rapor.Click += new System.EventHandler(this.rapor_Click);
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(215)))), ((int)(((byte)(61)))));
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button14.ForeColor = System.Drawing.Color.White;
+            this.button14.Location = new System.Drawing.Point(94, 419);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(215, 125);
+            this.button14.TabIndex = 19;
+            this.button14.Text = "Alım Siparişi Ara,Listele";
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(184)))), ((int)(((byte)(94)))));
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.Location = new System.Drawing.Point(326, 419);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(215, 125);
+            this.button15.TabIndex = 20;
+            this.button15.Text = "Satım Siparişi Ara,Listele";
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // YoneticiMain
             // 
@@ -449,8 +348,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -472,20 +369,11 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button14;
     }
 }

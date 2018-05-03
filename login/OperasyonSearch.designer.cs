@@ -421,8 +421,8 @@
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel11);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(50, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 650);

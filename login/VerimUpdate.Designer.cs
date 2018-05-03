@@ -42,6 +42,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.tadet3 = new System.Windows.Forms.TextBox();
+            this.tdemet3 = new System.Windows.Forms.TextBox();
+            this.tadet2 = new System.Windows.Forms.TextBox();
+            this.tadet1 = new System.Windows.Forms.TextBox();
+            this.tdemet2 = new System.Windows.Forms.TextBox();
+            this.tdemet1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,13 +62,6 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.tadet3 = new System.Windows.Forms.TextBox();
-            this.tdemet3 = new System.Windows.Forms.TextBox();
-            this.tadet2 = new System.Windows.Forms.TextBox();
-            this.tadet1 = new System.Windows.Forms.TextBox();
-            this.tdemet2 = new System.Windows.Forms.TextBox();
-            this.tdemet1 = new System.Windows.Forms.TextBox();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -126,6 +126,7 @@
             this.tuid.Size = new System.Drawing.Size(233, 33);
             this.tuid.TabIndex = 34;
             this.tuid.Text = "Ürün no";
+            this.tuid.Enter += new System.EventHandler(this.tpid_Enter);
             // 
             // toid
             // 
@@ -136,6 +137,7 @@
             this.toid.Size = new System.Drawing.Size(233, 33);
             this.toid.TabIndex = 33;
             this.toid.Text = "Operasyon no";
+            this.toid.Enter += new System.EventHandler(this.tpid_Enter);
             // 
             // panel4
             // 
@@ -244,6 +246,77 @@
             this.panel6.Size = new System.Drawing.Size(595, 323);
             this.panel6.TabIndex = 27;
             // 
+            // tadet3
+            // 
+            this.tadet3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tadet3.ForeColor = System.Drawing.Color.Black;
+            this.tadet3.Location = new System.Drawing.Point(385, 124);
+            this.tadet3.Name = "tadet3";
+            this.tadet3.Size = new System.Drawing.Size(99, 33);
+            this.tadet3.TabIndex = 54;
+            this.tadet3.Text = "0";
+            // 
+            // tdemet3
+            // 
+            this.tdemet3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tdemet3.ForeColor = System.Drawing.Color.Black;
+            this.tdemet3.Location = new System.Drawing.Point(45, 124);
+            this.tdemet3.Name = "tdemet3";
+            this.tdemet3.Size = new System.Drawing.Size(233, 33);
+            this.tdemet3.TabIndex = 53;
+            // 
+            // tadet2
+            // 
+            this.tadet2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tadet2.ForeColor = System.Drawing.Color.Black;
+            this.tadet2.Location = new System.Drawing.Point(385, 85);
+            this.tadet2.Name = "tadet2";
+            this.tadet2.Size = new System.Drawing.Size(99, 33);
+            this.tadet2.TabIndex = 52;
+            this.tadet2.Text = "0";
+            // 
+            // tadet1
+            // 
+            this.tadet1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tadet1.ForeColor = System.Drawing.Color.Black;
+            this.tadet1.Location = new System.Drawing.Point(385, 46);
+            this.tadet1.Name = "tadet1";
+            this.tadet1.Size = new System.Drawing.Size(99, 33);
+            this.tadet1.TabIndex = 51;
+            this.tadet1.Text = "0";
+            // 
+            // tdemet2
+            // 
+            this.tdemet2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tdemet2.ForeColor = System.Drawing.Color.Black;
+            this.tdemet2.Location = new System.Drawing.Point(45, 85);
+            this.tdemet2.Name = "tdemet2";
+            this.tdemet2.Size = new System.Drawing.Size(233, 33);
+            this.tdemet2.TabIndex = 50;
+            // 
+            // tdemet1
+            // 
+            this.tdemet1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tdemet1.ForeColor = System.Drawing.Color.Black;
+            this.tdemet1.Location = new System.Drawing.Point(45, 46);
+            this.tdemet1.Name = "tdemet1";
+            this.tdemet1.Size = new System.Drawing.Size(233, 33);
+            this.tdemet1.TabIndex = 49;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(68)))), ((int)(((byte)(83)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(308, 163);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(86, 39);
+            this.button4.TabIndex = 48;
+            this.button4.Text = "Çıkar";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -264,9 +337,9 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(68)))), ((int)(((byte)(83)))));
             this.label7.Location = new System.Drawing.Point(36, 186);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(236, 16);
+            this.label7.Size = new System.Drawing.Size(234, 16);
             this.label7.TabIndex = 46;
-            this.label7.Text = "direk toplamı değiştirebilirsiniz.";
+            this.label7.Text = "direk toplamı kaydedebilirsiniz.";
             // 
             // label4
             // 
@@ -339,6 +412,7 @@
             this.tpid.TabIndex = 26;
             this.tpid.Text = "Personel ID";
             this.tpid.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.tpid.Enter += new System.EventHandler(this.tpid_Enter);
             // 
             // panel2
             // 
@@ -381,6 +455,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -393,77 +468,6 @@
             this.button9.TabIndex = 0;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(68)))), ((int)(((byte)(83)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(308, 163);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 39);
-            this.button4.TabIndex = 48;
-            this.button4.Text = "Çıkar";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // tadet3
-            // 
-            this.tadet3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tadet3.ForeColor = System.Drawing.Color.Black;
-            this.tadet3.Location = new System.Drawing.Point(385, 124);
-            this.tadet3.Name = "tadet3";
-            this.tadet3.Size = new System.Drawing.Size(99, 33);
-            this.tadet3.TabIndex = 54;
-            this.tadet3.Text = "0";
-            // 
-            // tdemet3
-            // 
-            this.tdemet3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tdemet3.ForeColor = System.Drawing.Color.Black;
-            this.tdemet3.Location = new System.Drawing.Point(45, 124);
-            this.tdemet3.Name = "tdemet3";
-            this.tdemet3.Size = new System.Drawing.Size(233, 33);
-            this.tdemet3.TabIndex = 53;
-            // 
-            // tadet2
-            // 
-            this.tadet2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tadet2.ForeColor = System.Drawing.Color.Black;
-            this.tadet2.Location = new System.Drawing.Point(385, 85);
-            this.tadet2.Name = "tadet2";
-            this.tadet2.Size = new System.Drawing.Size(99, 33);
-            this.tadet2.TabIndex = 52;
-            this.tadet2.Text = "0";
-            // 
-            // tadet1
-            // 
-            this.tadet1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tadet1.ForeColor = System.Drawing.Color.Black;
-            this.tadet1.Location = new System.Drawing.Point(385, 46);
-            this.tadet1.Name = "tadet1";
-            this.tadet1.Size = new System.Drawing.Size(99, 33);
-            this.tadet1.TabIndex = 51;
-            this.tadet1.Text = "0";
-            // 
-            // tdemet2
-            // 
-            this.tdemet2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tdemet2.ForeColor = System.Drawing.Color.Black;
-            this.tdemet2.Location = new System.Drawing.Point(45, 85);
-            this.tdemet2.Name = "tdemet2";
-            this.tdemet2.Size = new System.Drawing.Size(233, 33);
-            this.tdemet2.TabIndex = 50;
-            // 
-            // tdemet1
-            // 
-            this.tdemet1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tdemet1.ForeColor = System.Drawing.Color.Black;
-            this.tdemet1.Location = new System.Drawing.Point(45, 46);
-            this.tdemet1.Name = "tdemet1";
-            this.tdemet1.Size = new System.Drawing.Size(233, 33);
-            this.tdemet1.TabIndex = 49;
             // 
             // VerimUpdate
             // 

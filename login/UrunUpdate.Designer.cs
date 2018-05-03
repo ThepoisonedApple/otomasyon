@@ -86,9 +86,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.label4.Location = new System.Drawing.Point(278, 74);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(368, 32);
+            this.label4.Size = new System.Drawing.Size(376, 32);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Personel Ekleme Paneli";
+            this.label4.Text = "Ürün Güncelleme Paneli";
             // 
             // label1
             // 
@@ -154,9 +154,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(68)))), ((int)(((byte)(83)))));
             this.label2.Location = new System.Drawing.Point(39, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(270, 16);
+            this.label2.Size = new System.Drawing.Size(245, 16);
             this.label2.TabIndex = 38;
-            this.label2.Text = "Güncelleyeceğiniz personelin id\'sine";
+            this.label2.Text = "Güncelleyeceğiniz ürünün id\'sine";
             // 
             // tuid
             // 
@@ -167,6 +167,7 @@
             this.tuid.Size = new System.Drawing.Size(233, 33);
             this.tuid.TabIndex = 37;
             this.tuid.Text = "Ürün ID";
+            this.tuid.Enter += new System.EventHandler(this.tuid_Enter);
             // 
             // panel7
             // 
@@ -216,6 +217,7 @@
             this.thid.Size = new System.Drawing.Size(189, 33);
             this.thid.TabIndex = 26;
             this.thid.Text = "Hammadde ID";
+            this.thid.Enter += new System.EventHandler(this.tuid_Enter);
             // 
             // panel6
             // 
@@ -265,6 +267,7 @@
             this.toid.Size = new System.Drawing.Size(189, 33);
             this.toid.TabIndex = 25;
             this.toid.Text = "Operasyon ID";
+            this.toid.Enter += new System.EventHandler(this.tuid_Enter);
             // 
             // tukl
             // 
@@ -385,6 +388,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 

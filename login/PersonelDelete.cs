@@ -114,5 +114,11 @@ namespace login
             this.yetki_bolumTableAdapter.Fill(this.otomasyonDataSet.yetki_bolum);
 
         }
+
+        private void binfo_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
+        }
     }
 }

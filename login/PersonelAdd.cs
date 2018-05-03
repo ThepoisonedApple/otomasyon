@@ -166,5 +166,11 @@ namespace login
                 e.Handled = true;
             }
         }
+
+        private void binfo_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
+        }
     }
 }

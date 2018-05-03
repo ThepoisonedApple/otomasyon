@@ -16,6 +16,7 @@ namespace login
         public UrunSearch()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
             button1.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;
@@ -26,9 +27,18 @@ namespace login
 
         private void button9_Click(object sender, EventArgs e)
         {
-            ModellemeMain nextForm = new ModellemeMain();
-            nextForm.Show();
-            this.Dispose();
+            if (Form1.YID == 1)
+            {
+                YoneticiMain NextForm = new YoneticiMain();
+                NextForm.Show();
+                this.Dispose();
+            }
+            else
+            {
+                ModellemeMain nextForm = new ModellemeMain();
+                nextForm.Show();
+                this.Dispose();
+            }
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -198,6 +208,22 @@ namespace login
             }
 
 
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
         }
     }
 }

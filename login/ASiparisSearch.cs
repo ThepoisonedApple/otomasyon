@@ -27,9 +27,19 @@ namespace login
 
         private void button9_Click(object sender, EventArgs e)
         {
-            MusteritemsilcisiAlim nextForm = new MusteritemsilcisiAlim();
-            nextForm.Show();
-            this.Dispose();
+            if (Form1.YID==1)
+            {
+                YoneticiMain NextForm = new YoneticiMain();
+                NextForm.Show();
+                this.Dispose();
+            }
+            else
+            {
+                MusteritemsilcisiAlim nextForm = new MusteritemsilcisiAlim();
+                nextForm.Show();
+                this.Dispose();
+            }
+
         }
 
         private void button11_Click(object sender, EventArgs e)
