@@ -161,8 +161,8 @@ namespace login
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Rapor Bulunamadı");
             }
         }
 
@@ -196,6 +196,8 @@ namespace login
             }
             catch (Exception)
             {
+                DBconnect.connectionclose();
+                MessageBox.Show("Rapor Bulunamadı");
             }
         }
 

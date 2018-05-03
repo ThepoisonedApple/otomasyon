@@ -84,23 +84,28 @@ namespace login
             }
             catch (Exception)
             {
-                DBconnect mycon = new DBconnect();
-                mycon.connectionclose();
+                 
+                DBconnect.connectionclose();
                 MessageBox.Show("Hatalı ID bilgiler getirilemedi");
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            var silmeOnay = MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (silmeOnay == DialogResult.Yes)
             {
-                UrunClass myclass = new UrunClass();
-                myclass.UrunSil(Convert.ToInt32(tuid.Text));
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Urun Silinemedi");
-                throw;
+                try
+                {
+                    UrunClass myclass = new UrunClass();
+                    myclass.UrunSil(Convert.ToInt32(tuid.Text));
+                    MessageBox.Show("Urun Başarıyla Silindi.");
+                }
+                catch (Exception)
+                {
+                    DBconnect.connectionclose();
+                    MessageBox.Show("Urun Silinemedi");
+                }
             }
         }
 

@@ -73,8 +73,8 @@ namespace login
             }
             catch (Exception)
             {
-                DBconnect mycon = new DBconnect();
-                mycon.connectionclose();
+                 
+                DBconnect.connectionclose();
                 MessageBox.Show("Tedarikçi Bilgileri Getirilemedi");
             }
         }
@@ -89,8 +89,8 @@ namespace login
             }
             catch (Exception)
             {
-                DBconnect mycon = new DBconnect();
-                mycon.connectionclose();
+                 
+                DBconnect.connectionclose();
                 MessageBox.Show("Tedarikçi Güncellenemedi");
             }
         }

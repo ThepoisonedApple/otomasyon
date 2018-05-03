@@ -57,11 +57,12 @@ namespace login
                 MakineClass myclass = new MakineClass();
                 myclass.MakineEkle(tmadi.Text, x, Convert.ToDateTime(tmalim.Text), Convert.ToDateTime(tmbakim.Text));
 
-                MessageBox.Show("Başarılı");
+                MessageBox.Show("Makine Başarıyla Eklendi");
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı");
+                DBconnect.connectionclose();
+                MessageBox.Show("Makine Eklenemedi.");
             }
         }
 

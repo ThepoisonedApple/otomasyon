@@ -12,23 +12,23 @@ namespace login
         public static List<string> mylist = new List<string>();
         public void UrunStokEkle(int uid,int uadet)
         {
-            DBconnect mycon = new DBconnect();
+             
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             command.CommandText = "SELECT adet FROM urun WHERE urun_id=@uid";
             command.Parameters.AddWithValue("@uid",uid);
             int x = Convert.ToInt32(command.ExecuteScalar());
             string y = "Bu ürün için stok zaten açılmıştır, " + Convert.ToString(x) + " ürün stoktadır .Güncelleme Kısmından Stok ekleme veya çıkarma yabilirsiniz.";
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             if (x==0)
             {
-                mycon.connectionopen();
+                DBconnect.connectionopen();
                 command.CommandText = "UPDATE urun SET adet=@uadet WHERE urun_id=@uid";
                 command.Parameters.AddWithValue("@uadet", uadet);
                 command.Parameters.AddWithValue("@uid", uid);
                 command.ExecuteNonQuery();
-                mycon.connectionclose();
+                DBconnect.connectionclose();
             }
             else
             {
@@ -41,8 +41,8 @@ namespace login
         {
 
             string[] arr = new string[2];
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT adi,adet FROM urun WHERE urun_id=@uid";
@@ -51,40 +51,40 @@ namespace login
             reader.Read();
             arr[0]=Convert.ToString(reader.GetValue(0));
             arr[1]=Convert.ToString(reader.GetValue(1));
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             return arr;
 
         }
 
         public void UrunStokGuncelle(int uid,int uadet)
         {
-            DBconnect mycon = new DBconnect();
+             
             NpgsqlCommand command = new NpgsqlCommand();
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             command.CommandText = "UPDATE urun SET adet=@uadet WHERE urun_id=@uid";
             command.Parameters.AddWithValue("@uadet", uadet);
             command.Parameters.AddWithValue("@uid", uid);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
 
         public void UrunStokSil(int uid)
         {
-            DBconnect mycon = new DBconnect();
+             
             NpgsqlCommand command = new NpgsqlCommand();
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             command.CommandText = "UPDATE urun SET adet=0 WHERE urun_id=@uid";
             command.Parameters.AddWithValue("@uid", uid);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
 
         public void UrunStokListele(string ad)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand comm = new NpgsqlCommand();
             comm.Connection = DBconnect.baglanti;
             comm.CommandText = "SELECT * FROM urun WHERE adi like @ad";
@@ -100,7 +100,7 @@ namespace login
 
             }
 
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
 

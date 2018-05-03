@@ -49,11 +49,12 @@ namespace login
             {
                 VerimClass myclass = new VerimClass();
                 ttoplam.Text=myclass.BilgileriGetir(Convert.ToInt32(tuid.Text),Convert.ToInt32(toid.Text),Convert.ToInt32(tpid.Text),Convert.ToDateTime(ttarih.Text));
+
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Verim bilgisi getirilemedi.");
             }
         }
 
@@ -68,11 +69,12 @@ namespace login
             {
                 VerimClass myclass = new VerimClass();
                 myclass.VerimGuncelle(Convert.ToInt32(ttoplam.Text));
+                MessageBox.Show("Verim Başarıyla güncellendi.");
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Verim Güncellenemedi");
             }
            
         }

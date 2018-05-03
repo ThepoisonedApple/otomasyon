@@ -61,8 +61,8 @@ namespace login
             }
             catch (Exception)
             {
-                DBconnect mycon = new DBconnect();
-                mycon.connectionclose();
+      
+                DBconnect.connectionclose();
                 MessageBox.Show("Sipariş Bilgileri Getirilemedi.");
 
             }
@@ -78,8 +78,8 @@ namespace login
             }
             catch (Exception)
             {
-                DBconnect mycon = new DBconnect();
-                mycon.connectionclose();
+
+                DBconnect.connectionclose();
                 MessageBox.Show("Sipariş güncellenemedi.");
             }
         }

@@ -12,16 +12,16 @@ namespace login
         public static List<string> mylist = new List<string>();
         public void SsipEkle(int mid, DateTime date, DateTime date1, int adet, int fiyat, string bilgi)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT personel_id FROM kullanici WHERE kullanici_id = @kid";
             command.Parameters.AddWithValue("@kid", Convert.ToInt32(Form1.KID));
             int xyz = Convert.ToInt32(command.ExecuteScalar());
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             command.CommandText = "INSERT INTO siparis (musteri_id, siparis_tarihi, teslim_tarihi, adet, fiyat, onaylayan_id, bilgi) VALUES (@mid, @date, @date1, @adet, @fiyat, @oid, @bilgi)";
             command.Parameters.AddWithValue("@mid", mid);
             command.Parameters.AddWithValue("@date", date);
@@ -31,13 +31,13 @@ namespace login
             command.Parameters.AddWithValue("@oid", xyz);
             command.Parameters.AddWithValue("@bilgi", bilgi);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public string[] BilgiGetir(int id)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM siparis WHERE siparis_id = @id;";
@@ -52,35 +52,35 @@ namespace login
             arr[5] = comread["fiyat"].ToString();
             arr[1] = comread["bilgi"].ToString();
             comread.Close();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             return arr;
         }
 
         public void SSipSil(int id)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "DELETE FROM siparis WHERE siparis_id=@id ;";
             command.Parameters.AddWithValue("@id", id);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
 
         public void SsipGuncelle(int sid,int mid, DateTime date, DateTime date1, int adet, int fiyat, string bilgi)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT personel_id FROM kullanici WHERE kullanici_id = @kid";
             command.Parameters.AddWithValue("@kid", Convert.ToInt32(Form1.KID));
             int xyz = Convert.ToInt32(command.ExecuteScalar());
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
-            mycon.connectionopen();
+            DBconnect.connectionopen();
 
             command.CommandText = "UPDATE siparis set musteri_id=@mid, siparis_tarihi=@date, teslim_tarihi=@date1, adet=@adet, fiyat=@fiyat, onaylayan_id=@oid, bilgi=@bilgi where siparis_id=@sid";
             command.Parameters.AddWithValue("@sid", sid);
@@ -92,13 +92,13 @@ namespace login
             command.Parameters.AddWithValue("@oid", xyz);
             command.Parameters.AddWithValue("@bilgi", bilgi);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public void SsipAra(string mid, string date)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM siparis WHERE (musteri_id::text) LIKE @mid AND (siparis_tarihi::text) LIKE @date;";
@@ -120,7 +120,7 @@ namespace login
 
             }
 
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
     }

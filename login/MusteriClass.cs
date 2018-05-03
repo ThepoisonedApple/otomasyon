@@ -12,8 +12,8 @@ namespace login
         public static List<string> mylist = new List<string>();
         public void MusteriEkle(string yetkili_adi, string adres, string telefon, string email, string firma_adi)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "INSERT INTO musteri (yetkili_adi, adres, telefon, email, firma_adi) VALUES (@yetkili_adi, @adres, @telefon, @email, @firma_adi)";
@@ -24,13 +24,13 @@ namespace login
             command.Parameters.AddWithValue("firma_adi", firma_adi);
 
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public string[] BilgiGetir(int id)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM musteri where musteri_id = @id;";
@@ -44,27 +44,27 @@ namespace login
             arr[3] = comread["telefon"].ToString();
             arr[4] = comread["email"].ToString();
             comread.Close();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             return arr;
         }
 
         public void MusteriSil(int id)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "DELETE FROM musteri WHERE musteri_id=@id ;";
             command.Parameters.AddWithValue("@id", id);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
 
         public void MusteriGuncelle(int id, string y_adi, string t_adi, string adres, string tel, string email)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "UPDATE musteri set yetkili_adi = @yetkili_adi, adres = @adres, telefon=@telefon, email=@email, firma_adi = @firma_adi where musteri_id=@id";
@@ -75,13 +75,13 @@ namespace login
             command.Parameters.AddWithValue("@firma_adi", t_adi);
             command.Parameters.AddWithValue("@id", id);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public void MusteriAra(string tad)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM musteri WHERE firma_adi LIKE @tad;";
@@ -101,7 +101,7 @@ namespace login
 
             }
 
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
     }

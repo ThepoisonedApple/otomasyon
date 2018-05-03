@@ -43,16 +43,20 @@ namespace login
 
         private void bdelete_Click(object sender, EventArgs e)
         {
-            try
+            var silmeOnay = MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (silmeOnay == DialogResult.Yes)
             {
-                HammaddeClass myclass = new HammaddeClass();
-                myclass.HammaddeSil(tuid.Text);
-                MessageBox.Show("Başarılı");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Hatalı");
-                throw;
+                try
+                {
+                    HammaddeClass myclass = new HammaddeClass();
+                    myclass.HammaddeSil(tuid.Text);
+                    MessageBox.Show("Hammadde Stoğu başarıyla silindi.");
+                }
+                catch (Exception)
+                {
+                    DBconnect.connectionclose();
+                    MessageBox.Show("Silme işlemi Başarısız");
+                }
             }
         }
 
@@ -70,12 +74,11 @@ namespace login
                 tuadet.ForeColor = Color.Black;
                 ttid.ForeColor = Color.Black;
 
-                MessageBox.Show("Başarılı");
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı");
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Hammadde Bilgileri Getirilemedi");
             }
         }
 

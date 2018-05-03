@@ -187,7 +187,7 @@ namespace login
             }
             catch (Exception)
             {
-
+                DBconnect.connectionclose();
                 MessageBox.Show("Sonuc Bulunamadi");
             }
         }
@@ -222,7 +222,7 @@ namespace login
             }
             catch (Exception)
             {
-
+                DBconnect.connectionclose();
                 MessageBox.Show("Sonuc Bulunamadi");
             }
         }

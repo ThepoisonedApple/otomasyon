@@ -48,12 +48,12 @@ namespace login
                 HammaddeClass myclass = new HammaddeClass();
                 myclass.HammaddeEkle(tuadi.Text, Convert.ToInt32(tuadet.Text), Convert.ToInt32(ttid.Text));
 
-                MessageBox.Show("Başarılı");
+                MessageBox.Show("Hammadde Stoğu Başarıyla Eklendi");
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı");
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Hammadde Stoğu Eklenemedi.");
             }
 
 

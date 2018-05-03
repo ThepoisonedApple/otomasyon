@@ -13,8 +13,8 @@ namespace login
 
         public static int Say()
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand comm = new NpgsqlCommand();
             comm.Connection = DBconnect.baglanti;
             comm.CommandText = "SELECT COUNT(makine_id) FROM makine WHERE bakim_tarihi<=@date";
@@ -25,8 +25,8 @@ namespace login
 
         public void MakineEkle(string ad, bool durum, DateTime alimtarihi, DateTime bakimtarihi)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "INSERT INTO makine (ad,alim_tarihi,bakim_tarihi,durum) " +
@@ -36,14 +36,14 @@ namespace login
             command.Parameters.AddWithValue("@mbakim",bakimtarihi);
             command.Parameters.AddWithValue("@mdurum", durum);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
 
         }
         public string[] MakineBilgiGetir(string mid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM makine WHERE makine_id=@mid";
@@ -57,13 +57,13 @@ namespace login
             arr[2] = comread["bakim_tarihi"].ToString();
             arr[3] = comread["durum"].ToString();
 
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             return arr;
         }
         public void MakineGuncelle(string ad, bool durum, DateTime alimtarihi, DateTime bakimtarihi, int mid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "UPDATE makine SET ad=@madi,durum=@mdurum,alim_tarihi=@malim , bakim_tarihi=@mbakim WHERE makine_id=@mid";
@@ -75,25 +75,25 @@ namespace login
 
 
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
         public void MakineSil(string mid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "DELETE FROM makine WHERE makine_id=@mid;";
             command.Parameters.AddWithValue("@mid", Convert.ToInt32(mid));
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
 
         public void MakineAra(string mad)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM makine WHERE ad LIKE @mad";
@@ -108,12 +108,12 @@ namespace login
                 mylist.Add(Convert.ToString(reader.GetValue(4)));
 
             }
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
         public void MakineDurumListele(bool x)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM makine WHERE durum=@durum";
@@ -128,14 +128,14 @@ namespace login
                 mylist.Add(Convert.ToString(reader.GetValue(4)));
 
             }
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public void MakineTarihListele()
         {
             var x=DateTime.Today;
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM makine WHERE bakim_tarihi<=@durum";
@@ -150,7 +150,7 @@ namespace login
                 mylist.Add(Convert.ToString(reader.GetValue(4)));
 
             }
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
     }

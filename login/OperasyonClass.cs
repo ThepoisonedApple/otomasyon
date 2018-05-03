@@ -12,22 +12,22 @@ namespace login
         public static List<string> mylist = new List<string>();
         public void operasyonekle(string oadi,string otanim)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "INSERT INTO operasyon (ad,tanim) "+"VALUES (@oadi,@otanim);";
             command.Parameters.AddWithValue("@oadi",oadi);
             command.Parameters.AddWithValue("@otanim", otanim);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
 
         }
         public string[] OperasyonBilgiGetir(string oid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM operasyon WHERE operasyon_id=@oid";
@@ -39,13 +39,13 @@ namespace login
             arr[0] = comread["ad"].ToString();
             arr[1] = comread["tanim"].ToString();
             
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             return arr;
         }
         public void OperasyonGuncelle(string oadi, string otanim, int oid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "UPDATE operasyon SET ad=@oadi,tanim=@otanim WHERE operasyon_id=@oid ";
@@ -53,24 +53,24 @@ namespace login
             command.Parameters.AddWithValue("@otanim", otanim);
             command.Parameters.AddWithValue("@oid", Convert.ToInt32(oid));
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
         public void OperasyonSil(string oid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "DELETE FROM operasyon WHERE operasyon_id=@oid;";
             command.Parameters.AddWithValue("@oid", Convert.ToInt32(oid));
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
         public void OperasyonAra(string oad)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM operasyon WHERE ad LIKE @mad";
@@ -83,7 +83,7 @@ namespace login
                 mylist.Add(Convert.ToString(reader.GetValue(2)));
 
             }
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
 

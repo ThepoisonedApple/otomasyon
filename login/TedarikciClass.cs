@@ -12,8 +12,8 @@ namespace login
         public static List<string> mylist = new List<string>();
         public void TedarikciEkle(string yetkili_adi, string adres, string telefon, string email, string firma_adi)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText= "INSERT INTO tedarikci (yetkili_adi, adres, telefon, email, firma_adi) VALUES (@yetkili_adi, @adres, @telefon, @email, @firma_adi)";
@@ -24,13 +24,13 @@ namespace login
             command.Parameters.AddWithValue("firma_adi", firma_adi);
 
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public string[] BilgiGetir(int id)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM tedarikci where id = @id;";
@@ -44,27 +44,27 @@ namespace login
             arr[3] = comread["telefon"].ToString();
             arr[4] = comread["email"].ToString();
             comread.Close();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             return arr;
         }
 
         public void TedarikciSil(int id)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "DELETE FROM tedarikci WHERE id=@id ;";
             command.Parameters.AddWithValue("@id", id);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
 
         public void TedarikciGuncelle(int id,string y_adi, string t_adi, string adres, string tel, string email)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "UPDATE tedarikci set yetkili_adi = @yetkili_adi, adres = @adres, telefon=@telefon, email=@email, firma_adi = @firma_adi where id=@id";
@@ -75,13 +75,13 @@ namespace login
             command.Parameters.AddWithValue("@firma_adi", t_adi);
             command.Parameters.AddWithValue("@id", id);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public void TedarikciAra(string tad)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM tedarikci WHERE firma_adi LIKE @tad;";
@@ -101,7 +101,7 @@ namespace login
 
             }
 
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
 

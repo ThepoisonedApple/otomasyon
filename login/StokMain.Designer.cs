@@ -101,9 +101,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.label3.Location = new System.Drawing.Point(27, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 35);
+            this.label3.Size = new System.Drawing.Size(105, 35);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Satım";
+            this.label3.Text = " Ürün";
             this.label3.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel7

@@ -62,12 +62,12 @@ namespace login
             {
                 OperasyonClass myclass = new OperasyonClass();
                 myclass.operasyonekle(toadi.Text,totanim.Text);
-                MessageBox.Show("Başarılı");
+                MessageBox.Show("Operasyon başarıyla eklendi.");
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı");
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Operasyon eklenemedi.");
             }
         }
 

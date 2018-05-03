@@ -53,8 +53,8 @@ namespace login
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Urun Stok bilgileri getirilemedi.");
             }
         }
 
@@ -65,11 +65,12 @@ namespace login
             {
                 UrunStokClass myclass = new UrunStokClass();
                 myclass.UrunStokGuncelle(Convert.ToInt32(tuid.Text),x);
+                MessageBox.Show("Urun stok başarıyla güncellendi.");
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Urun Stok Bilgisi güncellenemedi");
             }
         }
 
@@ -80,11 +81,12 @@ namespace login
             {
                 UrunStokClass myclass = new UrunStokClass();
                 myclass.UrunStokGuncelle(Convert.ToInt32(tuid.Text), x);
+                MessageBox.Show("Urun stok başarıyla güncellendi.");
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Urun Stok bilgisi güncellenemedi.");
             }
         }
 

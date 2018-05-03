@@ -17,8 +17,8 @@ namespace login
         public int UrunEkle(string uad, string utl, string ukl, int sid)
         {
             int adet = 0;
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "INSERT INTO urun (adi,tasarim_link,kesim_link,siparis_id,adet) " +
@@ -32,7 +32,7 @@ namespace login
             var reader = command.ExecuteScalar();
 
             int iid = Convert.ToInt32(reader);
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             return iid;
 
 
@@ -41,8 +41,8 @@ namespace login
         public string[] BilgiGetir(int uid)
         {
             string[] arr = new string[4];
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM urun WHERE urun_id=@uid";
@@ -53,16 +53,16 @@ namespace login
             arr[1] = comread["tasarim_link"].ToString();
             arr[2] = comread["kesim_link"].ToString();
             arr[3] = comread["siparis_id"].ToString();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             return arr;
         }
 
         public void UrunSil(int uid)
         {
-            DBconnect mycon = new DBconnect();
+             
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             command.CommandText = "SELECT COUNT(urun_id) FROM verim WHERE urun_id=@uid";
             command.Parameters.AddWithValue("@uid", uid);
             int i = Convert.ToInt32(command.ExecuteScalar());
@@ -70,23 +70,23 @@ namespace login
             if (i == 0)
             {
 
-                mycon.connectionopen();
+                DBconnect.connectionopen();
                 command.CommandText = "DELETE FROM urun_operasyon WHERE urun_id=@uid";
                 command.Parameters.AddWithValue("@uid", uid);
                 command.ExecuteNonQuery();
-                mycon.connectionclose();
+                DBconnect.connectionclose();
 
-                mycon.connectionopen();
+                DBconnect.connectionopen();
                 command.CommandText = "DELETE FROM urun_hammadde WHERE urun_id=@uid";
                 command.Parameters.AddWithValue("@uid", uid);
                 command.ExecuteNonQuery();
-                mycon.connectionclose();
+                DBconnect.connectionclose();
 
-                mycon.connectionopen();
+                DBconnect.connectionopen();
                 command.CommandText = "DELETE FROM urun WHERE urun_id=@uid";
                 command.Parameters.AddWithValue("@uid", uid);
                 command.ExecuteNonQuery();
-                mycon.connectionclose();
+                DBconnect.connectionclose();
 
             }
             else
@@ -100,8 +100,8 @@ namespace login
 
         public void UrunGuncelle(int uid, string uad, string utl, string ukl, int sid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "UPDATE urun SET adi=@uad, tasarim_link=@utl, kesim_link=@ukl, siparis_id=@sid WHERE urun_id=@uid;";
@@ -111,63 +111,63 @@ namespace login
             command.Parameters.AddWithValue("@sid", sid);
             command.Parameters.AddWithValue("@uid", uid);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public void UruneOperasyonEkle(int uid, int oid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "INSERT INTO urun_operasyon (urun_id,operasyon_id) VALUES (@uid,@oid)";
             command.Parameters.AddWithValue("@uid", uid);
             command.Parameters.AddWithValue("@oid", oid);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
         public void UruneHammaddeEkle(int uid, int hid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "INSERT INTO urun_hammadde (urun_id,hammadde_id) VALUES (@uid,@hid)";
             command.Parameters.AddWithValue("@uid", uid);
             command.Parameters.AddWithValue("@hid", hid);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
         public void UrundenOperasyonSil(int uid, int oid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "DELETE FROM urun_operasyon WHERE urun_id=@uid and operasyon_id=@oid";
             command.Parameters.AddWithValue("@uid", uid);
             command.Parameters.AddWithValue("@oid", oid);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
         public void UrundenHammaddeSil(int uid, int hid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "DELETE FROM urun_hammadde WHERE urun_id=@uid and hammadde_id=@hid";
             command.Parameters.AddWithValue("@uid", uid);
             command.Parameters.AddWithValue("@hid", hid);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public void AratabloListele(int uid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "select operasyon_id from urun_operasyon where urun_id=@uid";
@@ -178,8 +178,8 @@ namespace login
                 operasyonlist.Add(Convert.ToString(reader.GetValue(0)));
             }
             reader.Close();
-            mycon.connectionclose();
-            mycon.connectionopen();
+            DBconnect.connectionclose();
+            DBconnect.connectionopen();
             command.CommandText = "select hammadde_id from urun_hammadde where urun_id=@uid";
             command.Parameters.AddWithValue("@uid", uid);
             reader = command.ExecuteReader();
@@ -187,13 +187,13 @@ namespace login
             {
                 hammaddelist.Add(Convert.ToString(reader.GetValue(0)));
             }
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public void UrunAra(string ad)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "select * from urun where adi like @uid";
@@ -212,7 +212,7 @@ namespace login
                 mylist.Add("");
 
             }
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             for (int i = 0; i < mylist.Count; i = i + 7)
             {
                 hammaddelist.Clear();
@@ -238,8 +238,8 @@ namespace login
         }
         public void UrunListele(string sid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "select * from urun where siparis_id=@uid";
@@ -258,7 +258,7 @@ namespace login
                 mylist.Add("");
 
             }
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             for (int i = 0; i < mylist.Count; i = i + 7)
             {
                 hammaddelist.Clear();

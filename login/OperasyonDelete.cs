@@ -66,29 +66,29 @@ namespace login
                arr= myclass.OperasyonBilgiGetir(toid.Text);
                 toadi.Text = arr[0];
                 totanim.Text = arr[1];
-                MessageBox.Show("Başarılı");
-
-
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Operasyon bilgisi getirilemedi.");
             }
         }
 
         private void bdelete_Click(object sender, EventArgs e)
-        {
-            try
+        { var silmeOnay = MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (silmeOnay == DialogResult.Yes)
             {
-                OperasyonClass myclass = new OperasyonClass();
-                myclass.OperasyonSil(toid.Text);
-                MessageBox.Show("Başarılı");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Hatalı");
-                throw;
+                try
+                {
+                    OperasyonClass myclass = new OperasyonClass();
+                    myclass.OperasyonSil(toid.Text);
+                    MessageBox.Show("Operasyon başarıyla silindi");
+                }
+                catch (Exception)
+                {
+                    DBconnect.connectionclose();
+                    MessageBox.Show("Operasyon Silinemedi.");
+                }
             }
         }
 

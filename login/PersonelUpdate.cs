@@ -61,8 +61,7 @@ namespace login
             }
             catch (Exception)
             {
-                DBconnect conn = new DBconnect();
-                conn.connectionclose();
+                DBconnect.connectionclose();
                 MessageBox.Show("Persone id'sini Eksik veya Yanlış Girdiniz");
             }
 
@@ -107,10 +106,11 @@ namespace login
             {
                 PersonelClass myclass = new PersonelClass();
                 myclass.PersonelGuncelle(tpad.Text, tpsad.Text, tpmail.Text,Convert.ToDouble(tpmaas.Text),comboBox2.SelectedIndex+1, tpadres.Text,tptel.Text, tppoz.Text,pid);
-                MessageBox.Show("yuppi");
+                MessageBox.Show("Personel Başarıyla Güncellendi.");
             }
             catch (Exception)
             {
+                DBconnect.connectionclose();
                 MessageBox.Show("Hatalı Veya Eksik bilgi girdiniz Güncelleme Başarısız");
             }
         }

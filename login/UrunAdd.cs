@@ -61,11 +61,12 @@ namespace login
             {
                 UrunClass myclass = new UrunClass();
                iid = myclass.UrunEkle(tuad.Text,tutl.Text,tukl.Text,Convert.ToInt32(tsid.Text));
+                MessageBox.Show("Urun Başarıyla Eklendi.");
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Urun Eklenemedi.");
             }
         }
 
@@ -75,11 +76,12 @@ namespace login
             {
                 UrunClass myclass = new UrunClass();
                 myclass.UruneOperasyonEkle(iid,Convert.ToInt32(toid.Text));
+                MessageBox.Show("Urune Operasyon Başarıyla Eklendi.");
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Urune Operasyon Eklenemedi.");
             }
         }
 
@@ -89,11 +91,12 @@ namespace login
             {
                 UrunClass myclass = new UrunClass();
                 myclass.UruneHammaddeEkle(iid, Convert.ToInt32(thid.Text));
+                MessageBox.Show("Urune Hammadde Başarıyla Eklendi.");
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Urune Hammadde Eklenemedi.");
             }
         }
 

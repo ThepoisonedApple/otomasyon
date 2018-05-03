@@ -75,11 +75,12 @@ namespace login
             {
                 VerimClass myclass = new VerimClass();
                 myclass.VerimEkle(Convert.ToInt32(tpid.Text), Convert.ToInt32(tuid.Text), Convert.ToInt32(toid.Text), Convert.ToDateTime(ttarih.Text), Convert.ToInt32(ttoplam.Text));
+                MessageBox.Show("Verim Başarıyla eklendi.");
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Verim Eklenemedi.");
             }
            
 

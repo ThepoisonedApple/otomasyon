@@ -71,8 +71,7 @@ namespace login
             }
             catch (Exception)
             {
-                DBconnect mycon = new DBconnect();
-                mycon.connectionclose();
+                DBconnect.connectionclose();
                 MessageBox.Show("Bilgiler getirilemedi");
 
             }
@@ -93,7 +92,7 @@ namespace login
                 }
                 catch (Exception)
                 {
-
+                    DBconnect.connectionclose();
                     MessageBox.Show("Sipariş Silinemedi");
                 }
             }

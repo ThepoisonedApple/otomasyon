@@ -54,25 +54,29 @@ namespace login
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Verim Bilgisi getirilemedi");
             }
         
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            var silmeOnay = MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (silmeOnay == DialogResult.Yes)
             {
-                VerimClass myclass = new VerimClass();
-                myclass.VerimSil();
+                try
+                {
+                    VerimClass myclass = new VerimClass();
+                    myclass.VerimSil();
+                    MessageBox.Show("Verim Başarıyla Silindi.");
+                }
+                catch (Exception)
+                {
+                    DBconnect.connectionclose();
+                    MessageBox.Show("Verim Silinemedi.");
+                }
             }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
 
         }
 

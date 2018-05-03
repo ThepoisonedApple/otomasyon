@@ -14,8 +14,8 @@ namespace login
         public bool PidKontrol(string pid)
         {
             bool x;
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand comm1 = new NpgsqlCommand();
             comm1.Connection = DBconnect.baglanti;
             comm1.CommandText = "SELECT COUNT(*) FROM personel WHERE personel_id=@pid;";
@@ -25,18 +25,18 @@ namespace login
             {
                 x = false;
                 MessageBox.Show("Personel ID'sini yanlış girdiniz");
-                mycon.connectionclose();
+                DBconnect.connectionclose();
                 return x;
             }
 
-            else mycon.connectionclose();
-            mycon.connectionopen();
+            else DBconnect.connectionclose();
+            DBconnect.connectionopen();
             NpgsqlCommand comm = new NpgsqlCommand();
             comm.Connection = DBconnect.baglanti;
             comm.CommandText = "SELECT COUNT(*) FROM kullanici WHERE personel_id=@pid;";
             comm.Parameters.AddWithValue("@pid",Convert.ToInt32(pid));
             Int32 count = Convert.ToInt32(comm.ExecuteScalar());
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             if (count != 0)
             {
                 x = false;
@@ -51,9 +51,9 @@ namespace login
         {
             
 
-            DBconnect mycon = new DBconnect();
+             
 
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText= "SELECT bolum_id FROM personel WHERE personel_id=@pid;";
@@ -64,14 +64,14 @@ namespace login
             yetki.Read();
             var yid = yetki["bolum_id"];
             x = Convert.ToInt32(yid);
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             return x;
         }
 
         public int kadkontrol(string kad)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT COUNT(*) FROM kullanici WHERE kullanici_adi=@kad;";
@@ -86,8 +86,8 @@ namespace login
 
         public void InsertKullanici(string kad,string sifre,string yid,string gs,string gc,string pid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "INSERT INTO kullanici (kullanici_adi,sifre,yetki_id,guvenlik_soru,guvenlik_cevap,personel_id) " +
@@ -99,7 +99,7 @@ namespace login
             command.Parameters.AddWithValue("@gc", gc);
             command.Parameters.AddWithValue("@pid", Convert.ToInt32(pid));
             var reader = command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
 

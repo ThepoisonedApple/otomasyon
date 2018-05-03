@@ -60,8 +60,8 @@ namespace login
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Urun Bilgileri Getirilemedi.");
             }
         }
 
@@ -71,11 +71,12 @@ namespace login
             {
                 UrunClass myclass = new UrunClass();
                 myclass.UruneOperasyonEkle(Convert.ToInt32(tuid.Text), Convert.ToInt32(toid.Text));
+                MessageBox.Show("Urune Operasyon Başarıyla Eklendi.");
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Urune Operasyon Eklenemedi.");
             }
         }
 
@@ -85,11 +86,12 @@ namespace login
             {
                 UrunClass myclass = new UrunClass();
                 myclass.UruneHammaddeEkle(Convert.ToInt32(tuid.Text), Convert.ToInt32(thid.Text));
+                MessageBox.Show("Urune Hammadde Başarıyla Eklendi.");
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Urune Hammadde Eklenemedi.");
             }
         }
 
@@ -99,11 +101,12 @@ namespace login
             {
                 UrunClass myclass = new UrunClass();
                 myclass.UrundenOperasyonSil(Convert.ToInt32(tuid.Text), Convert.ToInt32(toid.Text));
+                MessageBox.Show("Urunden Operasyon Başarıyla Silindi.");
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Urunden Operasyon Silinemedi.");
             }
         }
 
@@ -118,11 +121,12 @@ namespace login
             {
                 UrunClass myclass = new UrunClass();
                 myclass.UrunGuncelle(Convert.ToInt32(tuid.Text), tuad.Text, tutl.Text, tukl.Text, Convert.ToInt32(tsid.Text));
+                MessageBox.Show("Urun Başarıyla Güncellendi.");
             }
             catch (Exception)
             {
-                
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Urun Güncellenemedi.");
             }
 
         }

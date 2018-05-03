@@ -70,29 +70,32 @@ namespace login
                 tmalim.ForeColor = Color.Black;
                 tmbakim.ForeColor = Color.Black;
 
-
-                MessageBox.Show("Başarılı");
             }
             catch (Exception)
             {
-                DBconnect mycon = new DBconnect();
-                mycon.connectionclose();
-                MessageBox.Show("Hatalı");
+                 
+                DBconnect.connectionclose();
+                MessageBox.Show("Makine bilgileri getirilemedi.");
             }
         }
 
         private void bdelete_Click(object sender, EventArgs e)
         {
-            try
+            var silmeOnay = MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (silmeOnay == DialogResult.Yes)
             {
-                MakineClass myclass = new MakineClass();
-                myclass.MakineSil(tmid.Text);
-                MessageBox.Show("Başarılı");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Hatalı");
-                
+                try
+                {
+                    MakineClass myclass = new MakineClass();
+                    myclass.MakineSil(tmid.Text);
+                    MessageBox.Show("Makine Başarıyla Silindi.");
+                }
+                catch (Exception)
+                {
+                    DBconnect.connectionclose();
+                    MessageBox.Show("Makine Silinemedi");
+
+                }
             }
         }
 

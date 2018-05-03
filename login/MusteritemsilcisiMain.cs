@@ -52,9 +52,7 @@ namespace login
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form1 nextForm = new Form1();
-            nextForm.Show();
-            this.Dispose();
+
         }
 
         private void button2_Click(object sender, EventArgs e)

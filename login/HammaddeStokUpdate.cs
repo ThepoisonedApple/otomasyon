@@ -47,12 +47,12 @@ namespace login
             {
                 HammaddeClass myclass = new HammaddeClass();
                 myclass.HammaddeGuncelle(tuadi.Text, Convert.ToInt32(tuadet.Text), Convert.ToInt32(ttid.Text),Convert.ToInt32(tuid.Text));
-                MessageBox.Show("Başarılı");
+                MessageBox.Show("Hammadde Stoğu başarıyla güncellendi.");
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı");
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Hammadde Stoğu güncellenemedi.");
             }
         }
 
@@ -70,12 +70,11 @@ namespace login
                 tuadet.ForeColor = Color.Black;
                 ttid.ForeColor = Color.Black;
 
-                MessageBox.Show("Başarılı");
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı");
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("hammadde stok bilgisi getirilemedi.");
             }
         }
 

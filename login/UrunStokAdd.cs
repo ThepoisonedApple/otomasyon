@@ -47,11 +47,12 @@ namespace login
             {
                 UrunStokClass myclass = new UrunStokClass();
                 myclass.UrunStokEkle(Convert.ToInt32(tuid.Text),Convert.ToInt32(tuadet.Text));
+                MessageBox.Show("Urun Stok Başarıyla Eklendi.");
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Urun Stok Eklenemedi.");
             }
         }
 

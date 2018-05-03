@@ -43,12 +43,12 @@ namespace login
             {
                 OperasyonClass myclass = new OperasyonClass();
                 myclass.OperasyonGuncelle(toadi.Text, totanim.Text, Convert.ToInt32(toid.Text));
-                MessageBox.Show("Başarılı");
+                MessageBox.Show("Operasyon Başarıyla güncellendi.");
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı");
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Operasyon güncellenemedi.");
             }
         }
 
@@ -64,12 +64,11 @@ namespace login
                 toadi.ForeColor = Color.Black;
                 totanim.ForeColor = Color.Black;
 
-                MessageBox.Show("Başarılı");
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı");
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("Operasyon bilgileri getirilemedi.");
             }
         }
 

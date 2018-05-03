@@ -52,11 +52,12 @@ namespace login
             {
                 MakineClass myclass = new MakineClass();
                 myclass.MakineGuncelle(tmadi.Text, x, Convert.ToDateTime(tmalim.Text), Convert.ToDateTime(tmbakim.Text),Convert.ToInt32(tmid.Text));
-                MessageBox.Show("Başarılı");
+                MessageBox.Show("Makine Başarıyla Güncellendi");
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı");
+                DBconnect.connectionclose();
+                MessageBox.Show("Makine Güncellenemedi");
                
             }
         }
@@ -84,15 +85,13 @@ namespace login
                 tmadi.ForeColor = Color.Black;
                 tmalim.ForeColor = Color.Black;
                 tmbakim.ForeColor = Color.Black;
-               
 
-                MessageBox.Show("Başarılı");
             }
             catch (Exception)
             {
-                DBconnect mycon = new DBconnect();
-                mycon.connectionclose();
-                MessageBox.Show("Hatalı");
+                 
+                DBconnect.connectionclose();
+                MessageBox.Show("Makine Bilgileri Getirilemedi.");
                 
             }
         }

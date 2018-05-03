@@ -15,8 +15,8 @@ namespace login
             try
             {
                 int x = 0;
-                DBconnect mycon = new DBconnect();
-                mycon.connectionopen();
+                 
+                DBconnect.connectionopen();
                 NpgsqlCommand command = new NpgsqlCommand();
                 command.Connection = DBconnect.baglanti;
                 try
@@ -30,23 +30,23 @@ namespace login
 
 
                 }
-                mycon.connectionclose();
+                DBconnect.connectionclose();
                 if (x == 0)
                 {
-                    mycon.connectionopen();
+                    DBconnect.connectionopen();
                     command.CommandText = "SELECT SUM(maas) FROM Personel";
                     double maas = Convert.ToDouble(command.ExecuteScalar());
-                    mycon.connectionclose();
-                    mycon.connectionopen();
+                    DBconnect.connectionclose();
+                    DBconnect.connectionopen();
                     command.CommandText = "SELECT SUM(fiyat) FROM hammadde_siparis";
                     double hamucret = Convert.ToDouble(command.ExecuteScalar());
-                    mycon.connectionclose();
-                    mycon.connectionopen();
+                    DBconnect.connectionclose();
+                    DBconnect.connectionopen();
                     command.CommandText = "SELECT SUM(fiyat) FROM siparis";
                     double gelir = Convert.ToDouble(command.ExecuteScalar());
-                    mycon.connectionclose();
+                    DBconnect.connectionclose();
                     double kar = gelir - hamucret - maas;
-                    mycon.connectionopen();
+                    DBconnect.connectionopen();
                     command.CommandText = "INSERT INTO rapor (gelir,gider_personel,gider_hammadde,kar,tarih) VALUES (@gelir,@gper,@gham,@kar,@tarih)";
                     command.Parameters.AddWithValue("@gelir", Convert.ToInt32(gelir));
                     command.Parameters.AddWithValue("@gper", Convert.ToInt32(maas));
@@ -54,12 +54,12 @@ namespace login
                     command.Parameters.AddWithValue("@kar", Convert.ToInt32(kar));
                     command.Parameters.AddWithValue("@tarih", Convert.ToInt32(kar));
                     command.ExecuteNonQuery();
-                    mycon.connectionclose();
+                    DBconnect.connectionclose();
                 }
             }
             catch (Exception)
             {
-
+                DBconnect.connectionclose();
             }
 
 
@@ -69,8 +69,8 @@ namespace login
 
         public void RaporAra(DateTime tarih)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "select * from rapor where tarih=@uid";
@@ -86,12 +86,12 @@ namespace login
                 mylist.Add(reader.GetValue(x + 4).ToString());
                 mylist.Add(reader.GetValue(x + 5).ToString());
             }
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
         public void RaporListele()
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "select * from rapor";
@@ -106,7 +106,7 @@ namespace login
                 mylist.Add(reader.GetValue(x + 4).ToString());
                 mylist.Add(reader.GetValue(x + 5).ToString());
             }
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
 

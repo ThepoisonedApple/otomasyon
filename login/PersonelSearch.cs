@@ -197,7 +197,7 @@ namespace login
             }
             catch (Exception)
             {
-
+                DBconnect.connectionclose();
                 MessageBox.Show("Aramanızla Eşleşen Sonuç Bulunamadı");
             }
 
@@ -242,7 +242,7 @@ namespace login
             }
             catch (Exception)
             {
-
+                DBconnect.connectionclose();
                 MessageBox.Show("Aramanızla Eşleşen Sonuç Bulunamadı");
             }
             

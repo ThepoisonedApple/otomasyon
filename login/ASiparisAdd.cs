@@ -34,7 +34,7 @@ namespace login
             }
             catch (Exception)
             {
-
+                DBconnect.connectionclose();
                 MessageBox.Show("Sipariş Eklenemedi.");
             }
         }

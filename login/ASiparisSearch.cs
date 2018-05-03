@@ -23,6 +23,7 @@ namespace login
             button10.FlatAppearance.BorderSize = 0;
             button11.FlatAppearance.BorderSize = 0;
             button12.FlatAppearance.BorderSize = 0;
+            this.ActiveControl = this.panel1;
         }
 
 
@@ -190,7 +191,7 @@ namespace login
             }
             catch (Exception)
             {
-
+                DBconnect.connectionclose();
                 MessageBox.Show("Sipariş bulunamadı.");
             }
         }
@@ -234,7 +235,7 @@ namespace login
             }
             catch (Exception)
             {
-
+                DBconnect.connectionclose();
                 MessageBox.Show("Listeleme yapılamadı.");
             }
         }

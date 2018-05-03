@@ -57,6 +57,7 @@ namespace login
             }
             catch (Exception)
             {
+                DBconnect.connectionclose();
                 MessageBox.Show("Tedarikçi eklenemedi");
             }
         }

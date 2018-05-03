@@ -51,6 +51,7 @@ namespace login
             }
             catch (Exception)
             {
+                DBconnect.connectionclose();
                 MessageBox.Show("Müşteri eklenemedi");
             }
         }

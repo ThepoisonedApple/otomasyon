@@ -53,21 +53,27 @@ namespace login
             }
             catch (Exception)
             {
-
-                throw;
+                DBconnect.connectionclose();
+                MessageBox.Show("UrunStok bilgileri getirilemedi.");
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            var silmeOnay = MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (silmeOnay == DialogResult.Yes)
             {
-                UrunStokClass myclass = new UrunStokClass();
-                myclass.UrunStokSil(Convert.ToInt32(tuid.Text));
-            }
-            catch (Exception)
-            {
-                throw;
+                try
+                {
+                    UrunStokClass myclass = new UrunStokClass();
+                    myclass.UrunStokSil(Convert.ToInt32(tuid.Text));
+                    MessageBox.Show("Urun Stoğu Başarıyla Silindi.");
+                }
+                catch (Exception)
+                {
+                    DBconnect.connectionclose();
+                    MessageBox.Show("Urun Stoğu Silinemedi.");
+                }
             }
         }
 

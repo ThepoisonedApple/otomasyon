@@ -15,8 +15,8 @@ namespace login
 
        public static int Sayi()
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand comm = new NpgsqlCommand();
             comm.Connection = DBconnect.baglanti;
             comm.CommandText = "SELECT COUNT(ad) FROM personel where ad like @ad";
@@ -29,8 +29,8 @@ namespace login
 
             public void Personelekle(string ad,string sad, string mail, double maas, int bolum_id,string adres, string tel,string poz)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "INSERT INTO personel (ad,soyad,email,maas,bolum_id,adres,telefon,pozisyon) " +
@@ -44,13 +44,13 @@ namespace login
             command.Parameters.AddWithValue("@tel", tel);
             command.Parameters.AddWithValue("@poz", poz);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public string[] PersonelBilgiGetir(string pid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM personel WHERE personel_id=@pid";
@@ -68,14 +68,14 @@ namespace login
             arr[6] = comread["telefon"].ToString();
             arr[7] = comread["pozisyon"].ToString();
             comread.Close();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             return arr;
         }
 
         public void PersonelGuncelle(string ad, string sad, string mail, double maas, int bolum_id, string adres, string tel, string poz,string pid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "UPDATE personel SET ad=@name, soyad=@sname, email=@mail, maas=@maas, bolum_id=@bid, adres=@adres, telefon=@tel, pozisyon=@poz WHERE personel_id = @pid";
@@ -89,30 +89,30 @@ namespace login
             command.Parameters.AddWithValue("@poz", poz);
             command.Parameters.AddWithValue("@pid", Convert.ToInt32(pid));
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public void PersonelSil(string pid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "DELETE FROM kullanici WHERE personel_id=@pid;";
             command.Parameters.AddWithValue("@pid",Convert.ToInt32(pid));
             command.ExecuteNonQuery();
-            mycon.connectionclose();
-            mycon.connectionopen();
+            DBconnect.connectionclose();
+            DBconnect.connectionopen();
             command.CommandText = "DELETE FROM personel WHERE personel_id=@pid;";
             command.Parameters.AddWithValue("@pid",Convert.ToInt32(pid));
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public void PersonelAra(string pad,string sad)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand comm = new NpgsqlCommand();
             comm.Connection = DBconnect.baglanti;
             comm.CommandText = "SELECT * FROM personel WHERE ad like @pad and soyad like @sad;";
@@ -135,7 +135,7 @@ namespace login
 
             }
 
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
 
         }
@@ -143,8 +143,8 @@ namespace login
         public void Personellistele(string sword,string sorgu)
         {
 
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand comm = new NpgsqlCommand();
             comm.Connection = DBconnect.baglanti;
 
@@ -176,7 +176,7 @@ namespace login
 
             }
 
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
 

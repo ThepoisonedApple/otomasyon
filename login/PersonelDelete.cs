@@ -70,8 +70,7 @@ namespace login
             {
 
                 MessageBox.Show("Persone id'sini Eksik veya Yanlış Girdiniz");
-                DBconnect conn = new DBconnect();
-                conn.connectionclose();
+                DBconnect.connectionclose();
             }
         }
 
@@ -87,24 +86,28 @@ namespace login
 
         private void bdelete_Click(object sender, EventArgs e)
         {
-            try
+            var silmeOnay = MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (silmeOnay == DialogResult.Yes)
             {
-                PersonelClass myclass = new PersonelClass();
-                myclass.PersonelSil(tpid.Text);
-                MessageBox.Show("Personel başarıyla silindi.");
-                foreach (Control c in panel5.Controls)
+                try
                 {
-                    if (c is TextBox)
+                    PersonelClass myclass = new PersonelClass();
+                    myclass.PersonelSil(tpid.Text);
+                    MessageBox.Show("Personel başarıyla silindi.");
+                    foreach (Control c in panel5.Controls)
                     {
-                        c.ResetText();
+                        if (c is TextBox)
+                        {
+                            c.ResetText();
+                        }
                     }
                 }
-            }
-            catch (Exception)
-            {
-                DBconnect conn = new DBconnect();
-                conn.connectionclose();
-                MessageBox.Show("Personel silme başarısız");
+                catch (Exception)
+                {
+                    
+                    DBconnect.connectionclose();
+                    MessageBox.Show("Personel silme başarısız");
+                }
             }
         }
 

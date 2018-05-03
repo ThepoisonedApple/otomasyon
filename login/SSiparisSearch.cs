@@ -184,7 +184,7 @@ namespace login
             }
             catch (Exception)
             {
-
+                DBconnect.connectionclose();
                 MessageBox.Show("Sipariş bulunamadı.");
             }
         }
@@ -229,7 +229,7 @@ namespace login
             }
             catch (Exception)
             {
-
+                DBconnect.connectionclose();
                 MessageBox.Show("Sipariş bulunamadı.");
             }
         }

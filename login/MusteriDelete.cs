@@ -64,8 +64,8 @@ namespace login
             }
             catch (Exception)
             {
-                DBconnect mycon = new DBconnect();
-                mycon.connectionclose();
+                 
+                DBconnect.connectionclose();
                 MessageBox.Show("Müşteri Bilgileri Getirilemedi");
             }
         }
@@ -83,8 +83,8 @@ namespace login
                 }
                 catch (Exception)
                 {
-                    DBconnect mycon = new DBconnect();
-                    mycon.connectionclose();
+                     
+                    DBconnect.connectionclose();
                     MessageBox.Show("Müşteri Silinemedi." + Environment.NewLine + "Bu Müşteriye Bağlı Veriler Bulunuyorsa Silinemez!");
                 }
             }

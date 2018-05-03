@@ -11,8 +11,7 @@ namespace login
         public static List<string> mylist = new List<string>();
         public void AsipEkle(int tid,int hid,DateTime date,DateTime date1,int adet,int fiyat)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText= "INSERT INTO hammadde_siparis (tedarikci_id, hammadde_id,siparis_tarihi, beklenen_tarih, adet, fiyat) VALUES (@tedarikci_id, @hammadde_id, @date1, @beklenen_tarih, @adet, @fiyat)";
@@ -23,13 +22,12 @@ namespace login
             command.Parameters.AddWithValue("@adet", adet);
             command.Parameters.AddWithValue("@fiyat", fiyat);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public string[] BilgiGetir(int id)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM hammadde_siparis where id = @id;";
@@ -44,27 +42,26 @@ namespace login
             arr[4] = comread["adet"].ToString();
             arr[5] = comread["fiyat"].ToString();
             comread.Close();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             return arr;         
         }
 
         public void AsipSil(int id)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "DELETE FROM hammadde_siparis WHERE id=@id;";
             command.Parameters.AddWithValue("@id", id);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
 
         public void AsipGuncelle(int sid,int tid, int hid, DateTime date, DateTime date1, int adet, int fiyat)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "UPDATE hammadde_siparis SET tedarikci_id=@tid, hammadde_id = @hid, adet=@adet, fiyat=@fiyat, beklenen_tarih = @btarih, siparis_tarihi = @starih where id=@sid;";
@@ -76,13 +73,12 @@ namespace login
             command.Parameters.AddWithValue("@fiyat", fiyat);
             command.Parameters.AddWithValue("@sid", sid);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public void AsipAra(string tid, string date)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM hammadde_siparis WHERE (tedarikci_id::text) LIKE @tid AND (siparis_tarihi::text) LIKE @date;";
@@ -103,7 +99,7 @@ namespace login
 
             }
 
-            mycon.connectionclose();
+            DBconnect.connectionclose();
 
         }
 

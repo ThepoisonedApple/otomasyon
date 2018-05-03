@@ -16,7 +16,7 @@ namespace login
 
         public static NpgsqlConnection baglanti = new NpgsqlConnection(baglantiSatiri);
 
-        public void connectionopen()
+        public static void connectionopen()
         {
             if (baglanti.State==ConnectionState.Closed)
             {
@@ -33,7 +33,7 @@ namespace login
             }
 
         }
-        public void connectionclose()
+        public static void connectionclose()
         {
 
             if (baglanti.State == ConnectionState.Open)

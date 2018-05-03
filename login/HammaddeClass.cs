@@ -13,8 +13,7 @@ namespace login
         public static List<string> mylist = new List<string>();
         public void HammaddeEkle(string adi, int adet, int tid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "INSERT INTO hammadde (adi,adet,tedarikci_id) " + "VALUES (@uadi,@uadet,@tid);";
@@ -22,12 +21,11 @@ namespace login
             command.Parameters.AddWithValue("@uadet", adet);
             command.Parameters.AddWithValue("@tid", tid);
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
         public string[] HammaddeBilgiGetir(string uid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "SELECT * FROM hammadde WHERE id=@uid";
@@ -40,13 +38,12 @@ namespace login
             arr[1] = comread["adet"].ToString();
             arr[2] = comread["tedarikci_id"].ToString();
 
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             return arr;
         }
         public void HammaddeGuncelle(string adi, int adet, int tid , int id)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "UPDATE hammadde SET adi=@uadi,adet=@uadet , tedarikci_id=@ttdi WHERE id=@uid";
@@ -55,25 +52,23 @@ namespace login
             command.Parameters.AddWithValue("@ttdi", tid);
             command.Parameters.AddWithValue("@uid", Convert.ToInt32(id));
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
         public void HammaddeSil(string uid)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = DBconnect.baglanti;
             command.CommandText = "DELETE FROM hammadde WHERE id=@uid;";
             command.Parameters.AddWithValue("@uid", Convert.ToInt32(uid));
             command.ExecuteNonQuery();
-            mycon.connectionclose();
+            DBconnect.connectionclose();
             
         }
 
         public void UrunStokAra(string ad)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+            DBconnect.connectionopen();
             NpgsqlCommand comm = new NpgsqlCommand();
             comm.Connection = DBconnect.baglanti;
             comm.CommandText = "SELECT * FROM hammadde WHERE adi like @ad";
@@ -87,13 +82,13 @@ namespace login
                 mylist.Add(reader.GetValue(x + 2).ToString());
                 mylist.Add(reader.GetValue(x + 3).ToString());
             }
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
 
         public void UrunStokListele(int ID)
         {
-            DBconnect mycon = new DBconnect();
-            mycon.connectionopen();
+             
+            DBconnect.connectionopen();
             NpgsqlCommand comm = new NpgsqlCommand();
             comm.Connection = DBconnect.baglanti;
             comm.CommandText = "SELECT * FROM hammadde WHERE tedarikci_id=@ID";
@@ -107,7 +102,7 @@ namespace login
                 mylist.Add(reader.GetValue(x + 2).ToString());
                 mylist.Add(reader.GetValue(x + 3).ToString());
             }
-            mycon.connectionclose();
+            DBconnect.connectionclose();
         }
     }
 }
