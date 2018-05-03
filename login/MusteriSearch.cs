@@ -16,6 +16,7 @@ namespace login
         public MusteriSearch()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
             button1.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;
@@ -31,9 +32,18 @@ namespace login
 
         private void button9_Click(object sender, EventArgs e)
         {
-            MusterıtemsilcisiSatim nextForm = new MusterıtemsilcisiSatim();
-            nextForm.Show();
-            this.Dispose();
+            if (Form1.YID == 1)
+            {
+                YoneticiMain NextForm = new YoneticiMain();
+                NextForm.Show();
+                this.Dispose();
+            }
+            else
+            {
+                MusterıtemsilcisiSatim nextForm = new MusterıtemsilcisiSatim();
+                nextForm.Show();
+                this.Dispose();
+            }
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -125,6 +135,96 @@ namespace login
             panel8.Hide();
             panel2.Show();
             panel11.Hide();
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MusteriClass myclass = new MusteriClass();
+            MusteriClass.mylist.Clear();
+            listView1.Items.Clear();
+            bool x = true;
+            int i = 0;
+            if (ttad.ForeColor == Color.Silver)
+            {
+                ttad.ResetText();
+            }
+            try
+            {
+                myclass.MusteriAra(ttad.Text);
+                while (x)
+                {
+                    ListViewItem item = new ListViewItem(MusteriClass.mylist[i]);
+                    item.SubItems.Add(MusteriClass.mylist[i + 1]);
+                    item.SubItems.Add(MusteriClass.mylist[i + 2]);
+                    item.SubItems.Add(MusteriClass.mylist[i + 3]);
+                    item.SubItems.Add(MusteriClass.mylist[i + 4]);
+                    item.SubItems.Add(MusteriClass.mylist[i + 5]);
+
+                    i = i + 6;
+                    listView1.Items.Add(item);
+                    if (MusteriClass.mylist.Count == i)
+                    {
+                        x = false;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Sonuc Bulunamadi");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MusteriClass myclass = new MusteriClass();
+            MusteriClass.mylist.Clear();
+            listView2.Items.Clear();
+            bool x = true;
+            int i = 0;
+            try
+            {
+                myclass.MusteriAra("");
+                while (x)
+                {
+                    ListViewItem item = new ListViewItem(MusteriClass.mylist[i]);
+                    item.SubItems.Add(MusteriClass.mylist[i + 1]);
+                    item.SubItems.Add(MusteriClass.mylist[i + 2]);
+                    item.SubItems.Add(MusteriClass.mylist[i + 3]);
+                    item.SubItems.Add(MusteriClass.mylist[i + 4]);
+                    item.SubItems.Add(MusteriClass.mylist[i + 5]);
+
+                    i = i + 6;
+                    listView2.Items.Add(item);
+                    if (MusteriClass.mylist.Count == i)
+                    {
+                        x = false;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Sonuc Bulunamadi");
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
         }
     }
 }

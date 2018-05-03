@@ -16,6 +16,7 @@ namespace login
         public ASiparisSearch()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
             button1.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;
@@ -138,6 +139,110 @@ namespace login
             panel8.Hide();
             panel2.Show();
             panel11.Hide();
+        }
+
+        private void textBox3_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AsiparisClass myclass = new AsiparisClass();
+            AsiparisClass.mylist.Clear();
+            listView1.Items.Clear();
+            bool x = true;
+            int i = 0;
+            if (ttid.ForeColor == Color.Silver)
+            {
+                ttid.ResetText();
+            }
+            if (tstarih.ForeColor == Color.Silver)
+            {
+                tstarih.ResetText();
+            }
+            try
+            {
+                myclass.AsipAra(ttid.Text, tstarih.Text);
+                while (x)
+                {
+                    ListViewItem item = new ListViewItem(AsiparisClass.mylist[i]);
+                    item.SubItems.Add(AsiparisClass.mylist[i + 1]);
+                    item.SubItems.Add(AsiparisClass.mylist[i + 2]);
+                    item.SubItems.Add(AsiparisClass.mylist[i + 3]);
+                    item.SubItems.Add(AsiparisClass.mylist[i + 4]);
+                    item.SubItems.Add(AsiparisClass.mylist[i + 5]);
+                    item.SubItems.Add(AsiparisClass.mylist[i + 6]);
+
+                    i = i + 7;
+                    listView1.Items.Add(item);
+                    if (AsiparisClass.mylist.Count == i)
+                    {
+                        x = false;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Sipariş bulunamadı.");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AsiparisClass myclass = new AsiparisClass();
+            AsiparisClass.mylist.Clear();
+            listView2.Items.Clear();
+            bool x = true;
+            int i = 0;
+            if (ttid.ForeColor == Color.Silver)
+            {
+                ttid.ResetText();
+            }
+            if (tstarih.ForeColor == Color.Silver)
+            {
+                tstarih.ResetText();
+            }
+            try
+            {
+                myclass.AsipAra("","");
+                while (x)
+                {
+                    ListViewItem item = new ListViewItem(AsiparisClass.mylist[i]);
+                    item.SubItems.Add(AsiparisClass.mylist[i + 1]);
+                    item.SubItems.Add(AsiparisClass.mylist[i + 2]);
+                    item.SubItems.Add(AsiparisClass.mylist[i + 3]);
+                    item.SubItems.Add(AsiparisClass.mylist[i + 4]);
+                    item.SubItems.Add(AsiparisClass.mylist[i + 5]);
+                    item.SubItems.Add(AsiparisClass.mylist[i + 6]);
+
+                    i = i + 7;
+                    listView2.Items.Add(item);
+                    if (AsiparisClass.mylist.Count == i)
+                    {
+                        x = false;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Listeleme yapılamadı.");
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
         }
     }
 }

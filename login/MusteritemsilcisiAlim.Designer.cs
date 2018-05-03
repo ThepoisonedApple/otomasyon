@@ -30,6 +30,7 @@
         {
             this.button9 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button12);
             this.panel1.Controls.Add(this.panel2);
@@ -82,6 +83,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1060, 500);
             this.panel1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label2.Location = new System.Drawing.Point(284, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(645, 45);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Müşteri Temsilcisi Alım Paneli";
             // 
             // button12
             // 
@@ -270,17 +282,6 @@
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label2.Location = new System.Drawing.Point(284, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(645, 45);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Müşteri Temsilcisi Alım Paneli";
             // 
             // MusteritemsilcisiAlim
             // 

@@ -20,6 +20,7 @@ namespace login
             button10.FlatAppearance.BorderSize = 0;
             button11.FlatAppearance.BorderSize = 0;
             button12.FlatAppearance.BorderSize = 0;
+            tstarih.Text = DateTime.Today.ToString();
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -39,6 +40,38 @@ namespace login
             Form1 nextForm = new Form1();
             nextForm.Show();
             this.Dispose();
+        }
+
+        private void tadet_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SSiparisClass myclass = new SSiparisClass();
+                myclass.SsipEkle(Convert.ToInt32(tmid.Text),Convert.ToDateTime(tstarih.Text), Convert.ToDateTime(tbtarih.Text), Convert.ToInt32(tadet.Text), Convert.ToInt32(tfiyat.Text),tbilgi.Text);
+                MessageBox.Show("Sipariş Başarıyla Eklendi.");
+            }
+            catch (Exception)
+            {
+                DBconnect mycon = new DBconnect();
+                mycon.connectionclose();
+                MessageBox.Show("Sipariş Eklenemedi.");
+            }
         }
     }
 }

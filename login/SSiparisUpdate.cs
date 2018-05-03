@@ -12,6 +12,7 @@ namespace login
 {
     public partial class SSiparisUpdate : Form
     {
+        int sid;
         public SSiparisUpdate()
         {
             InitializeComponent();
@@ -41,6 +42,62 @@ namespace login
             Form1 nextForm = new Form1();
             nextForm.Show();
             this.Dispose();
+        }
+
+        private void tsid_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string[] arr = new string[6];
+            try
+            {
+                SSiparisClass myclass = new SSiparisClass();
+                sid = Convert.ToInt32(tsid.Text);
+                arr = myclass.BilgiGetir(sid);
+                tmid.Text = arr[0];
+                tmid.ForeColor = Color.Black;
+                tbilgi.Text = arr[1];
+                tbilgi.ForeColor = Color.Black;
+                tstarih.Text = arr[2];
+                tstarih.ForeColor = Color.Black;
+                tbtarih.Text = arr[3];
+                tbtarih.ForeColor = Color.Black;
+                tadet.Text = arr[4];
+                tadet.ForeColor = Color.Black;
+                tfiyat.Text = arr[5];
+                tfiyat.ForeColor = Color.Black;
+            }
+            catch (Exception)
+            {
+                DBconnect mycon = new DBconnect();
+                mycon.connectionclose();
+                MessageBox.Show("Bilgiler getirilemedi");
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SSiparisClass myclass = new SSiparisClass();
+                myclass.SsipGuncelle(sid, Convert.ToInt32(tmid.Text), Convert.ToDateTime(tstarih.Text), Convert.ToDateTime(tbtarih.Text), Convert.ToInt32(tadet.Text), Convert.ToInt32(tfiyat.Text), tbilgi.Text);
+                MessageBox.Show("Sipariş başarıyla güncellendi.");
+            }
+            catch (Exception)
+            {
+                DBconnect mycon = new DBconnect();
+                mycon.connectionclose();
+                MessageBox.Show("Sipariş güncellenemedi.");
+            }
         }
     }
 }

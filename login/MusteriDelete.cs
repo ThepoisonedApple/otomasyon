@@ -12,6 +12,7 @@ namespace login
 {
     public partial class MusteriDelete : Form
     {
+        int mid;
         public MusteriDelete()
         {
             InitializeComponent();
@@ -40,6 +41,59 @@ namespace login
             Form1 nextForm = new Form1();
             nextForm.Show();
             this.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string[] arr = new string[5];
+            try
+            {
+                MusteriClass myclass = new MusteriClass();
+                mid = Convert.ToInt32(ttid.Text);
+                arr = myclass.BilgiGetir(mid);
+                ttad.Text = arr[0];
+                ttad.ForeColor = Color.Black;
+                tyad.Text = arr[1];
+                tyad.ForeColor = Color.Black;
+                tadres.Text = arr[2];
+                tadres.ForeColor = Color.Black;
+                ttel.Text = arr[3];
+                ttel.ForeColor = Color.Black;
+                temail.Text = arr[4];
+                temail.ForeColor = Color.Black;
+            }
+            catch (Exception)
+            {
+                DBconnect mycon = new DBconnect();
+                mycon.connectionclose();
+                MessageBox.Show("Müşteri Bilgileri Getirilemedi");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var silmeOnay = MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (silmeOnay == DialogResult.Yes)
+            {
+                try
+                {
+                    MusteriClass myclass = new MusteriClass();
+                    myclass.MusteriSil(mid);
+                    MessageBox.Show("Müşteri Başarıyla Silindi");
+                }
+                catch (Exception)
+                {
+                    DBconnect mycon = new DBconnect();
+                    mycon.connectionclose();
+                    MessageBox.Show("Müşteri Silinemedi." + Environment.NewLine + "Bu Müşteriye Bağlı Veriler Bulunuyorsa Silinemez!");
+                }
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
         }
     }
 }

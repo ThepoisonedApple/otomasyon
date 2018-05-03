@@ -12,6 +12,7 @@ namespace login
 {
     public partial class ASiparisUpdate : Form
     {
+        int sid;
         public ASiparisUpdate()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace login
             button11.FlatAppearance.BorderSize = 0;
             button12.FlatAppearance.BorderSize = 0;
             DateTime thisDay1 = DateTime.Today;
-            textBox2.Text = thisDay1.ToString("d");
+            tstarih.Text = thisDay1.ToString("d");
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -41,6 +42,61 @@ namespace login
             Form1 nextForm = new Form1();
             nextForm.Show();
             this.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string[] arr = new string[6];
+            try
+            {
+                AsiparisClass myclass = new AsiparisClass();
+                sid = Convert.ToInt32(tsid.Text);
+                arr = myclass.BilgiGetir(sid);
+                ttid.Text = arr[0];
+                thid.Text = arr[1];
+                tstarih.Text = arr[2];
+                tbtarih.Text = arr[3];
+                tadet.Text = arr[4];
+                tfiyat.Text = arr[5];
+            }
+            catch (Exception)
+            {
+                DBconnect mycon = new DBconnect();
+                mycon.connectionclose();
+                MessageBox.Show("Sipariş Bilgileri Getirilemedi.");
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AsiparisClass myclass = new AsiparisClass();
+                myclass.AsipGuncelle(sid,Convert.ToInt32(ttid.Text), Convert.ToInt32(thid.Text), Convert.ToDateTime(tstarih.Text), Convert.ToDateTime(tbtarih.Text), Convert.ToInt32(tadet.Text), Convert.ToInt32(tfiyat.Text));
+                MessageBox.Show("Sipariş başarıyla güncellendi.");
+            }
+            catch (Exception)
+            {
+                DBconnect mycon = new DBconnect();
+                mycon.connectionclose();
+                MessageBox.Show("Sipariş güncellenemedi.");
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
+        }
+
+        private void tsid_Enter(object sender, EventArgs e)
+        {
+            if (tsid.ForeColor==Color.Silver)
+            {
+                tsid.ResetText();
+                tsid.ForeColor = Color.Black;
+            }
         }
     }
 }

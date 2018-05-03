@@ -54,11 +54,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsiparisClass.cs" />
     <Compile Include="DBconnect.cs" />
     <Compile Include="HammaddeClass.cs" />
     <Compile Include="KayitInsert.cs" />
     <Compile Include="LoginClass.cs" />
     <Compile Include="MakineClass.cs" />
+    <Compile Include="MusteriClass.cs" />
     <Compile Include="OperasyonClass.cs" />
     <Compile Include="OperasyonSearch.cs">
       <SubType>Form</SubType>
@@ -79,6 +81,8 @@
       <DependentUpon>Rapor.cs</DependentUpon>
     </Compile>
     <Compile Include="SifreUnuttumClass.cs" />
+    <Compile Include="SSiparisClass.cs" />
+    <Compile Include="TedarikciClass.cs" />
     <Compile Include="UrunClass.cs" />
     <Compile Include="UrunSearch.cs">
       <SubType>Form</SubType>

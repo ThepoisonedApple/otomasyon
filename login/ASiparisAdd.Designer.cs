@@ -33,13 +33,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.thid = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tadet = new System.Windows.Forms.TextBox();
+            this.tfiyat = new System.Windows.Forms.TextBox();
+            this.tbtarih = new System.Windows.Forms.TextBox();
+            this.tstarih = new System.Windows.Forms.TextBox();
+            this.ttid = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -75,7 +75,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(700, 600);
+            this.panel1.Size = new System.Drawing.Size(700, 505);
             this.panel1.TabIndex = 3;
             // 
             // label4
@@ -104,28 +104,29 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Azure;
-            this.panel5.Controls.Add(this.textBox4);
+            this.panel5.Controls.Add(this.thid);
             this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.textBox7);
-            this.panel5.Controls.Add(this.textBox5);
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.textBox2);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.tadet);
+            this.panel5.Controls.Add(this.tfiyat);
+            this.panel5.Controls.Add(this.tbtarih);
+            this.panel5.Controls.Add(this.tstarih);
+            this.panel5.Controls.Add(this.ttid);
             this.panel5.Location = new System.Drawing.Point(82, 122);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(595, 435);
+            this.panel5.Size = new System.Drawing.Size(593, 342);
             this.panel5.TabIndex = 24;
             // 
-            // textBox4
+            // thid
             // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.ForeColor = System.Drawing.Color.Silver;
-            this.textBox4.Location = new System.Drawing.Point(42, 112);
-            this.textBox4.MaxLength = 10;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(233, 33);
-            this.textBox4.TabIndex = 33;
-            this.textBox4.Text = "hammadde ID";
+            this.thid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.thid.ForeColor = System.Drawing.Color.Silver;
+            this.thid.Location = new System.Drawing.Point(319, 46);
+            this.thid.MaxLength = 10;
+            this.thid.Name = "thid";
+            this.thid.Size = new System.Drawing.Size(233, 33);
+            this.thid.TabIndex = 33;
+            this.thid.Text = "hammadde ID";
+            this.thid.Enter += new System.EventHandler(this.ttid_Enter);
             // 
             // button1
             // 
@@ -133,7 +134,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(445, 359);
+            this.button1.Location = new System.Drawing.Point(426, 255);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 54);
             this.button1.TabIndex = 32;
@@ -141,56 +142,61 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox7
+            // tadet
             // 
-            this.textBox7.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox7.ForeColor = System.Drawing.Color.Silver;
-            this.textBox7.Location = new System.Drawing.Point(42, 179);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(233, 33);
-            this.textBox7.TabIndex = 30;
-            this.textBox7.Text = "adet";
+            this.tadet.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tadet.ForeColor = System.Drawing.Color.Silver;
+            this.tadet.Location = new System.Drawing.Point(42, 179);
+            this.tadet.Name = "tadet";
+            this.tadet.Size = new System.Drawing.Size(233, 33);
+            this.tadet.TabIndex = 30;
+            this.tadet.Text = "adet";
+            this.tadet.Enter += new System.EventHandler(this.ttid_Enter);
             // 
-            // textBox5
+            // tfiyat
             // 
-            this.textBox5.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.Color.Silver;
-            this.textBox5.Location = new System.Drawing.Point(42, 241);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(233, 33);
-            this.textBox5.TabIndex = 28;
-            this.textBox5.Text = "fiyat";
+            this.tfiyat.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tfiyat.ForeColor = System.Drawing.Color.Silver;
+            this.tfiyat.Location = new System.Drawing.Point(42, 241);
+            this.tfiyat.Name = "tfiyat";
+            this.tfiyat.Size = new System.Drawing.Size(233, 33);
+            this.tfiyat.TabIndex = 28;
+            this.tfiyat.Text = "fiyat";
+            this.tfiyat.Enter += new System.EventHandler(this.ttid_Enter);
             // 
-            // textBox3
+            // tbtarih
             // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.ForeColor = System.Drawing.Color.Silver;
-            this.textBox3.Location = new System.Drawing.Point(319, 112);
-            this.textBox3.MaxLength = 10;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 33);
-            this.textBox3.TabIndex = 26;
-            this.textBox3.Text = "beklenen tarih";
+            this.tbtarih.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbtarih.ForeColor = System.Drawing.Color.Silver;
+            this.tbtarih.Location = new System.Drawing.Point(319, 112);
+            this.tbtarih.MaxLength = 10;
+            this.tbtarih.Name = "tbtarih";
+            this.tbtarih.Size = new System.Drawing.Size(233, 33);
+            this.tbtarih.TabIndex = 26;
+            this.tbtarih.Text = "beklenen tarih";
+            this.tbtarih.Enter += new System.EventHandler(this.ttid_Enter);
             // 
-            // textBox2
+            // tstarih
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(319, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 33);
-            this.textBox2.TabIndex = 25;
-            this.textBox2.Text = "Şipariş tarihi";
+            this.tstarih.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tstarih.ForeColor = System.Drawing.Color.Black;
+            this.tstarih.Location = new System.Drawing.Point(42, 112);
+            this.tstarih.Name = "tstarih";
+            this.tstarih.Size = new System.Drawing.Size(233, 33);
+            this.tstarih.TabIndex = 25;
+            this.tstarih.Text = "Sipariş tarihi";
+            this.tstarih.Enter += new System.EventHandler(this.ttid_Enter);
             // 
-            // textBox1
+            // ttid
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(42, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 33);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Tedarikçi ID";
+            this.ttid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ttid.ForeColor = System.Drawing.Color.Silver;
+            this.ttid.Location = new System.Drawing.Point(42, 46);
+            this.ttid.Name = "ttid";
+            this.ttid.Size = new System.Drawing.Size(233, 33);
+            this.ttid.TabIndex = 24;
+            this.ttid.Text = "Tedarikçi ID";
+            this.ttid.Enter += new System.EventHandler(this.ttid_Enter);
             // 
             // panel4
             // 
@@ -205,7 +211,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Location = new System.Drawing.Point(50, 575);
+            this.panel2.Location = new System.Drawing.Point(49, 480);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(650, 25);
             this.panel2.TabIndex = 13;
@@ -218,7 +224,7 @@
             this.panel3.Controls.Add(this.button9);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(50, 600);
+            this.panel3.Size = new System.Drawing.Size(50, 505);
             this.panel3.TabIndex = 12;
             // 
             // button11
@@ -243,6 +249,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -260,7 +267,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 600);
+            this.ClientSize = new System.Drawing.Size(700, 505);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ASiparisAdd";
@@ -282,13 +289,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox thid;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tadet;
+        private System.Windows.Forms.TextBox tfiyat;
+        private System.Windows.Forms.TextBox tbtarih;
+        private System.Windows.Forms.TextBox tstarih;
+        private System.Windows.Forms.TextBox ttid;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;

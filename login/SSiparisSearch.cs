@@ -22,6 +22,7 @@ namespace login
             button10.FlatAppearance.BorderSize = 0;
             button11.FlatAppearance.BorderSize = 0;
             button12.FlatAppearance.BorderSize = 0;
+            comboBox1.SelectedIndex = 0;
         }
 
         private void panel7_Paint(object sender, PaintEventArgs e)
@@ -128,9 +129,119 @@ namespace login
 
         private void button9_Click(object sender, EventArgs e)
         {
-            MusterıtemsilcisiSatim nextForm = new MusterıtemsilcisiSatim();
-            nextForm.Show();
-            this.Dispose();
+            if (Form1.YID == 1)
+            {
+                YoneticiMain NextForm = new YoneticiMain();
+                NextForm.Show();
+                this.Dispose();
+            }
+            else
+            {
+                MusterıtemsilcisiSatim nextForm = new MusterıtemsilcisiSatim();
+                nextForm.Show();
+                this.Dispose();
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SSiparisClass myclass = new SSiparisClass();
+            SSiparisClass.mylist.Clear();
+            listView1.Items.Clear();
+            bool x = true;
+            int i = 0;
+            if (textBox2.ForeColor == Color.Silver)
+            {
+                textBox2.ResetText();
+            }
+            if (textBox3.ForeColor == Color.Silver)
+            {
+                textBox3.ResetText();
+            }
+            try
+            {
+                myclass.SsipAra(textBox2.Text, textBox3.Text);
+                while (x)
+                {
+                    ListViewItem item = new ListViewItem(SSiparisClass.mylist[i]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 1]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 2]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 3]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 4]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 5]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 6]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 7]);
+
+                    i = i + 8;
+                    listView1.Items.Add(item);
+                    if (SSiparisClass.mylist.Count == i)
+                    {
+                        x = false;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Sipariş bulunamadı.");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SSiparisClass myclass = new SSiparisClass();
+            SSiparisClass.mylist.Clear();
+            listView2.Items.Clear();
+            bool x = true;
+            int i = 0;
+            if (textBox2.ForeColor == Color.Silver)
+            {
+                textBox2.ResetText();
+            }
+            if (textBox3.ForeColor == Color.Silver)
+            {
+                textBox3.ResetText();
+            }
+            try
+            {
+                myclass.SsipAra(textBox2.Text, textBox3.Text);
+                while (x)
+                {
+                    ListViewItem item = new ListViewItem(SSiparisClass.mylist[i]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 1]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 2]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 3]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 4]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 5]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 6]);
+                    item.SubItems.Add(SSiparisClass.mylist[i + 7]);
+
+                    i = i + 8;
+                    listView2.Items.Add(item);
+                    if (SSiparisClass.mylist.Count == i)
+                    {
+                        x = false;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Sipariş bulunamadı.");
+            }
+        }
+
+        private void textBox3_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
         }
     }
 }

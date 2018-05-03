@@ -32,14 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +43,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tsid = new System.Windows.Forms.TextBox();
+            this.tadet = new System.Windows.Forms.TextBox();
+            this.tfiyat = new System.Windows.Forms.TextBox();
+            this.tbilgi = new System.Windows.Forms.TextBox();
+            this.tbtarih = new System.Windows.Forms.TextBox();
+            this.tstarih = new System.Windows.Forms.TextBox();
+            this.tmid = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,6 +79,7 @@
             this.button2.TabIndex = 36;
             this.button2.Text = "Bilgilerini Getir";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -104,96 +105,24 @@
             this.label2.TabIndex = 34;
             this.label2.Text = "Güncelleyeceğiniz siparişin id\'sine";
             // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox9.ForeColor = System.Drawing.Color.Silver;
-            this.textBox9.Location = new System.Drawing.Point(42, 17);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(233, 33);
-            this.textBox9.TabIndex = 33;
-            this.textBox9.Text = "Sipariş ID";
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.MintCream;
-            this.panel5.Controls.Add(this.textBox7);
-            this.panel5.Controls.Add(this.textBox5);
-            this.panel5.Controls.Add(this.textBox4);
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.textBox2);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.tsid);
+            this.panel5.Controls.Add(this.tadet);
+            this.panel5.Controls.Add(this.tfiyat);
+            this.panel5.Controls.Add(this.tbilgi);
+            this.panel5.Controls.Add(this.tbtarih);
+            this.panel5.Controls.Add(this.tstarih);
+            this.panel5.Controls.Add(this.tmid);
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.textBox9);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Location = new System.Drawing.Point(82, 122);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(595, 483);
             this.panel5.TabIndex = 24;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox7.ForeColor = System.Drawing.Color.Silver;
-            this.textBox7.Location = new System.Drawing.Point(42, 338);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(233, 33);
-            this.textBox7.TabIndex = 42;
-            this.textBox7.Text = "adet";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.Color.Silver;
-            this.textBox5.Location = new System.Drawing.Point(42, 394);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(233, 33);
-            this.textBox5.TabIndex = 41;
-            this.textBox5.Text = "fiyat";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.ForeColor = System.Drawing.Color.Silver;
-            this.textBox4.Location = new System.Drawing.Point(42, 163);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(510, 94);
-            this.textBox4.TabIndex = 40;
-            this.textBox4.Text = "Sipariş bilgisi";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.ForeColor = System.Drawing.Color.Silver;
-            this.textBox3.Location = new System.Drawing.Point(42, 279);
-            this.textBox3.MaxLength = 10;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 33);
-            this.textBox3.TabIndex = 39;
-            this.textBox3.Text = "Bitiş tarihi";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(319, 112);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 33);
-            this.textBox2.TabIndex = 38;
-            this.textBox2.Text = "Şipariş tarihi";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(42, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 33);
-            this.textBox1.TabIndex = 37;
-            this.textBox1.Text = "müşteri ID";
             // 
             // button1
             // 
@@ -207,6 +136,7 @@
             this.button1.TabIndex = 32;
             this.button1.Text = "Güncelle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -310,6 +240,85 @@
             this.panel1.Size = new System.Drawing.Size(700, 650);
             this.panel1.TabIndex = 3;
             // 
+            // tsid
+            // 
+            this.tsid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tsid.ForeColor = System.Drawing.Color.Silver;
+            this.tsid.Location = new System.Drawing.Point(42, 17);
+            this.tsid.Name = "tsid";
+            this.tsid.Size = new System.Drawing.Size(233, 33);
+            this.tsid.TabIndex = 44;
+            this.tsid.Text = "Sipariş ID";
+            this.tsid.Enter += new System.EventHandler(this.tsid_Enter);
+            // 
+            // tadet
+            // 
+            this.tadet.BackColor = System.Drawing.Color.White;
+            this.tadet.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tadet.ForeColor = System.Drawing.Color.Silver;
+            this.tadet.Location = new System.Drawing.Point(42, 330);
+            this.tadet.Name = "tadet";
+            this.tadet.Size = new System.Drawing.Size(233, 33);
+            this.tadet.TabIndex = 43;
+            this.tadet.Text = "adet";
+            // 
+            // tfiyat
+            // 
+            this.tfiyat.BackColor = System.Drawing.Color.White;
+            this.tfiyat.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tfiyat.ForeColor = System.Drawing.Color.Silver;
+            this.tfiyat.Location = new System.Drawing.Point(42, 386);
+            this.tfiyat.Name = "tfiyat";
+            this.tfiyat.Size = new System.Drawing.Size(233, 33);
+            this.tfiyat.TabIndex = 42;
+            this.tfiyat.Text = "fiyat";
+            // 
+            // tbilgi
+            // 
+            this.tbilgi.BackColor = System.Drawing.Color.White;
+            this.tbilgi.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbilgi.ForeColor = System.Drawing.Color.Silver;
+            this.tbilgi.Location = new System.Drawing.Point(42, 159);
+            this.tbilgi.Multiline = true;
+            this.tbilgi.Name = "tbilgi";
+            this.tbilgi.Size = new System.Drawing.Size(500, 94);
+            this.tbilgi.TabIndex = 41;
+            this.tbilgi.Text = "Sipariş bilgisi";
+            // 
+            // tbtarih
+            // 
+            this.tbtarih.BackColor = System.Drawing.Color.White;
+            this.tbtarih.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbtarih.ForeColor = System.Drawing.Color.Silver;
+            this.tbtarih.Location = new System.Drawing.Point(309, 276);
+            this.tbtarih.MaxLength = 10;
+            this.tbtarih.Name = "tbtarih";
+            this.tbtarih.Size = new System.Drawing.Size(233, 33);
+            this.tbtarih.TabIndex = 40;
+            this.tbtarih.Text = "Bitiş tarihi";
+            // 
+            // tstarih
+            // 
+            this.tstarih.BackColor = System.Drawing.Color.White;
+            this.tstarih.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tstarih.ForeColor = System.Drawing.Color.Silver;
+            this.tstarih.Location = new System.Drawing.Point(42, 276);
+            this.tstarih.Name = "tstarih";
+            this.tstarih.Size = new System.Drawing.Size(233, 33);
+            this.tstarih.TabIndex = 39;
+            this.tstarih.Text = "Şipariş tarihi";
+            // 
+            // tmid
+            // 
+            this.tmid.BackColor = System.Drawing.Color.White;
+            this.tmid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tmid.ForeColor = System.Drawing.Color.Silver;
+            this.tmid.Location = new System.Drawing.Point(42, 104);
+            this.tmid.Name = "tmid";
+            this.tmid.Size = new System.Drawing.Size(233, 33);
+            this.tmid.TabIndex = 38;
+            this.tmid.Text = "müşteri ID";
+            // 
             // SSiparisUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,7 +344,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
@@ -347,11 +355,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tsid;
+        private System.Windows.Forms.TextBox tadet;
+        private System.Windows.Forms.TextBox tfiyat;
+        private System.Windows.Forms.TextBox tbilgi;
+        private System.Windows.Forms.TextBox tbtarih;
+        private System.Windows.Forms.TextBox tstarih;
+        private System.Windows.Forms.TextBox tmid;
     }
 }

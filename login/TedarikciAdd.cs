@@ -40,5 +40,35 @@ namespace login
             nextForm.Show();
             this.Dispose();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TedarikciClass myclass = new TedarikciClass();
+                myclass.TedarikciEkle(tyadi.Text, tadres.Text, ttel.Text, temail.Text, ttadi.Text);
+                MessageBox.Show("Tedarikçi başarıyla eklendi");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Tedarikçi eklenemedi");
+            }
+        }
+
+        private void temail_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+        }
     }
 }

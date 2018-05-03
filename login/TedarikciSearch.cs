@@ -16,6 +16,7 @@ namespace login
         public TedarikciSearch()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
             button1.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;
@@ -26,9 +27,18 @@ namespace login
 
         private void button9_Click(object sender, EventArgs e)
         {
-            MusteritemsilcisiAlim nextForm = new MusteritemsilcisiAlim();
-            nextForm.Show();
-            this.Dispose();
+            if (Form1.YID == 1)
+            {
+                YoneticiMain NextForm = new YoneticiMain();
+                NextForm.Show();
+                this.Dispose();
+            }
+            else
+            {
+                MusteritemsilcisiAlim nextForm = new MusteritemsilcisiAlim();
+                nextForm.Show();
+                this.Dispose();
+            }
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -125,6 +135,96 @@ namespace login
             panel8.Hide();
             panel2.Show();
             panel11.Hide();
+        }
+
+        private void textBox3_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TedarikciClass myclass = new TedarikciClass();
+            TedarikciClass.mylist.Clear();
+            listView1.Items.Clear();
+            bool x = true;
+            int i = 0;
+            if (ttad.ForeColor == Color.Silver)
+            {
+                ttad.ResetText();
+            }
+            try
+            {
+                myclass.TedarikciAra(ttad.Text);
+                while (x)
+                {
+                    ListViewItem item = new ListViewItem(TedarikciClass.mylist[i]);
+                    item.SubItems.Add(TedarikciClass.mylist[i + 1]);
+                    item.SubItems.Add(TedarikciClass.mylist[i + 2]);
+                    item.SubItems.Add(TedarikciClass.mylist[i + 3]);
+                    item.SubItems.Add(TedarikciClass.mylist[i + 4]);
+                    item.SubItems.Add(TedarikciClass.mylist[i + 5]);
+
+                    i = i + 6;
+                    listView1.Items.Add(item);
+                    if (TedarikciClass.mylist.Count == i)
+                    {
+                        x = false;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Sonuc Bulunamadi");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TedarikciClass myclass = new TedarikciClass();
+            TedarikciClass.mylist.Clear();
+            listView2.Items.Clear();
+            bool x = true;
+            int i = 0;
+            try
+            {
+                myclass.TedarikciAra("");
+                while (x)
+                {
+                    ListViewItem item = new ListViewItem(TedarikciClass.mylist[i]);
+                    item.SubItems.Add(TedarikciClass.mylist[i + 1]);
+                    item.SubItems.Add(TedarikciClass.mylist[i + 2]);
+                    item.SubItems.Add(TedarikciClass.mylist[i + 3]);
+                    item.SubItems.Add(TedarikciClass.mylist[i + 4]);
+                    item.SubItems.Add(TedarikciClass.mylist[i + 5]);
+
+                    i = i + 6;
+                    listView2.Items.Add(item);
+                    if (TedarikciClass.mylist.Count == i)
+                    {
+                        x = false;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Sonuc Bulunamadi");
+            }
         }
     }
 }

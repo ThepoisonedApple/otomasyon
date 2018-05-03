@@ -35,11 +35,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.temail = new System.Windows.Forms.TextBox();
+            this.tadres = new System.Windows.Forms.TextBox();
+            this.ttel = new System.Windows.Forms.TextBox();
+            this.tyadi = new System.Windows.Forms.TextBox();
+            this.ttadi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -113,6 +113,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button1
             // 
@@ -126,58 +127,64 @@
             this.button1.TabIndex = 32;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox7
+            // temail
             // 
-            this.textBox7.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox7.ForeColor = System.Drawing.Color.Silver;
-            this.textBox7.Location = new System.Drawing.Point(42, 309);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(233, 33);
-            this.textBox7.TabIndex = 30;
-            this.textBox7.Text = "e-mail";
+            this.temail.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.temail.ForeColor = System.Drawing.Color.Silver;
+            this.temail.Location = new System.Drawing.Point(42, 309);
+            this.temail.Name = "temail";
+            this.temail.Size = new System.Drawing.Size(247, 33);
+            this.temail.TabIndex = 30;
+            this.temail.Text = "e-mail";
+            this.temail.Enter += new System.EventHandler(this.temail_Enter);
             // 
-            // textBox4
+            // tadres
             // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.ForeColor = System.Drawing.Color.Silver;
-            this.textBox4.Location = new System.Drawing.Point(42, 148);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(510, 94);
-            this.textBox4.TabIndex = 27;
-            this.textBox4.Text = "adres";
+            this.tadres.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tadres.ForeColor = System.Drawing.Color.Silver;
+            this.tadres.Location = new System.Drawing.Point(42, 148);
+            this.tadres.Multiline = true;
+            this.tadres.Name = "tadres";
+            this.tadres.Size = new System.Drawing.Size(510, 94);
+            this.tadres.TabIndex = 27;
+            this.tadres.Text = "Firma Adresi";
+            this.tadres.Enter += new System.EventHandler(this.temail_Enter);
             // 
-            // textBox3
+            // ttel
             // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.ForeColor = System.Drawing.Color.Silver;
-            this.textBox3.Location = new System.Drawing.Point(42, 259);
-            this.textBox3.MaxLength = 10;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 33);
-            this.textBox3.TabIndex = 26;
-            this.textBox3.Text = "telefon";
+            this.ttel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ttel.ForeColor = System.Drawing.Color.Silver;
+            this.ttel.Location = new System.Drawing.Point(42, 259);
+            this.ttel.MaxLength = 10;
+            this.ttel.Name = "ttel";
+            this.ttel.Size = new System.Drawing.Size(247, 33);
+            this.ttel.TabIndex = 26;
+            this.ttel.Text = "Telefon Numarası";
+            this.ttel.Enter += new System.EventHandler(this.temail_Enter);
             // 
-            // textBox2
+            // tyadi
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(42, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(364, 33);
-            this.textBox2.TabIndex = 25;
-            this.textBox2.Text = "yetkili ad-soyad";
+            this.tyadi.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tyadi.ForeColor = System.Drawing.Color.Silver;
+            this.tyadi.Location = new System.Drawing.Point(42, 95);
+            this.tyadi.Name = "tyadi";
+            this.tyadi.Size = new System.Drawing.Size(358, 33);
+            this.tyadi.TabIndex = 25;
+            this.tyadi.Text = "Yetkili ad-soyad";
+            this.tyadi.Enter += new System.EventHandler(this.temail_Enter);
             // 
-            // textBox1
+            // ttadi
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(42, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 33);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "tedarikçi firma ismi";
+            this.ttadi.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ttadi.ForeColor = System.Drawing.Color.Silver;
+            this.ttadi.Location = new System.Drawing.Point(42, 46);
+            this.ttadi.Name = "ttadi";
+            this.ttadi.Size = new System.Drawing.Size(247, 33);
+            this.ttadi.TabIndex = 24;
+            this.ttadi.Text = "Tedarikçi firma ismi";
+            this.ttadi.Enter += new System.EventHandler(this.temail_Enter);
             // 
             // label4
             // 
@@ -206,11 +213,11 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.Azure;
             this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.textBox7);
-            this.panel5.Controls.Add(this.textBox4);
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.textBox2);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.temail);
+            this.panel5.Controls.Add(this.tadres);
+            this.panel5.Controls.Add(this.ttel);
+            this.panel5.Controls.Add(this.tyadi);
+            this.panel5.Controls.Add(this.ttadi);
             this.panel5.Location = new System.Drawing.Point(82, 122);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(595, 435);
@@ -271,11 +278,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox temail;
+        private System.Windows.Forms.TextBox tadres;
+        private System.Windows.Forms.TextBox ttel;
+        private System.Windows.Forms.TextBox tyadi;
+        private System.Windows.Forms.TextBox ttadi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;

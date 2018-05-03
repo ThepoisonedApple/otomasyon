@@ -33,22 +33,22 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ttid = new System.Windows.Forms.TextBox();
+            this.temail = new System.Windows.Forms.TextBox();
+            this.tadres = new System.Windows.Forms.TextBox();
+            this.ttel = new System.Windows.Forms.TextBox();
+            this.tyad = new System.Windows.Forms.TextBox();
+            this.ttad = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -112,38 +112,7 @@
             this.button1.TabIndex = 32;
             this.button1.Text = "Güncelle";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox7.ForeColor = System.Drawing.Color.Silver;
-            this.textBox7.Location = new System.Drawing.Point(46, 366);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(233, 33);
-            this.textBox7.TabIndex = 30;
-            this.textBox7.Text = "e-mail";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.ForeColor = System.Drawing.Color.Silver;
-            this.textBox4.Location = new System.Drawing.Point(46, 205);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(510, 94);
-            this.textBox4.TabIndex = 27;
-            this.textBox4.Text = "adres";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.ForeColor = System.Drawing.Color.Silver;
-            this.textBox3.Location = new System.Drawing.Point(46, 316);
-            this.textBox3.MaxLength = 10;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 33);
-            this.textBox3.TabIndex = 26;
-            this.textBox3.Text = "telefon";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -174,16 +143,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(46, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(364, 33);
-            this.textBox2.TabIndex = 25;
-            this.textBox2.Text = "yetkili ad-soyad";
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // label4
             // 
@@ -211,16 +171,16 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.MintCream;
+            this.panel5.Controls.Add(this.ttid);
+            this.panel5.Controls.Add(this.temail);
+            this.panel5.Controls.Add(this.tadres);
+            this.panel5.Controls.Add(this.ttel);
+            this.panel5.Controls.Add(this.tyad);
+            this.panel5.Controls.Add(this.ttad);
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.textBox9);
             this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.textBox7);
-            this.panel5.Controls.Add(this.textBox4);
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.textBox2);
-            this.panel5.Controls.Add(this.textBox1);
             this.panel5.Location = new System.Drawing.Point(82, 122);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(595, 435);
@@ -238,6 +198,7 @@
             this.button2.TabIndex = 40;
             this.button2.Text = "Bilgilerini Getir";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -263,26 +224,6 @@
             this.label2.TabIndex = 38;
             this.label2.Text = "Güncelleyeceğiniz müşterinin id\'sine";
             // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox9.ForeColor = System.Drawing.Color.Silver;
-            this.textBox9.Location = new System.Drawing.Point(46, 17);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(233, 33);
-            this.textBox9.TabIndex = 37;
-            this.textBox9.Text = "Müşteri ID";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(46, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 33);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "müşteri firma ismi";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -297,6 +238,69 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(700, 600);
             this.panel1.TabIndex = 4;
+            // 
+            // ttid
+            // 
+            this.ttid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ttid.ForeColor = System.Drawing.Color.Silver;
+            this.ttid.Location = new System.Drawing.Point(46, 17);
+            this.ttid.Name = "ttid";
+            this.ttid.Size = new System.Drawing.Size(233, 33);
+            this.ttid.TabIndex = 46;
+            this.ttid.Text = "Müşteri ID";
+            this.ttid.Enter += new System.EventHandler(this.ttid_Enter);
+            // 
+            // temail
+            // 
+            this.temail.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.temail.ForeColor = System.Drawing.Color.Silver;
+            this.temail.Location = new System.Drawing.Point(46, 366);
+            this.temail.Name = "temail";
+            this.temail.Size = new System.Drawing.Size(233, 33);
+            this.temail.TabIndex = 45;
+            this.temail.Text = "e-mail";
+            // 
+            // tadres
+            // 
+            this.tadres.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tadres.ForeColor = System.Drawing.Color.Silver;
+            this.tadres.Location = new System.Drawing.Point(46, 205);
+            this.tadres.Multiline = true;
+            this.tadres.Name = "tadres";
+            this.tadres.Size = new System.Drawing.Size(510, 94);
+            this.tadres.TabIndex = 44;
+            this.tadres.Text = "adres";
+            // 
+            // ttel
+            // 
+            this.ttel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ttel.ForeColor = System.Drawing.Color.Silver;
+            this.ttel.Location = new System.Drawing.Point(46, 316);
+            this.ttel.MaxLength = 10;
+            this.ttel.Name = "ttel";
+            this.ttel.Size = new System.Drawing.Size(233, 33);
+            this.ttel.TabIndex = 43;
+            this.ttel.Text = "telefon";
+            // 
+            // tyad
+            // 
+            this.tyad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tyad.ForeColor = System.Drawing.Color.Silver;
+            this.tyad.Location = new System.Drawing.Point(46, 152);
+            this.tyad.Name = "tyad";
+            this.tyad.Size = new System.Drawing.Size(364, 33);
+            this.tyad.TabIndex = 42;
+            this.tyad.Text = "yetkili ad-soyad";
+            // 
+            // ttad
+            // 
+            this.ttad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ttad.ForeColor = System.Drawing.Color.Silver;
+            this.ttad.Location = new System.Drawing.Point(46, 103);
+            this.ttad.Name = "ttad";
+            this.ttad.Size = new System.Drawing.Size(233, 33);
+            this.ttad.TabIndex = 41;
+            this.ttad.Text = "Müşteri firma ismi";
             // 
             // MusteriUpdate
             // 
@@ -324,21 +328,21 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox ttid;
+        private System.Windows.Forms.TextBox temail;
+        private System.Windows.Forms.TextBox tadres;
+        private System.Windows.Forms.TextBox ttel;
+        private System.Windows.Forms.TextBox tyad;
+        private System.Windows.Forms.TextBox ttad;
     }
 }
