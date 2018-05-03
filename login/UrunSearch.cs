@@ -26,7 +26,7 @@ namespace login
 
         private void button9_Click(object sender, EventArgs e)
         {
-            MakineMain nextForm = new MakineMain();
+            ModellemeMain nextForm = new ModellemeMain();
             nextForm.Show();
             this.Dispose();
         }

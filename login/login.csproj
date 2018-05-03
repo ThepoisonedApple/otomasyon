@@ -714,6 +714,18 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\unknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Anahtar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\purchase_order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Sell_oreder.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

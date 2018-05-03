@@ -86,22 +86,22 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.label4.Location = new System.Drawing.Point(195, 75);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(261, 29);
+            this.label4.Size = new System.Drawing.Size(293, 32);
             this.label4.TabIndex = 17;
             this.label4.Text = "Makine Ara,Listele";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label3.Location = new System.Drawing.Point(230, 35);
+            this.label3.Location = new System.Drawing.Point(248, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 29);
+            this.label3.Size = new System.Drawing.Size(199, 32);
             this.label3.TabIndex = 16;
             this.label3.Text = "ModaVizyon";
             // 
@@ -298,6 +298,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel9
             // 
@@ -350,7 +351,7 @@
             this.button1.BackColor = System.Drawing.Color.SkyBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(343, 99);
+            this.button1.Location = new System.Drawing.Point(287, 54);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 42);
             this.button1.TabIndex = 5;
@@ -361,11 +362,13 @@
             // tmad
             // 
             this.tmad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tmad.ForeColor = System.Drawing.Color.Silver;
             this.tmad.Location = new System.Drawing.Point(23, 61);
             this.tmad.Name = "tmad";
             this.tmad.Size = new System.Drawing.Size(233, 33);
             this.tmad.TabIndex = 1;
             this.tmad.Text = "Makine Adı";
+            this.tmad.Enter += new System.EventHandler(this.tmad_Enter);
             // 
             // panel2
             // 
@@ -391,9 +394,9 @@
             this.listView1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listView1.GridLines = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.Location = new System.Drawing.Point(18, 161);
+            this.listView1.Location = new System.Drawing.Point(18, 121);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(480, 258);
+            this.listView1.Size = new System.Drawing.Size(480, 298);
             this.listView1.TabIndex = 21;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;

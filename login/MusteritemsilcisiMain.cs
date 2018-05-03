@@ -16,7 +16,6 @@ namespace login
         {
             InitializeComponent();
             button1.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;
             button10.FlatAppearance.BorderSize = 0;
             button11.FlatAppearance.BorderSize = 0;
@@ -53,12 +52,22 @@ namespace login
 
         private void button9_Click(object sender, EventArgs e)
         {
-
+            Form1 nextForm = new Form1();
+            nextForm.Show();
+            this.Dispose();
         }
 
-        private void button9_Click_1(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            MusteritemsilcisiAlim nextForm = new MusteritemsilcisiAlim();
+            nextForm.Show();
+            this.Dispose();
+        }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
         }
     }
 }

@@ -78,5 +78,21 @@ namespace login
                 throw;
             }
         }
+
+        private void tuid_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+        }
+
+        private void binfo_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
+        }
     }
 }

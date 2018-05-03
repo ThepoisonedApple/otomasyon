@@ -176,5 +176,21 @@ namespace login
                 }
             }
         }
+
+        private void toad_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
+        }
     }
 }

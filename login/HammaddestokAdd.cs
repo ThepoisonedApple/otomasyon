@@ -58,5 +58,16 @@ namespace login
 
 
         }
+
+        private void tuadet_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+
+        }
     }
 }

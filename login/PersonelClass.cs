@@ -13,7 +13,17 @@ namespace login
     {
         public static List<string> mylist = new List<string>();
 
-       
+       public static int Sayi()
+        {
+            DBconnect mycon = new DBconnect();
+            mycon.connectionopen();
+            NpgsqlCommand comm = new NpgsqlCommand();
+            comm.Connection = DBconnect.baglanti;
+            comm.CommandText = "SELECT COUNT(ad) FROM personel where ad like @ad";
+            comm.Parameters.AddWithValue("@ad","%%");
+            int z =Convert.ToInt32(comm.ExecuteScalar());
+            return z;
+        }
 
         
 

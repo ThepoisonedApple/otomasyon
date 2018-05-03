@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -41,6 +40,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -49,6 +50,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel18);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label4);
@@ -58,16 +60,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(733, 614);
             this.panel1.TabIndex = 0;
-            // 
-            // panel18
-            // 
-            this.panel18.BackgroundImage = global::login.Properties.Resources.Exit;
-            this.panel18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel18.Location = new System.Drawing.Point(710, 0);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(23, 21);
-            this.panel18.TabIndex = 26;
-            this.panel18.Click += new System.EventHandler(this.panel18_Click);
             // 
             // panel2
             // 
@@ -83,7 +75,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(36, 166);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(630, 408);
+            this.panel2.Size = new System.Drawing.Size(636, 408);
             this.panel2.TabIndex = 25;
             // 
             // label9
@@ -96,7 +88,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(306, 25);
             this.label9.TabIndex = 32;
-            this.label9.Text = "2150656062@nku.edu.tr";
+            this.label9.Text = "2150656029@nku.edu.tr";
             // 
             // label10
             // 
@@ -108,7 +100,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(306, 25);
             this.label10.TabIndex = 31;
-            this.label10.Text = "2150656020@nku.edu.tr";
+            this.label10.Text = "2150656030@nku.edu.tr";
             // 
             // label8
             // 
@@ -205,6 +197,26 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "ModaVizyon";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImage = global::login.Properties.Resources.unknown;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(535, 26);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(137, 119);
+            this.panel3.TabIndex = 27;
+            // 
+            // panel18
+            // 
+            this.panel18.BackgroundImage = global::login.Properties.Resources.Exit;
+            this.panel18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel18.Location = new System.Drawing.Point(710, 0);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(23, 21);
+            this.panel18.TabIndex = 26;
+            this.panel18.Click += new System.EventHandler(this.panel18_Click);
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
@@ -250,5 +262,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel3;
     }
 }

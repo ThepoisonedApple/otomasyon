@@ -68,5 +68,11 @@ namespace login
             nextForm.Show();
             this.Dispose();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
+        }
     }
 }

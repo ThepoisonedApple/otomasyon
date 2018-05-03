@@ -141,16 +141,19 @@
             this.binfo.Size = new System.Drawing.Size(50, 50);
             this.binfo.TabIndex = 1;
             this.binfo.UseVisualStyleBackColor = true;
+            this.binfo.Click += new System.EventHandler(this.binfo_Click);
             // 
             // tuadi
             // 
+            this.tuadi.BackColor = System.Drawing.Color.White;
             this.tuadi.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tuadi.ForeColor = System.Drawing.Color.Silver;
             this.tuadi.Location = new System.Drawing.Point(45, 120);
             this.tuadi.Name = "tuadi";
+            this.tuadi.ReadOnly = true;
             this.tuadi.Size = new System.Drawing.Size(233, 33);
             this.tuadi.TabIndex = 41;
-            this.tuadi.Text = "Ürün Adı";
+            this.tuadi.Text = "Hammadde Adı";
             // 
             // label2
             // 
@@ -186,7 +189,8 @@
             this.tuid.Name = "tuid";
             this.tuid.Size = new System.Drawing.Size(233, 33);
             this.tuid.TabIndex = 24;
-            this.tuid.Text = "Ürün ID";
+            this.tuid.Text = "Hammadde ID";
+            this.tuid.Enter += new System.EventHandler(this.tuid_Enter);
             // 
             // label4
             // 
@@ -194,11 +198,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(280, 71);
+            this.label4.Location = new System.Drawing.Point(249, 70);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(251, 29);
+            this.label4.Size = new System.Drawing.Size(338, 29);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Ürün Silme Paneli";
+            this.label4.Text = "Hammadde Silme Paneli";
             // 
             // label1
             // 
@@ -229,23 +233,27 @@
             // 
             // ttid
             // 
+            this.ttid.BackColor = System.Drawing.Color.White;
             this.ttid.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ttid.ForeColor = System.Drawing.Color.Silver;
             this.ttid.Location = new System.Drawing.Point(45, 231);
             this.ttid.Name = "ttid";
+            this.ttid.ReadOnly = true;
             this.ttid.Size = new System.Drawing.Size(233, 33);
             this.ttid.TabIndex = 43;
-            this.ttid.Text = "Tedarikçi ID";
+            this.ttid.Text = "Hammadde ID";
             // 
             // tuadet
             // 
+            this.tuadet.BackColor = System.Drawing.Color.White;
             this.tuadet.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tuadet.ForeColor = System.Drawing.Color.Silver;
             this.tuadet.Location = new System.Drawing.Point(45, 174);
             this.tuadet.Name = "tuadet";
+            this.tuadet.ReadOnly = true;
             this.tuadet.Size = new System.Drawing.Size(233, 33);
             this.tuadet.TabIndex = 42;
-            this.tuadet.Text = "Ürün Adeti";
+            this.tuadet.Text = "Hammadde Adeti";
             // 
             // bexit
             // 

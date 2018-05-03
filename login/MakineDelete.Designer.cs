@@ -84,22 +84,22 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(265, 72);
+            this.label4.Location = new System.Drawing.Point(243, 65);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(247, 25);
+            this.label4.Size = new System.Drawing.Size(318, 32);
             this.label4.TabIndex = 26;
             this.label4.Text = "Makine Silme Paneli";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(312, 34);
+            this.label1.Location = new System.Drawing.Point(290, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 25);
+            this.label1.Size = new System.Drawing.Size(199, 32);
             this.label1.TabIndex = 25;
             this.label1.Text = "ModaVizyon";
             // 
@@ -210,7 +210,6 @@
             this.tmbakim.Size = new System.Drawing.Size(342, 33);
             this.tmbakim.TabIndex = 26;
             this.tmbakim.Text = "Sonraki bakım tarihi";
-            this.tmbakim.Enter += new System.EventHandler(this.tmid_Enter);
             // 
             // tmalim
             // 
@@ -223,7 +222,6 @@
             this.tmalim.Size = new System.Drawing.Size(342, 33);
             this.tmalim.TabIndex = 25;
             this.tmalim.Text = "Alım Tarihi";
-            this.tmalim.Enter += new System.EventHandler(this.tmid_Enter);
             // 
             // tmadi
             // 
@@ -236,7 +234,6 @@
             this.tmadi.Size = new System.Drawing.Size(342, 33);
             this.tmadi.TabIndex = 24;
             this.tmadi.Text = "Makine Adı";
-            this.tmadi.Enter += new System.EventHandler(this.tmid_Enter);
             // 
             // panel2
             // 
@@ -289,6 +286,7 @@
             this.binfo.Size = new System.Drawing.Size(50, 50);
             this.binfo.TabIndex = 1;
             this.binfo.UseVisualStyleBackColor = true;
+            this.binfo.Click += new System.EventHandler(this.binfo_Click);
             // 
             // bhome
             // 

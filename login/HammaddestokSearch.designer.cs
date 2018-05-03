@@ -42,6 +42,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -63,7 +64,6 @@
             this.TID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -87,11 +87,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(205, 75);
+            this.label4.Location = new System.Drawing.Point(169, 75);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(230, 29);
+            this.label4.Size = new System.Drawing.Size(317, 29);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Ürün Ara,Listele";
+            this.label4.Text = "Hammadde Ara,Listele";
             // 
             // label3
             // 
@@ -231,6 +231,18 @@
             this.panel11.Size = new System.Drawing.Size(474, 441);
             this.panel11.TabIndex = 20;
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.ForeColor = System.Drawing.Color.Silver;
+            this.textBox1.Location = new System.Drawing.Point(172, 73);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(133, 33);
+            this.textBox1.TabIndex = 24;
+            this.textBox1.Text = "Tedarikçi ID";
+            this.textBox1.Visible = false;
+            this.textBox1.Enter += new System.EventHandler(this.thad_Enter);
+            // 
             // listView2
             // 
             this.listView2.BackColor = System.Drawing.Color.LightBlue;
@@ -292,6 +304,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel9
             // 
@@ -333,11 +346,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label5.Location = new System.Drawing.Point(18, 9);
+            this.label5.Location = new System.Drawing.Point(18, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(217, 29);
+            this.label5.Size = new System.Drawing.Size(312, 29);
             this.label5.TabIndex = 19;
-            this.label5.Text = "Aranan Ürünün";
+            this.label5.Text = "Aranan Hammaddenin";
             // 
             // button1
             // 
@@ -355,11 +368,13 @@
             // thad
             // 
             this.thad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.thad.ForeColor = System.Drawing.Color.Silver;
             this.thad.Location = new System.Drawing.Point(23, 67);
             this.thad.Name = "thad";
             this.thad.Size = new System.Drawing.Size(233, 33);
             this.thad.TabIndex = 1;
             this.thad.Text = "Hammadde Adı";
+            this.thad.Enter += new System.EventHandler(this.thad_Enter);
             // 
             // panel2
             // 
@@ -435,22 +450,12 @@
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel11);
             this.panel1.Location = new System.Drawing.Point(50, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 650);
             this.panel1.TabIndex = 16;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(172, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 33);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Tedarikçi ID";
-            this.textBox1.Visible = false;
             // 
             // HammaddestokSearch
             // 

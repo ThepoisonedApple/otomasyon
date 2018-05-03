@@ -35,13 +35,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.totanim = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bexit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.blogout = new System.Windows.Forms.Button();
             this.binfo = new System.Windows.Forms.Button();
             this.bhome = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -66,7 +66,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(363, 29);
+            this.label1.Location = new System.Drawing.Point(339, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 32);
             this.label1.TabIndex = 25;
@@ -104,7 +104,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(278, 74);
+            this.label4.Location = new System.Drawing.Point(254, 74);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(399, 32);
             this.label4.TabIndex = 26;
@@ -133,6 +133,14 @@
             this.totanim.TabIndex = 34;
             this.totanim.Text = "Operasyon Tanımı";
             this.totanim.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Location = new System.Drawing.Point(50, 441);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(638, 25);
+            this.panel2.TabIndex = 13;
             // 
             // panel4
             // 
@@ -189,6 +197,7 @@
             this.binfo.Size = new System.Drawing.Size(50, 50);
             this.binfo.TabIndex = 1;
             this.binfo.UseVisualStyleBackColor = true;
+            this.binfo.Click += new System.EventHandler(this.binfo_Click);
             // 
             // bhome
             // 
@@ -202,19 +211,11 @@
             this.bhome.UseVisualStyleBackColor = false;
             this.bhome.Click += new System.EventHandler(this.bhome_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Location = new System.Drawing.Point(50, 441);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(638, 25);
-            this.panel2.TabIndex = 13;
-            // 
             // OperasyonAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 466);
+            this.ClientSize = new System.Drawing.Size(688, 466);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OperasyonAdd";

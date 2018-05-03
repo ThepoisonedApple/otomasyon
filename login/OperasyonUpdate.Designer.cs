@@ -92,6 +92,7 @@
             this.binfo.Size = new System.Drawing.Size(50, 50);
             this.binfo.TabIndex = 1;
             this.binfo.UseVisualStyleBackColor = true;
+            this.binfo.Click += new System.EventHandler(this.binfo_Click);
             // 
             // bhome
             // 
@@ -109,20 +110,20 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(307, 61);
+            this.label4.Location = new System.Drawing.Point(267, 75);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(317, 32);
+            this.label4.Size = new System.Drawing.Size(412, 29);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Operasyon Güncelle";
+            this.label4.Text = "Operasyon Güncelleme Paneli";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(363, 29);
+            this.label1.Location = new System.Drawing.Point(377, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 32);
             this.label1.TabIndex = 25;
@@ -210,10 +211,10 @@
             // 
             this.totanim.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.totanim.ForeColor = System.Drawing.Color.Silver;
-            this.totanim.Location = new System.Drawing.Point(32, 204);
+            this.totanim.Location = new System.Drawing.Point(42, 176);
             this.totanim.Multiline = true;
             this.totanim.Name = "totanim";
-            this.totanim.Size = new System.Drawing.Size(510, 66);
+            this.totanim.Size = new System.Drawing.Size(500, 94);
             this.totanim.TabIndex = 33;
             this.totanim.Text = "Operasyon Tanımı";
             // 
@@ -236,10 +237,9 @@
             this.toadi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.toadi.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.toadi.ForeColor = System.Drawing.Color.Silver;
-            this.toadi.Location = new System.Drawing.Point(32, 112);
-            this.toadi.Multiline = true;
+            this.toadi.Location = new System.Drawing.Point(42, 112);
             this.toadi.Name = "toadi";
-            this.toadi.Size = new System.Drawing.Size(510, 66);
+            this.toadi.Size = new System.Drawing.Size(233, 33);
             this.toadi.TabIndex = 27;
             this.toadi.Text = "Operasyon Adı";
             // 

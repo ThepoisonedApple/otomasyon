@@ -15,10 +15,10 @@ namespace login
         public IKMain()
         {
             InitializeComponent();
+            textBox1.Text=Convert.ToString(PersonelClass.Sayi());
             button5.FlatAppearance.BorderSize = 0;
             button4.FlatAppearance.BorderSize = 0;
             button3.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;
             button10.FlatAppearance.BorderSize = 0;
@@ -76,6 +76,12 @@ namespace login
             PersonelUpdate nextForm = new PersonelUpdate();
             nextForm.Show();
             this.Dispose();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
         }
     }
 }

@@ -95,7 +95,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label3.Location = new System.Drawing.Point(230, 35);
+            this.label3.Location = new System.Drawing.Point(243, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(174, 29);
             this.label3.TabIndex = 16;
@@ -281,6 +281,7 @@
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel9
             // 
@@ -333,7 +334,7 @@
             this.button1.BackColor = System.Drawing.Color.SkyBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(343, 86);
+            this.button1.Location = new System.Drawing.Point(343, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 42);
             this.button1.TabIndex = 5;
@@ -344,11 +345,13 @@
             // toad
             // 
             this.toad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.toad.ForeColor = System.Drawing.Color.Silver;
             this.toad.Location = new System.Drawing.Point(23, 61);
             this.toad.Name = "toad";
             this.toad.Size = new System.Drawing.Size(233, 33);
             this.toad.TabIndex = 1;
             this.toad.Text = "Operasyon Adı";
+            this.toad.Enter += new System.EventHandler(this.toad_Enter);
             // 
             // panel2
             // 

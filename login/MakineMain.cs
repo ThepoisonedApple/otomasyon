@@ -15,6 +15,7 @@ namespace login
         public MakineMain()
         {
             InitializeComponent();
+            textBox1.Text=MakineClass.Say().ToString();
             button5.FlatAppearance.BorderSize = 0;
             button4.FlatAppearance.BorderSize = 0;
             button3.FlatAppearance.BorderSize = 0;
@@ -74,7 +75,8 @@ namespace login
 
         private void button10_Click(object sender, EventArgs e)
         {
-
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
         }
     }
 }

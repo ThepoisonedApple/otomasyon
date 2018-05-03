@@ -10,6 +10,19 @@ namespace login
     class MakineClass
     {
         public static List<string> mylist = new List<string>();
+
+        public static int Say()
+        {
+            DBconnect mycon = new DBconnect();
+            mycon.connectionopen();
+            NpgsqlCommand comm = new NpgsqlCommand();
+            comm.Connection = DBconnect.baglanti;
+            comm.CommandText = "SELECT COUNT(makine_id) FROM makine WHERE bakim_tarihi<=@date";
+            comm.Parameters.AddWithValue("@date",DateTime.Today);
+            int z =Convert.ToInt32(comm.ExecuteScalar());
+            return z;
+        }
+
         public void MakineEkle(string ad, bool durum, DateTime alimtarihi, DateTime bakimtarihi)
         {
             DBconnect mycon = new DBconnect();

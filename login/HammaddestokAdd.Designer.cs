@@ -121,7 +121,8 @@
             this.tuadet.Name = "tuadet";
             this.tuadet.Size = new System.Drawing.Size(233, 33);
             this.tuadet.TabIndex = 33;
-            this.tuadet.Text = "Ürün Adeti";
+            this.tuadet.Text = "Hammadde Adeti";
+            this.tuadet.Enter += new System.EventHandler(this.tuadet_Enter);
             // 
             // badd
             // 
@@ -145,26 +146,27 @@
             this.tuadi.Name = "tuadi";
             this.tuadi.Size = new System.Drawing.Size(233, 33);
             this.tuadi.TabIndex = 24;
-            this.tuadi.Text = "Ürün Adı";
+            this.tuadi.Text = "Hammadde Adı";
+            this.tuadi.Enter += new System.EventHandler(this.tuadet_Enter);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.label4.Location = new System.Drawing.Point(249, 65);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(240, 25);
+            this.label4.Size = new System.Drawing.Size(292, 23);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Ürün Ekleme Paneli";
+            this.label4.Text = "Hammadde Ekleme Paneli";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(286, 29);
+            this.label1.Location = new System.Drawing.Point(319, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 25);
             this.label1.TabIndex = 25;
@@ -192,6 +194,7 @@
             this.ttid.Size = new System.Drawing.Size(233, 33);
             this.ttid.TabIndex = 34;
             this.ttid.Text = "Tedarikçi ID";
+            this.ttid.Enter += new System.EventHandler(this.tuadet_Enter);
             // 
             // bexit
             // 

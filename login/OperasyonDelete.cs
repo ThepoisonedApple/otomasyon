@@ -56,10 +56,6 @@ namespace login
             this.Dispose();
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void bbilgi_Click(object sender, EventArgs e)
         {
@@ -93,6 +89,22 @@ namespace login
             {
                 MessageBox.Show("Hatalı");
                 throw;
+            }
+        }
+
+        private void binfo_Click(object sender, EventArgs e)
+        {
+            Hakkında nextForm = new Hakkında();
+            nextForm.Show();
+        }
+
+        private void toid_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
             }
         }
     }

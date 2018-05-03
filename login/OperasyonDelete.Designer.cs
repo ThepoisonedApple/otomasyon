@@ -96,9 +96,9 @@
             this.panel5.Controls.Add(this.toid);
             this.panel5.Controls.Add(this.bdelete);
             this.panel5.Controls.Add(this.toadi);
-            this.panel5.Location = new System.Drawing.Point(82, 122);
+            this.panel5.Location = new System.Drawing.Point(65, 122);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(590, 322);
+            this.panel5.Size = new System.Drawing.Size(615, 330);
             this.panel5.TabIndex = 24;
             // 
             // totanim
@@ -108,7 +108,7 @@
             this.totanim.Location = new System.Drawing.Point(42, 161);
             this.totanim.Multiline = true;
             this.totanim.Name = "totanim";
-            this.totanim.Size = new System.Drawing.Size(510, 66);
+            this.totanim.Size = new System.Drawing.Size(488, 74);
             this.totanim.TabIndex = 41;
             this.totanim.Text = "Operasyon Tanımı";
             // 
@@ -118,7 +118,7 @@
             this.bbilgi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bbilgi.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bbilgi.ForeColor = System.Drawing.Color.White;
-            this.bbilgi.Location = new System.Drawing.Point(364, 17);
+            this.bbilgi.Location = new System.Drawing.Point(398, 17);
             this.bbilgi.Name = "bbilgi";
             this.bbilgi.Size = new System.Drawing.Size(188, 33);
             this.bbilgi.TabIndex = 40;
@@ -146,9 +146,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(68)))), ((int)(((byte)(83)))));
             this.label2.Location = new System.Drawing.Point(39, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(270, 16);
+            this.label2.Size = new System.Drawing.Size(235, 16);
             this.label2.TabIndex = 38;
-            this.label2.Text = "Güncelleyeceğiniz personelin id\'sine";
+            this.label2.Text = "Sileceğiniz operasyonun id\'sine";
             // 
             // toid
             // 
@@ -156,10 +156,10 @@
             this.toid.ForeColor = System.Drawing.Color.Silver;
             this.toid.Location = new System.Drawing.Point(42, 17);
             this.toid.Name = "toid";
-            this.toid.Size = new System.Drawing.Size(233, 33);
+            this.toid.Size = new System.Drawing.Size(249, 33);
             this.toid.TabIndex = 37;
             this.toid.Text = "Operasyon Id";
-            this.toid.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.toid.Enter += new System.EventHandler(this.toid_Enter);
             // 
             // bdelete
             // 
@@ -167,7 +167,7 @@
             this.bdelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bdelete.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bdelete.ForeColor = System.Drawing.Color.White;
-            this.bdelete.Location = new System.Drawing.Point(426, 252);
+            this.bdelete.Location = new System.Drawing.Point(460, 256);
             this.bdelete.Name = "bdelete";
             this.bdelete.Size = new System.Drawing.Size(126, 54);
             this.bdelete.TabIndex = 32;
@@ -181,7 +181,7 @@
             this.toadi.ForeColor = System.Drawing.Color.Silver;
             this.toadi.Location = new System.Drawing.Point(42, 112);
             this.toadi.Name = "toadi";
-            this.toadi.Size = new System.Drawing.Size(233, 33);
+            this.toadi.Size = new System.Drawing.Size(249, 33);
             this.toadi.TabIndex = 24;
             this.toadi.Text = "Operasyon Adı";
             // 
@@ -207,6 +207,7 @@
             this.binfo.Size = new System.Drawing.Size(50, 50);
             this.binfo.TabIndex = 1;
             this.binfo.UseVisualStyleBackColor = true;
+            this.binfo.Click += new System.EventHandler(this.binfo_Click);
             // 
             // bhome
             // 
@@ -252,7 +253,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel5);
