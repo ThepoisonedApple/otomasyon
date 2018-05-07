@@ -16,6 +16,7 @@ namespace login
         public MakineSearch()
         {
             InitializeComponent();
+            this.ActiveControl = this.panel1;
             button1.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;

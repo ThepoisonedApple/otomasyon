@@ -327,6 +327,7 @@
             this.tadet3.Name = "tadet3";
             this.tadet3.Size = new System.Drawing.Size(99, 33);
             this.tadet3.TabIndex = 41;
+            this.tadet3.Text = "0";
             // 
             // tdemet3
             // 
@@ -345,6 +346,7 @@
             this.tadet2.Name = "tadet2";
             this.tadet2.Size = new System.Drawing.Size(99, 33);
             this.tadet2.TabIndex = 39;
+            this.tadet2.Text = "0";
             // 
             // tadet1
             // 
@@ -354,6 +356,7 @@
             this.tadet1.Name = "tadet1";
             this.tadet1.Size = new System.Drawing.Size(99, 33);
             this.tadet1.TabIndex = 38;
+            this.tadet1.Text = "0";
             // 
             // tdemet2
             // 

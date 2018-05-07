@@ -20,6 +20,7 @@ namespace login
         public PersonelSearch()
         {
             InitializeComponent();
+            this.ActiveControl = this.panel1;
             bsearch.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.BorderSize = 0;
             bhome.FlatAppearance.BorderSize = 0;
@@ -282,6 +283,17 @@ namespace login
         {
             Hakkında nextForm = new Hakkında();
             nextForm.Show();
+        }
+
+        private void tpsad_Enter(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            if (textbox.ForeColor == Color.Silver)
+            {
+                textbox.ResetText();
+                textbox.ForeColor = Color.Black;
+            }
+
         }
     }
 }

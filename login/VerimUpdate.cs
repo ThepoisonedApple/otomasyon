@@ -15,6 +15,7 @@ namespace login
         public VerimUpdate()
         {
             InitializeComponent();
+            this.ActiveControl = this.panel1;
             button3.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.BorderSize = 0;

@@ -15,6 +15,7 @@ namespace login
         public HammaddeStokUpdate()
         {
             InitializeComponent();
+            this.ActiveControl = this.panel1;
             bupdate.FlatAppearance.BorderSize = 0;
             bhome.FlatAppearance.BorderSize = 0;
             binfo.FlatAppearance.BorderSize = 0;

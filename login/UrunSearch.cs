@@ -16,6 +16,7 @@ namespace login
         public UrunSearch()
         {
             InitializeComponent();
+            this.ActiveControl = this.panel1;
             comboBox1.SelectedIndex = 0;
             button1.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.BorderSize = 0;

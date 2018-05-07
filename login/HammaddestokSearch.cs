@@ -16,6 +16,7 @@ namespace login
         public HammaddestokSearch()
         {
             InitializeComponent();
+            this.ActiveControl = this.panel1;
             button1.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;
             button10.FlatAppearance.BorderSize = 0;
@@ -161,52 +162,61 @@ namespace login
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 0)
+            try
             {
-                HammaddeClass.mylist.Clear();
-                listView2.Items.Clear();
-                bool x = true;
-                int i = 0;
-                HammaddeClass myclass = new HammaddeClass();
-                myclass.UrunStokAra("");
-                while (x)
+                if (comboBox1.SelectedIndex == 0)
                 {
-                    ListViewItem item = new ListViewItem(HammaddeClass.mylist[i]);
-                    item.SubItems.Add(HammaddeClass.mylist[i + 1]);
-                    item.SubItems.Add(HammaddeClass.mylist[i + 2]);
-                    item.SubItems.Add(HammaddeClass.mylist[i + 3]);
-                    i = i + 4;
-                    listView2.Items.Add(item);
-                    if (HammaddeClass.mylist.Count == i)
+                    HammaddeClass.mylist.Clear();
+                    listView2.Items.Clear();
+                    bool x = true;
+                    int i = 0;
+                    HammaddeClass myclass = new HammaddeClass();
+                    myclass.UrunStokAra("");
+                    while (x)
                     {
-                        x = false;
-                        break;
+                        ListViewItem item = new ListViewItem(HammaddeClass.mylist[i]);
+                        item.SubItems.Add(HammaddeClass.mylist[i + 1]);
+                        item.SubItems.Add(HammaddeClass.mylist[i + 2]);
+                        item.SubItems.Add(HammaddeClass.mylist[i + 3]);
+                        i = i + 4;
+                        listView2.Items.Add(item);
+                        if (HammaddeClass.mylist.Count == i)
+                        {
+                            x = false;
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    HammaddeClass.mylist.Clear();
+                    listView2.Items.Clear();
+                    bool x = true;
+                    int i = 0;
+                    HammaddeClass myclass = new HammaddeClass();
+                    myclass.UrunStokListele(Convert.ToInt32(textBox1.Text));
+                    while (x)
+                    {
+                        ListViewItem item = new ListViewItem(HammaddeClass.mylist[i]);
+                        item.SubItems.Add(HammaddeClass.mylist[i + 1]);
+                        item.SubItems.Add(HammaddeClass.mylist[i + 2]);
+                        item.SubItems.Add(HammaddeClass.mylist[i + 3]);
+                        i = i + 4;
+                        listView2.Items.Add(item);
+                        if (HammaddeClass.mylist.Count == i)
+                        {
+                            x = false;
+                            break;
+                        }
                     }
                 }
             }
-            else
+            catch (Exception)
             {
-                HammaddeClass.mylist.Clear();
-                listView2.Items.Clear();
-                bool x = true;
-                int i = 0;
-                HammaddeClass myclass = new HammaddeClass();
-                myclass.UrunStokListele(Convert.ToInt32(textBox1.Text));
-                while (x)
-                {
-                    ListViewItem item = new ListViewItem(HammaddeClass.mylist[i]);
-                    item.SubItems.Add(HammaddeClass.mylist[i + 1]);
-                    item.SubItems.Add(HammaddeClass.mylist[i + 2]);
-                    item.SubItems.Add(HammaddeClass.mylist[i + 3]);
-                    i = i + 4;
-                    listView2.Items.Add(item);
-                    if (HammaddeClass.mylist.Count == i)
-                    {
-                        x = false;
-                        break;
-                    }
-                }
-            }
+                DBconnect.connectionopen();
+                MessageBox.Show("Sonuc Bulunamadı");
+                
+            } 
             
         }
 

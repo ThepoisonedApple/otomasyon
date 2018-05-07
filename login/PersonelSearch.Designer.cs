@@ -343,20 +343,24 @@
             // tpsad
             // 
             this.tpsad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpsad.ForeColor = System.Drawing.Color.Silver;
             this.tpsad.Location = new System.Drawing.Point(281, 67);
             this.tpsad.Name = "tpsad";
             this.tpsad.Size = new System.Drawing.Size(200, 33);
             this.tpsad.TabIndex = 2;
             this.tpsad.Text = "soyadı";
+            this.tpsad.Enter += new System.EventHandler(this.tpsad_Enter);
             // 
             // tpad
             // 
             this.tpad.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tpad.ForeColor = System.Drawing.Color.Silver;
             this.tpad.Location = new System.Drawing.Point(23, 67);
             this.tpad.Name = "tpad";
             this.tpad.Size = new System.Drawing.Size(220, 33);
             this.tpad.TabIndex = 1;
             this.tpad.Text = "adı";
+            this.tpad.Enter += new System.EventHandler(this.tpsad_Enter);
             // 
             // panel11
             // 

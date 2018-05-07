@@ -92,7 +92,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(169, 71);
             this.panel8.TabIndex = 39;
-            this.panel8.Click += new System.EventHandler(this.button5_Click);
+            this.panel8.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -104,7 +104,7 @@
             this.label3.Size = new System.Drawing.Size(105, 35);
             this.label3.TabIndex = 18;
             this.label3.Text = " Ürün";
-            this.label3.Click += new System.EventHandler(this.button5_Click);
+            this.label3.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel7
             // 
@@ -160,7 +160,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(169, 149);
             this.panel9.TabIndex = 36;
-            this.panel9.Click += new System.EventHandler(this.button5_Click);
+            this.panel9.Click += new System.EventHandler(this.button1_Click);
             // 
             // button1
             // 

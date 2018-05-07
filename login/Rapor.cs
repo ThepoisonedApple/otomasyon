@@ -26,7 +26,7 @@ namespace login
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Stokurun nextForm = new Stokurun();
+            YoneticiMain nextForm = new YoneticiMain();
             nextForm.Show();
             this.Dispose();
         }

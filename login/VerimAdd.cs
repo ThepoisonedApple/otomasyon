@@ -17,6 +17,7 @@ namespace login
             InitializeComponent();
             DateTime thisDay1 = DateTime.Today;
             ttarih.Text = thisDay1.ToString("d");
+            this.ActiveControl = this.panel1;
             button2.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;

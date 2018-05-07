@@ -34,7 +34,9 @@ namespace login
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            HammaddestokSearch nextForm = new HammaddestokSearch();
+            nextForm.Show();
+            this.Dispose();
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -62,28 +64,28 @@ namespace login
 
         private void button7_Click(object sender, EventArgs e)
         {
-            IKMain nextForm = new IKMain();
+            PersonelSearch nextForm = new PersonelSearch();
             nextForm.Show();
             this.Dispose();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            BolumsefiMain nextForm = new BolumsefiMain();
+            VerimSearch nextForm = new VerimSearch();
             nextForm.Show();
             this.Dispose();
         }
 
         private void rapor_Click(object sender, EventArgs e)
         {
-            MakineMain nextForm = new MakineMain();
+            MakineSearch nextForm = new MakineSearch();
             nextForm.Show();
             this.Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StokMain nextForm = new StokMain();
+            UrunStokSearch nextForm = new UrunStokSearch();
             nextForm.Show();
             this.Dispose();
         }
@@ -102,7 +104,7 @@ namespace login
 
         private void button8_Click(object sender, EventArgs e)
         {
-            ModellemeMain nextForm = new ModellemeMain();
+            UrunSearch nextForm = new UrunSearch();
             nextForm.Show();
             this.Dispose();
         }
@@ -126,7 +128,28 @@ namespace login
 
         private void button15_Click(object sender, EventArgs e)
         {
-            MusteritemsilcisiMain nextForm = new MusteritemsilcisiMain();
+            SSiparisSearch nextForm = new SSiparisSearch();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            ASiparisSearch nextForm = new ASiparisSearch();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            TedarikciSearch nextForm = new TedarikciSearch();
+            nextForm.Show();
+            this.Dispose();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            MusteriSearch nextForm = new MusteriSearch();
             nextForm.Show();
             this.Dispose();
         }

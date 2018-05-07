@@ -17,6 +17,7 @@ namespace login
         {
             InitializeComponent();
             comboBox1.SelectedIndex = 0;
+            this.ActiveControl = this.panel1;
             button1.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.BorderSize = 0;
             button9.FlatAppearance.BorderSize = 0;

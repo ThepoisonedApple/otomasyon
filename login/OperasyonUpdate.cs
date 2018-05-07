@@ -15,6 +15,7 @@ namespace login
         public OperasyonUpdate()
         {
             InitializeComponent();
+            this.ActiveControl = this.panel1;
             bupdate.FlatAppearance.BorderSize = 0;
             bbilgi.FlatAppearance.BorderSize = 0;
             bhome.FlatAppearance.BorderSize = 0;
